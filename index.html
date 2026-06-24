@@ -251,6 +251,50 @@ footer .logo-dark {
   .stat-block .num { font-size: 34px; font-weight: 800; line-height: 1; letter-spacing: -.02em; }
   .stat-block .cap { font-size: 13px; color: var(--gray); margin-top: 6px; }
 
+  .about-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.about-media {
+  display: flex;
+  justify-content: center;
+}
+
+.about-photo-frame {
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border-radius: 6px;
+  border: 1px solid var(--gray-line);
+  background: var(--paper-warm);
+  position: relative;
+}
+
+/* subtle editorial treatment */
+.about-photo-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(0,0,0,0.08),
+    rgba(255,255,255,0.0)
+  );
+  pointer-events: none;
+}
+
+.about-photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%) contrast(1.05);
+  transform: scale(1.02);
+}
+
   /* ---------- CONTACT ---------- */
   .contact { background: var(--ink); color: #fff; text-align: center; padding: 120px 0; }
   .contact h2 { font-size: clamp(30px, 5vw, 56px); font-weight: 800; letter-spacing: -.01em; line-height: 1.05; }
@@ -462,26 +506,28 @@ footer .logo-dark {
 <section class="about" id="about">
   <div class="wrap about-grid">
     <div>
+      <section class="about" id="about">
+  <div class="wrap about-grid">
+
+    <div class="about-content">
       <div class="sec-eyebrow reveal">About</div>
-      <h2 class="sec-title reveal" style="margin-bottom:28px;">15 years making brands sound like something.</h2>
+      <h2 class="sec-title reveal" style="margin-bottom:28px;">
+        15 years making brands sound like something.
+      </h2>
+
       <p class="reveal">PK Works is me, Phil Kukawinski. I spent 15 years in radio building brands, growing audiences, and producing the kind of content that makes people stop and pay attention.</p>
+
       <p class="reveal">That's where the ear for voice comes from, and the instinct for what actually moves people instead of just filling a feed. Now I bring that same expertise to businesses that need real marketing leadership without the cost of a full-time hire.</p>
+
       <p class="reveal">I work with a small number of clients at a time, which means you get someone who treats your brand like it's the only one that matters. Because while we're working together, it is.</p>
     </div>
-    <div class="stat-block reveal">
-      <div class="stat">
-        <div class="num">15 yrs</div>
-        <div class="cap">Building brands and audiences in media</div>
-      </div>
-      <div class="stat">
-        <div class="num">4 apps</div>
-        <div class="cap">Designed, built, and shipped independently</div>
-      </div>
-      <div class="stat">
-        <div class="num">1 seat</div>
-        <div class="cap">The marketing department your business is missing</div>
+
+    <div class="about-media reveal">
+      <div class="about-photo-frame">
+        <img src="pk-headshot.png" alt="Phil Kukawinski" />
       </div>
     </div>
+
   </div>
 </section>
 
