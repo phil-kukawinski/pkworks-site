@@ -37,6 +37,31 @@
 
   .wrap { max-width: var(--max); margin: 0 auto; padding: 0 32px; }
 
+  .nav-logo img,
+.f-logo img {
+  height: 34px;
+  width: auto;
+  display: block;
+}
+
+/* default (hero = dark background) */
+.logo-dark {
+  display: none;
+}
+
+.logo-light {
+  display: block;
+}
+
+/* when scrolled (light background nav) */
+nav.scrolled .logo-light {
+  display: none;
+}
+
+nav.scrolled .logo-dark {
+  display: block;
+}
+
   /* ---------- NAV ---------- */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
@@ -52,13 +77,6 @@
     box-shadow: 0 1px 0 var(--gray-line);
   }
   nav .nav-logo { display: flex; align-items: center; gap: 11px; font-weight: 700; letter-spacing: .14em; font-size: 15px; }
-  nav .nav-logo .dot {
-    width: 30px; height: 30px; border-radius: 50%;
-    background: radial-gradient(circle at 32% 28%, #3a3a38, #0d0d0d 78%);
-    display: inline-flex; align-items: center; justify-content: center;
-    color: #fff; font-size: 11px; font-weight: 700; letter-spacing: .04em;
-    box-shadow: 0 2px 5px rgba(0,0,0,.25);
-  }
   nav .nav-links { display: flex; gap: 30px; font-size: 13px; font-weight: 500; letter-spacing: .04em; }
   /* On load (over dark hero): light text. */
   nav .nav-links a { color: rgba(255,255,255,.82); transition: color .2s; }
@@ -250,7 +268,6 @@
   footer { background: #0c0c0c; color: rgba(255,255,255,.5); padding: 34px 0; }
   footer .wrap { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px; }
   footer .f-logo { display: flex; align-items: center; gap: 10px; font-weight: 700; letter-spacing: .14em; font-size: 14px; color: #fff; }
-  footer .f-logo .dot { width: 26px; height: 26px; border-radius: 50%; background: radial-gradient(circle at 32% 28%, #3a3a38, #0d0d0d 78%); display:inline-flex; align-items:center; justify-content:center; font-size: 10px; }
   footer .f-meta { font-size: 13px; letter-spacing: .03em; }
 
   @media (prefers-reduced-motion: reduce) {
@@ -261,7 +278,10 @@
 <body>
 
 <nav id="nav">
-  <a class="nav-logo" href="#top"><span class="dot">PK</span> WORKS</a>
+  <a class="nav-logo" href="#top">
+  <img class="logo-light" src="pk-logo-white.png" alt="PK Works" />
+  <img class="logo-dark" src="pk-logo.png" alt="PK Works" />
+</a>
   <div class="nav-links">
     <a href="#approach">Approach</a>
     <a href="#who">Who I Help</a>
@@ -470,7 +490,9 @@
 
 <footer>
   <div class="wrap">
-    <div class="f-logo"><span class="dot">PK</span> WORKS</div>
+    <div class="f-logo">
+  <img class="logo-dark" src="pk-logo.png" alt="PK Works" />
+</div>
     <div class="f-meta">Voice. Strategy. Social. · Louisville, KY</div>
   </div>
 </footer>
