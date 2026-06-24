@@ -37,28 +37,26 @@
 
   .wrap { max-width: var(--max); margin: 0 auto; padding: 0 32px; }
 
-  .nav-logo img,
+  /* --- LOGO BASE --- */
+.nav-logo img,
 .f-logo img {
   height: 34px;
   width: auto;
+  display: none; /* IMPORTANT: start hidden */
+}
+
+/* default state (hero = dark background) */
+nav:not(.scrolled) .logo-light {
   display: block;
 }
 
-/* default (hero = dark background) */
-.logo-dark {
-  display: none;
-}
-
-.logo-light {
-  display: block;
-}
-
-/* when scrolled (light background nav) */
-nav.scrolled .logo-light {
-  display: none;
-}
-
+/* scrolled state (light nav background) */
 nav.scrolled .logo-dark {
+  display: block;
+}
+
+/* footer always dark logo */
+footer .logo-dark {
   display: block;
 }
 
@@ -266,7 +264,14 @@ nav.scrolled .logo-dark {
 
   /* ---------- FOOTER ---------- */
   footer { background: #0c0c0c; color: rgba(255,255,255,.5); padding: 34px 0; }
-  footer .wrap { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px; }
+  footer .wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
+}
   footer .f-logo { display: flex; align-items: center; gap: 10px; font-weight: 700; letter-spacing: .14em; font-size: 14px; color: #fff; }
   footer .f-meta { font-size: 13px; letter-spacing: .03em; }
 
