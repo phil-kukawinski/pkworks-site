@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>PK Works — Marketing Leadership Without the Marketing Department</title>
+<link rel="icon" type="image/png" href="pk-logo.png" />
+<meta name="description" content="Voice. Strategy. Social. Marketing leadership for small and mid-sized businesses that need results, not another full-time hire." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --ink: #141414;
+    --ink-soft: #2c2c2a;
+    --paper: #ffffff;
+    --paper-warm: #f4f3f1;
+    --gray: #8a8a85;
+    --gray-line: #e4e3df;
+    --max: 1100px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 32px; }
+
+  /* ---------- NAV ---------- */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 20px 32px;
+    background: rgba(255,255,255,0);
+    transition: background .3s ease, padding .3s ease, box-shadow .3s ease;
+  }
+  nav.scrolled {
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(10px);
+    padding: 14px 32px;
+    box-shadow: 0 1px 0 var(--gray-line);
+  }
+  nav .nav-logo { display: flex; align-items: center; gap: 11px; font-weight: 700; letter-spacing: .14em; font-size: 15px; }
+  nav .nav-logo .dot {
+    width: 30px; height: 30px; border-radius: 50%;
+    background: radial-gradient(circle at 32% 28%, #3a3a38, #0d0d0d 78%);
+    display: inline-flex; align-items: center; justify-content: center;
+    color: #fff; font-size: 11px; font-weight: 700; letter-spacing: .04em;
+    box-shadow: 0 2px 5px rgba(0,0,0,.25);
+  }
+  nav .nav-links { display: flex; gap: 30px; font-size: 13px; font-weight: 500; letter-spacing: .04em; }
+  /* On load (over dark hero): light text. */
+  nav .nav-links a { color: rgba(255,255,255,.82); transition: color .2s; }
+  nav .nav-links a:hover { color: #fff; }
+  nav .nav-logo { color: #fff; }
+  nav .nav-cta {
+    font-size: 13px; font-weight: 600; letter-spacing: .04em;
+    border: 1.5px solid rgba(255,255,255,.55); color: #fff; border-radius: 2px; padding: 8px 16px;
+    transition: background .2s, color .2s, border-color .2s;
+  }
+  nav .nav-cta:hover { background: #fff; color: var(--ink); border-color: #fff; }
+  /* Once scrolled (light nav bg): switch to dark text. */
+  nav.scrolled .nav-logo { color: var(--ink); }
+  nav.scrolled .nav-links a { color: var(--ink-soft); }
+  nav.scrolled .nav-links a:hover { color: var(--gray); }
+  nav.scrolled .nav-cta { border-color: var(--ink); color: var(--ink); }
+  nav.scrolled .nav-cta:hover { background: var(--ink); color: #fff; }
+  @media (max-width: 760px) { nav .nav-links { display: none; } }
+
+  /* ---------- HERO ---------- */
+  header.hero {
+    background: var(--ink);
+    color: #fff;
+    min-height: 100vh;
+    display: flex; flex-direction: column; justify-content: center;
+    position: relative;
+    padding: 140px 0 90px;
+    overflow: hidden;
+  }
+  /* faint concentric "broadcast" rings, top-right, as the quiet signature */
+  header.hero .rings {
+    position: absolute; top: -20%; right: -12%;
+    width: 760px; height: 760px; pointer-events: none; opacity: .5;
+  }
+  header.hero .rings span {
+    position: absolute; border-radius: 50%; border: 1px solid rgba(255,255,255,0.06);
+    inset: 0; margin: auto;
+  }
+
+  .hero-eyebrow {
+    font-size: 12px; font-weight: 600; letter-spacing: .42em; text-transform: uppercase;
+    color: rgba(255,255,255,.5); margin-bottom: 30px;
+    opacity: 0; transform: translateY(14px); animation: rise .7s ease forwards .1s;
+  }
+  .triad { font-weight: 800; letter-spacing: -.01em; line-height: .98; font-size: clamp(48px, 9vw, 116px); }
+  .triad span { display: inline-block; opacity: 0; transform: translateY(26px); }
+  .triad span:nth-child(1) { animation: rise .7s cubic-bezier(.2,.7,.2,1) forwards .25s; }
+  .triad span:nth-child(2) { animation: rise .7s cubic-bezier(.2,.7,.2,1) forwards .42s; }
+  .triad span:nth-child(3) { animation: rise .7s cubic-bezier(.2,.7,.2,1) forwards .59s; }
+  .triad .pd { color: var(--gray); }
+
+  .hero-sub {
+    margin-top: 34px; max-width: 600px;
+    font-size: clamp(17px, 2.1vw, 21px); font-weight: 400; line-height: 1.5;
+    color: rgba(255,255,255,.82);
+    opacity: 0; transform: translateY(14px); animation: rise .7s ease forwards .8s;
+  }
+  .hero-sub strong { font-weight: 600; color: #fff; }
+  .hero-actions {
+    margin-top: 42px; display: flex; gap: 16px; flex-wrap: wrap;
+    opacity: 0; transform: translateY(14px); animation: rise .7s ease forwards .95s;
+  }
+  .btn {
+    font-size: 14px; font-weight: 600; letter-spacing: .04em;
+    padding: 14px 26px; border-radius: 2px; transition: transform .15s, background .2s, color .2s;
+    display: inline-block;
+  }
+  .btn-primary { background: #fff; color: var(--ink); }
+  .btn-primary:hover { transform: translateY(-2px); }
+  .btn-ghost { border: 1.5px solid rgba(255,255,255,.4); color: #fff; }
+  .btn-ghost:hover { border-color: #fff; background: rgba(255,255,255,.07); }
+
+  @keyframes rise { to { opacity: 1; transform: translateY(0); } }
+
+  /* ---------- SECTION SHELL ---------- */
+  section { padding: 104px 0; }
+  .sec-eyebrow {
+    font-size: 12px; font-weight: 700; letter-spacing: .34em; text-transform: uppercase;
+    color: var(--gray); margin-bottom: 18px;
+  }
+  .sec-title { font-size: clamp(28px, 4vw, 44px); font-weight: 700; line-height: 1.12; letter-spacing: -.01em; max-width: 760px; }
+  .sec-lead { margin-top: 22px; max-width: 660px; font-size: 18px; color: var(--ink-soft); }
+
+  /* reveal on scroll */
+  .reveal { opacity: 0; transform: translateY(26px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+
+  /* ---------- POSITIONING ---------- */
+  .position { background: var(--paper); }
+  .position .big {
+    font-size: clamp(26px, 3.6vw, 40px); font-weight: 600; line-height: 1.25; letter-spacing: -.01em;
+    max-width: 880px; margin-top: 8px;
+  }
+  .position .big em { font-style: normal; color: var(--gray); }
+  .position-grid {
+    margin-top: 64px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 34px;
+  }
+  @media (max-width: 760px) { .position-grid { grid-template-columns: 1fr; gap: 30px; } }
+  .pcard .pnum { font-size: 13px; font-weight: 700; letter-spacing: .2em; color: var(--gray); }
+  .pcard h3 { font-size: 20px; font-weight: 700; margin: 14px 0 8px; }
+  .pcard p { font-size: 15px; color: var(--ink-soft); }
+  .pcard { border-top: 2px solid var(--ink); padding-top: 18px; }
+
+  /* ---------- WHO I HELP ---------- */
+  .who { background: var(--paper-warm); }
+  .who .who-lead { margin-top: 22px; max-width: 660px; font-size: 18px; color: var(--ink-soft); }
+  .who-grid {
+    margin-top: 48px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px;
+  }
+  @media (max-width: 860px) { .who-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 480px) { .who-grid { grid-template-columns: 1fr; } }
+  .who-item {
+    background: #fff; border: 1px solid var(--gray-line); border-radius: 6px;
+    padding: 20px 18px; font-size: 15px; font-weight: 600; color: var(--ink);
+  }
+  .who-foot { margin-top: 34px; font-size: 18px; font-weight: 600; color: var(--ink); max-width: 720px; }
+  .who-foot em { font-style: normal; color: var(--gray); }
+
+  /* ---------- SERVICES ---------- */
+  .services { background: var(--ink); color: #fff; }
+  .services .sec-eyebrow { color: rgba(255,255,255,.5); }
+  .services .sec-lead { color: rgba(255,255,255,.75); }
+  .tier-grid {
+    margin-top: 56px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px;
+  }
+  @media (max-width: 860px) { .tier-grid { grid-template-columns: 1fr; } }
+  .tier {
+    background: #fff; color: var(--ink); border-radius: 6px; padding: 32px 28px;
+    display: flex; flex-direction: column; position: relative;
+  }
+  .tier.feat { outline: 2px solid #fff; outline-offset: 4px; }
+  .tier .badge {
+    position: absolute; top: -12px; left: 28px; background: var(--ink); color: #fff;
+    font-size: 10px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase;
+    padding: 5px 12px; border-radius: 2px;
+  }
+  .tier h3 { font-size: 23px; font-weight: 700; font-style: italic; margin-bottom: 6px; }
+  .tier .tier-for { font-size: 13px; color: var(--gray); margin-bottom: 22px; min-height: 38px; }
+  .tier ul { list-style: none; margin-bottom: 26px; }
+  .tier li { font-size: 14px; color: var(--ink-soft); padding: 7px 0 7px 18px; position: relative; }
+  .tier li::before { content: '—'; position: absolute; left: 0; color: #bbb; }
+  .tier .price { margin-top: auto; font-size: 27px; font-weight: 700; }
+  .tier .price span { display: block; font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--gray); margin-top: 5px; }
+
+  .alacarte { margin-top: 24px; display: flex; flex-wrap: wrap; gap: 10px 26px; align-items: center; }
+  .alacarte .label { font-size: 12px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,.45); width: 100%; margin-bottom: 4px; }
+  .alacarte .item { font-size: 14px; color: rgba(255,255,255,.85); }
+  .alacarte .item b { font-weight: 700; color: #fff; }
+  .alacarte .dotsep { color: rgba(255,255,255,.25); }
+  .alacarte-note { margin-top: 16px; font-size: 13px; color: rgba(255,255,255,.55); }
+
+  /* ---------- APPS ---------- */
+  .apps { background: var(--paper-warm); }
+  .apps-head { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 20px; }
+  .apps .shipped { font-size: 13px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--gray); }
+  .apps .shipped b { color: var(--ink); }
+  .apps-grid { margin-top: 52px; display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
+  @media (max-width: 860px) { .apps-grid { grid-template-columns: 1fr; } }
+  .app-tier { background: #fff; border: 1px solid var(--gray-line); border-radius: 6px; padding: 28px 24px; }
+  .app-tier h3 { font-size: 19px; font-weight: 700; font-style: italic; margin-bottom: 12px; }
+  .app-tier p { font-size: 14px; color: var(--ink-soft); margin-bottom: 18px; min-height: 60px; }
+  .app-tier .price { font-size: 21px; font-weight: 700; }
+  .app-tier .price span { display:block; font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--gray); margin-top: 4px; }
+  .app-note { margin-top: 22px; font-size: 13px; color: var(--gray); }
+
+  /* ---------- ABOUT ---------- */
+  .about { background: var(--paper); }
+  .about-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 60px; align-items: start; }
+  @media (max-width: 860px) { .about-grid { grid-template-columns: 1fr; gap: 36px; } }
+  .about p { font-size: 18px; color: var(--ink-soft); margin-bottom: 20px; }
+  .about p strong { color: var(--ink); font-weight: 600; }
+  .stat-block { border-left: 2px solid var(--ink); padding-left: 22px; }
+  .stat-block .stat { margin-bottom: 24px; }
+  .stat-block .num { font-size: 34px; font-weight: 800; line-height: 1; letter-spacing: -.02em; }
+  .stat-block .cap { font-size: 13px; color: var(--gray); margin-top: 6px; }
+
+  /* ---------- CONTACT ---------- */
+  .contact { background: var(--ink); color: #fff; text-align: center; padding: 120px 0; }
+  .contact h2 { font-size: clamp(30px, 5vw, 56px); font-weight: 800; letter-spacing: -.01em; line-height: 1.05; }
+  .contact p { margin-top: 20px; font-size: 18px; color: rgba(255,255,255,.7); }
+  .contact .email-btn {
+    margin-top: 38px; display: inline-block; background: #fff; color: var(--ink);
+    font-size: 17px; font-weight: 600; padding: 16px 34px; border-radius: 2px; letter-spacing: .02em;
+    transition: transform .15s;
+  }
+  .contact .email-btn:hover { transform: translateY(-2px); }
+
+  /* ---------- FOOTER ---------- */
+  footer { background: #0c0c0c; color: rgba(255,255,255,.5); padding: 34px 0; }
+  footer .wrap { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px; }
+  footer .f-logo { display: flex; align-items: center; gap: 10px; font-weight: 700; letter-spacing: .14em; font-size: 14px; color: #fff; }
+  footer .f-logo .dot { width: 26px; height: 26px; border-radius: 50%; background: radial-gradient(circle at 32% 28%, #3a3a38, #0d0d0d 78%); display:inline-flex; align-items:center; justify-content:center; font-size: 10px; }
+  footer .f-meta { font-size: 13px; letter-spacing: .03em; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .triad span, .hero-eyebrow, .hero-sub, .hero-actions, .reveal { animation: none !important; opacity: 1 !important; transform: none !important; transition: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <a class="nav-logo" href="#top"><span class="dot">PK</span> WORKS</a>
+  <div class="nav-links">
+    <a href="#approach">Approach</a>
+    <a href="#who">Who I Help</a>
+    <a href="#services">Marketing</a>
+    <a href="#apps">Technology</a>
+    <a href="#about">About</a>
+  </div>
+  <a class="nav-cta" href="#contact">Get in touch</a>
+</nav>
+
+<header class="hero" id="top">
+  <div class="rings" aria-hidden="true">
+    <span style="width:100%;height:100%"></span>
+    <span style="width:74%;height:74%"></span>
+    <span style="width:48%;height:48%"></span>
+    <span style="width:24%;height:24%"></span>
+  </div>
+  <div class="wrap">
+    <div class="hero-eyebrow">Voice · Strategy · Social</div>
+    <h1 class="triad">
+      <span>Voice.<span class="pd"></span></span>
+      <span>Strategy.</span>
+      <span>Social.</span>
+    </h1>
+    <p class="hero-sub"><strong>Marketing leadership without the marketing department.</strong> Brand, content, and social media for businesses that need results, not another full-time hire. Starts at $1,500.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#services">See what I do</a>
+      <a class="btn btn-ghost" href="#contact">Start a conversation</a>
+    </div>
+  </div>
+</header>
+
+<section class="position" id="approach">
+  <div class="wrap">
+    <div class="sec-eyebrow reveal">The idea</div>
+    <p class="big reveal">Most growing businesses don't need to hire a marketing manager. They need someone who already knows how to build a brand, find its voice, and show up consistently. <em>That's where I work.</em></p>
+
+    <div class="position-grid">
+      <div class="pcard reveal">
+        <div class="pnum">Voice</div>
+        <h3>Sound like someone</h3>
+        <p>A clear brand voice and message, so every post, email, and page feels like it comes from the same place.</p>
+      </div>
+      <div class="pcard reveal">
+        <div class="pnum">Strategy</div>
+        <h3>Know the plan</h3>
+        <p>Content built on a real strategy with themes, cadence, and goals, not posting for the sake of posting.</p>
+      </div>
+      <div class="pcard reveal">
+        <div class="pnum">Social</div>
+        <h3>Show up consistently</h3>
+        <p>The calendars, the copy, the follow-through. The part most businesses run out of time to do well.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="who" id="who">
+  <div class="wrap">
+    <div class="sec-eyebrow reveal">Who I help</div>
+    <h2 class="sec-title reveal">Built for businesses without a marketing team.</h2>
+    <p class="who-lead reveal">If you're growing but too small to justify a full-time marketing hire, that's exactly who I'm built for.</p>
+
+    <div class="who-grid">
+      <div class="who-item reveal">Trades &amp; contractors</div>
+      <div class="who-item reveal">Local retail &amp; shops</div>
+      <div class="who-item reveal">Restaurants &amp; hospitality</div>
+      <div class="who-item reveal">Professional services</div>
+      <div class="who-item reveal">Home services</div>
+      <div class="who-item reveal">Nonprofits &amp; membership orgs</div>
+      <div class="who-item reveal">Fitness &amp; wellness</div>
+      <div class="who-item reveal">Real estate &amp; property</div>
+    </div>
+
+    <p class="who-foot reveal">Different businesses, same gap: <em>too big to ignore marketing, too small to staff it.</em></p>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="sec-eyebrow reveal">Marketing</div>
+    <h2 class="sec-title reveal">Three ways to work together.</h2>
+    <p class="sec-lead reveal">Start with a one-time foundation, or bring me on monthly as the marketing partner your business has been missing. A fraction of the cost of a full-time hire, scaled to what you actually need.</p>
+
+    <div class="tier-grid">
+      <div class="tier reveal">
+        <h3>Foundation</h3>
+        <div class="tier-for">For businesses that don't know where to start</div>
+        <ul>
+          <li>Brand voice guide</li>
+          <li>Audience definition</li>
+          <li>Platform recommendation</li>
+          <li>90-day content strategy</li>
+          <li>10 starter post concepts</li>
+        </ul>
+        <div class="price">One-time<span>2 weeks · No contract</span></div>
+      </div>
+
+      <div class="tier feat reveal">
+        <div class="badge">Most Popular</div>
+        <h3>Signal</h3>
+        <div class="tier-for">For businesses ready to show up consistently</div>
+        <ul>
+          <li>Monthly content calendar</li>
+          <li>12 posts, written and formatted</li>
+          <li>Caption copy in your brand voice</li>
+          <li>Graphic direction included</li>
+          <li>Monthly performance check-in</li>
+        </ul>
+        <div class="price">Monthly<span>Per month · 3-month minimum</span></div>
+      </div>
+
+      <div class="tier reveal">
+        <h3>Full Signal</h3>
+        <div class="tier-for">For businesses that want a true marketing partner</div>
+        <ul>
+          <li>Everything in Signal</li>
+          <li>Quarterly strategy sessions</li>
+          <li>Campaign and event planning</li>
+          <li>Monthly email or newsletter copy</li>
+          <li>Priority availability</li>
+        </ul>
+        <div class="price">Monthly<span>Per month · 3-month minimum</span></div>
+      </div>
+    </div>
+
+    <div class="alacarte reveal">
+      <span class="label">À la carte for partners</span>
+      <span class="item">Social Media Audit</span><span class="dotsep">·</span>
+      <span class="item">Brand Voice Guide</span><span class="dotsep">·</span>
+      <span class="item">Email Campaign</span><span class="dotsep">·</span>
+      <span class="item">LinkedIn Rewrite</span><span class="dotsep">·</span>
+      <span class="item">Voiceover</span><span class="dotsep">·</span>
+      <span class="item">Podcast Launch</span><span class="dotsep">·</span>
+      <span class="item">Podcast Production</span>
+    </div>
+    <p class="alacarte-note reveal">Pricing shared in a short conversation, so I can scope it to what you actually need.</p>
+  </div>
+</section>
+
+<section class="apps" id="apps">
+  <div class="wrap">
+    <div class="apps-head">
+      <div>
+        <div class="sec-eyebrow reveal">When marketing needs technology</div>
+        <h2 class="sec-title reveal">I don't just plan it. I can build it.</h2>
+      </div>
+      <div class="shipped reveal">Shipped: <b>ATMO · BrickKeep · PawFile · Dropzone</b></div>
+    </div>
+    <p class="sec-lead reveal">Custom web and mobile apps designed, built, and shipped. From a simple tool to a full product with accounts, payments, and integrations. I can write the ad, voice it, produce it, and market it, then build the tool behind it. Very few marketing people can hand you all of that.</p>
+
+    <div class="apps-grid">
+      <div class="app-tier reveal">
+        <h3>Simple</h3>
+        <p>Landing page or single-purpose tool. No accounts or database.</p>
+        <div class="price">Project<span>One-time build</span></div>
+      </div>
+      <div class="app-tier reveal">
+        <h3>Standard</h3>
+        <p>Multiple features, a database, and user accounts. Deployed live.</p>
+        <div class="price">Project<span>One-time build</span></div>
+      </div>
+      <div class="app-tier reveal">
+        <h3>Complex</h3>
+        <p>Full app with accounts, integrations (payments, OAuth, APIs), and native packaging.</p>
+        <div class="price">Project<span>One-time build</span></div>
+      </div>
+    </div>
+    <p class="app-note reveal">An optional Care Plan keeps it running after launch (hosting and maintenance), with changes available as you grow.</p>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div>
+      <div class="sec-eyebrow reveal">About</div>
+      <h2 class="sec-title reveal" style="margin-bottom:28px;">15 years making brands sound like something.</h2>
+      <p class="reveal">PK Works is me, Phil Kukawinski. I spent 15 years in radio building brands, growing audiences, and producing the kind of content that makes people stop and pay attention.</p>
+      <p class="reveal">That's where the ear for voice comes from, and the instinct for what actually moves people instead of just filling a feed. Now I bring that same expertise to businesses that need real marketing leadership without the cost of a full-time hire.</p>
+      <p class="reveal">I work with a small number of clients at a time, which means you get someone who treats your brand like it's the only one that matters. Because while we're working together, it is.</p>
+    </div>
+    <div class="stat-block reveal">
+      <div class="stat">
+        <div class="num">15 yrs</div>
+        <div class="cap">Building brands and audiences in media</div>
+      </div>
+      <div class="stat">
+        <div class="num">4 apps</div>
+        <div class="cap">Designed, built, and shipped independently</div>
+      </div>
+      <div class="stat">
+        <div class="num">1 seat</div>
+        <div class="cap">The marketing department your business is missing</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2>Let's talk about your brand.</h2>
+    <p>A short conversation is the best way to see if we're a fit. No pitch, no pressure.</p>
+    <a class="email-btn" href="mailto:phil@pkworks.co">phil@pkworks.co</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="f-logo"><span class="dot">PK</span> WORKS</div>
+    <div class="f-meta">Voice. Strategy. Social. · Louisville, KY</div>
+  </div>
+</footer>
+
+<script>
+  // nav background on scroll
+  var nav = document.getElementById('nav');
+  function onScroll(){ if (window.scrollY > 30) nav.classList.add('scrolled'); else nav.classList.remove('scrolled'); }
+  window.addEventListener('scroll', onScroll); onScroll();
+
+  // reveal on scroll
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(function(el, i){
+    el.style.transitionDelay = (i % 3) * 0.07 + 's';
+    io.observe(el);
+  });
+</script>
+
+</body>
+</html>
