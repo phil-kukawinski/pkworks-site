@@ -256,16 +256,16 @@ footer .logo-dark {
   grid-template-columns: 1.5fr 1fr;
   gap: 60px;
   align-items: start;
+  margin-bottom: 50px;
 }
 
-/* right column stacks items vertically */
-.about-side {
+/* keeps bio text clean */
+.about-bio {
   display: flex;
   flex-direction: column;
-  gap: 34px;
 }
 
-/* keeps image from stretching weird */
+/* image */
 .about-photo-frame {
   width: 100%;
   max-width: 360px;
@@ -283,25 +283,24 @@ footer .logo-dark {
   filter: grayscale(100%) contrast(1.05);
 }
 
-/* subtle editorial treatment */
-.about-photo-frame::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(0,0,0,0.08),
-    rgba(255,255,255,0.0)
-  );
-  pointer-events: none;
+/* ROW 2 STATS */
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 34px;
+  padding-top: 30px;
+  border-top: 1px solid var(--gray-line);
 }
 
-.about-photo-frame img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: grayscale(100%) contrast(1.05);
-  transform: scale(1.02);
+/* mobile fallback */
+@media (max-width: 860px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-stats {
+    grid-template-columns: 1fr;
+  }
 }
 
   /* ---------- CONTACT ---------- */
@@ -515,8 +514,8 @@ footer .logo-dark {
 <section class="about" id="about">
   <div class="wrap about-grid">
 
-    <!-- LEFT COLUMN -->
-    <div class="about-content">
+    <!-- ROW 1: BIO + PHOTO -->
+    <div class="about-bio">
       <div class="sec-eyebrow reveal">About</div>
 
       <h2 class="sec-title reveal" style="margin-bottom:28px;">
@@ -536,32 +535,30 @@ footer .logo-dark {
       </p>
     </div>
 
-    <!-- RIGHT COLUMN -->
-    <div class="about-side">
-
-      <div class="about-media reveal">
-        <div class="about-photo-frame">
-          <img src="pk-headshot.png" alt="Phil Kukawinski" />
-        </div>
+    <div class="about-media reveal">
+      <div class="about-photo-frame">
+        <img src="pk-headshot.png" alt="Phil Kukawinski" />
       </div>
+    </div>
 
-      <div class="stat-block reveal">
-        <div class="stat">
-          <div class="num">15+ yrs</div>
-          <div class="cap">Building brands and audiences in media</div>
-        </div>
+  </div>
 
-        <div class="stat">
-          <div class="num">4 apps</div>
-          <div class="cap">Designed, built, and shipped independently</div>
-        </div>
+  <!-- ROW 2: STATS -->
+  <div class="wrap about-stats reveal">
 
-        <div class="stat">
-          <div class="num">1 seat</div>
-          <div class="cap">The marketing department your business is missing</div>
-        </div>
-      </div>
+    <div class="stat">
+      <div class="num">15+ yrs</div>
+      <div class="cap">Building brands and audiences in media</div>
+    </div>
 
+    <div class="stat">
+      <div class="num">4 apps</div>
+      <div class="cap">Designed, built, and shipped independently</div>
+    </div>
+
+    <div class="stat">
+      <div class="num">1 seat</div>
+      <div class="cap">The marketing department your business is missing</div>
     </div>
 
   </div>
