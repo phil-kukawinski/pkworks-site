@@ -255,6 +255,36 @@ footer .logo-dark {
   .app-tier .price span { display:block; font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--gray); margin-top: 4px; }
   .app-note { margin-top: 22px; font-size: 13px; color: var(--gray); }
 
+  /* ---------- PORTFOLIO ---------- */
+  .portfolio { background: var(--paper); }
+  .portfolio .sec-lead { margin-bottom: 0; }
+  .work-grid {
+    margin-top: 52px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px;
+  }
+  @media (max-width: 760px) { .work-grid { grid-template-columns: 1fr; } }
+  .work-card {
+    display: flex; flex-direction: column; justify-content: space-between;
+    background: var(--paper-warm); border: 1px solid var(--gray-line); border-radius: 8px;
+    padding: 28px 28px 24px; transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+    min-height: 180px;
+  }
+  .work-card:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0,0,0,.07); border-color: #cfcec9; }
+  .work-top { display: flex; align-items: baseline; justify-content: space-between; gap: 14px; }
+  .work-name { font-size: 24px; font-weight: 700; letter-spacing: -.01em; }
+  .work-live {
+    font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+    color: #1f9d55; border: 1px solid rgba(31,157,85,.35); border-radius: 20px;
+    padding: 4px 10px; white-space: nowrap;
+  }
+  .work-desc { margin-top: 12px; font-size: 15px; color: var(--ink-soft); line-height: 1.5; }
+  .work-link {
+    margin-top: 22px; font-size: 13px; font-weight: 600; letter-spacing: .03em;
+    color: var(--ink); display: inline-flex; align-items: center; gap: 7px;
+  }
+  .work-link .arr { transition: transform .18s ease; }
+  .work-card:hover .work-link .arr { transform: translateX(4px); }
+  .work-foot { margin-top: 36px; font-size: 15px; color: var(--gray); }
+
   /* ---------- ABOUT ---------- */
   .about { background: var(--paper); }
   .about-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 60px; align-items: start; }
