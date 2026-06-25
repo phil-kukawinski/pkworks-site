@@ -285,6 +285,42 @@ footer .logo-dark {
   .work-card:hover .work-link .arr { transform: translateX(4px); }
   .work-foot { margin-top: 36px; font-size: 15px; color: var(--gray); }
 
+  /* ---------- CAROUSEL ---------- */
+  .gallery { margin-top: 64px; }
+  .gallery-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; flex-wrap: wrap; margin-bottom: 24px; }
+  .gallery-head h3 { font-size: 22px; font-weight: 700; letter-spacing: -.01em; }
+  .gallery-head p { font-size: 14px; color: var(--gray); margin-top: 4px; }
+  .gallery-controls { display: flex; gap: 10px; }
+  .gallery-btn {
+    width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid var(--gray-line);
+    background: #fff; color: var(--ink); font-size: 18px; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: background .18s, color .18s, border-color .18s;
+  }
+  .gallery-btn:hover { background: var(--ink); color: #fff; border-color: var(--ink); }
+  .gallery-btn:disabled { opacity: .3; cursor: default; background: #fff; color: var(--ink); border-color: var(--gray-line); }
+  .gallery-track-wrap { overflow: hidden; }
+  .gallery-track {
+    display: flex; gap: 16px; scroll-behavior: smooth; overflow-x: auto;
+    scroll-snap-type: x mandatory; padding-bottom: 6px;
+    -ms-overflow-style: none; scrollbar-width: none;
+  }
+  .gallery-track::-webkit-scrollbar { display: none; }
+  .gallery-slide {
+    flex: 0 0 auto; width: 300px; scroll-snap-align: start;
+    border-radius: 8px; overflow: hidden; border: 1px solid var(--gray-line); background: var(--paper-warm);
+    aspect-ratio: 4 / 5; display: flex; align-items: center; justify-content: center;
+  }
+  .gallery-slide img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  /* placeholder look until real images are added */
+  .gallery-slide.placeholder { position: relative; }
+  .gallery-slide.placeholder::after {
+    content: attr(data-label);
+    font-size: 13px; font-weight: 600; letter-spacing: .04em; color: var(--gray);
+    text-align: center; padding: 0 18px; line-height: 1.5;
+  }
+  @media (max-width: 600px) { .gallery-slide { width: 240px; } }
+
   /* ---------- ABOUT ---------- */
   .about { background: var(--paper); }
   .about-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 60px; align-items: start; }
@@ -711,7 +747,31 @@ footer .logo-dark {
       </a>
     </div>
  
-    <p class="work-foot reveal">Marketing case studies land here as client work wraps.</p>
+    <div class="gallery reveal">
+      <div class="gallery-head">
+        <div>
+          <h3>The marketing work</h3>
+          <p>Campaigns, social, and brand work. Swipe through.</p>
+        </div>
+        <div class="gallery-controls">
+          <button class="gallery-btn" id="galPrev" aria-label="Previous">&larr;</button>
+          <button class="gallery-btn" id="galNext" aria-label="Next">&rarr;</button>
+        </div>
+      </div>
+ 
+      <div class="gallery-track-wrap">
+        <div class="gallery-track" id="galTrack">
+          <!-- Replace each placeholder div with: <div class="gallery-slide"><img src="work-1.png" alt="..." /></div> -->
+          <div class="gallery-slide"><img src="work-2.png" alt="Proven Success"></div>
+          <div class="gallery-slide"><img src="work-1.png" alt="Duet with Disturbed campaign"></div>
+          <div class="gallery-slide"><img src="work-4.png" alt="Festination Flyaway Experience"></div>
+          <div class="gallery-slide"><img src="work-6.png" alt="ATMO 'This Or That' Content"></div>
+          <div class="gallery-slide"><img src="work-7.png" alt="Pup Close With PK & Kentucky Humane Society"></div>
+        </div>
+      </div>
+ 
+      <p class="work-foot reveal">Marketing case studies land here as client work wraps.</p>
+    </div>
   </div>
 </section>
 
