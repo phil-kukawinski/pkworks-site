@@ -238,55 +238,55 @@ footer .logo-light { display: block; }
   .app-tier .price span { display:block; font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--gray); margin-top: 4px; }
   .app-note { margin-top: 22px; font-size: 13px; color: var(--gray); }
 
-  /* ---------- PORTFOLIO ---------- */
-  .portfolio { background: var(--paper); }
-  .portfolio .sec-lead { margin-bottom: 0; }
+  /* ---------- PORTFOLIO (dark) ---------- */
+  .portfolio { background: var(--ink); color: #fff; }
+  .portfolio .sec-eyebrow { color: rgba(255,255,255,.5); }
+  .portfolio .sec-lead { margin-bottom: 0; color: rgba(255,255,255,.75); }
   .work-grid {
     margin-top: 52px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px;
   }
   @media (max-width: 760px) { .work-grid { grid-template-columns: 1fr; } }
   .work-card {
     display: flex; flex-direction: column; justify-content: space-between;
-    background: var(--paper-warm); border: 1px solid var(--gray-line); border-radius: 8px;
-    padding: 28px 28px 24px; transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+    background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.10); border-radius: 8px;
+    padding: 28px 28px 24px; transition: transform .18s ease, background .18s ease, border-color .18s ease;
     min-height: 180px;
   }
-  .work-card:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0,0,0,.07); border-color: #cfcec9; }
+  .work-card:hover { transform: translateY(-3px); background: rgba(255,255,255,.07); border-color: rgba(255,255,255,.22); }
   .work-top { display: flex; align-items: baseline; justify-content: space-between; gap: 14px; }
-  .work-name { font-size: 24px; font-weight: 700; letter-spacing: -.01em; }
+  .work-name { font-size: 24px; font-weight: 700; letter-spacing: -.01em; color: #fff; }
   .work-live {
     font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
-    color: #1f9d55; border: 1px solid rgba(31,157,85,.35); border-radius: 20px;
+    color: #4ade80; border: 1px solid rgba(74,222,128,.4); border-radius: 20px;
     padding: 4px 10px; white-space: nowrap;
   }
-  .work-desc { margin-top: 12px; font-size: 15px; color: var(--ink-soft); line-height: 1.5; }
+  .work-desc { margin-top: 12px; font-size: 15px; color: rgba(255,255,255,.7); line-height: 1.5; }
   .work-link {
     margin-top: 22px; font-size: 13px; font-weight: 600; letter-spacing: .03em;
-    color: var(--ink); display: inline-flex; align-items: center; gap: 7px;
+    color: #fff; display: inline-flex; align-items: center; gap: 7px;
   }
   .work-link .arr { transition: transform .18s ease; }
   .work-card:hover .work-link .arr { transform: translateX(4px); }
-  .work-foot { margin-top: 36px; font-size: 15px; color: var(--gray); }
+  .work-foot { margin-top: 36px; font-size: 15px; color: rgba(255,255,255,.55); }
 
   /* ---------- CAROUSEL ---------- */
   .gallery { margin-top: 64px; }
   .gallery-head { margin-bottom: 28px; }
-  .gallery-head h3 { font-size: 22px; font-weight: 700; letter-spacing: -.01em; }
-  .gallery-head p { font-size: 14px; color: var(--gray); margin-top: 4px; }
+  .gallery-head h3 { font-size: 22px; font-weight: 700; letter-spacing: -.01em; color: #fff; }
+  .gallery-head p { font-size: 14px; color: rgba(255,255,255,.55); margin-top: 4px; }
 
   /* row: [prev arrow] [track] [next arrow] */
   .gallery-row { display: flex; align-items: center; gap: 16px; }
   .gallery-btn {
     flex: 0 0 auto;
-    width: 48px; height: 48px; border-radius: 50%; border: 1.5px solid var(--gray-line);
-    background: #fff; color: var(--ink); font-size: 19px; cursor: pointer;
+    width: 48px; height: 48px; border-radius: 50%; border: 1.5px solid rgba(255,255,255,.25);
+    background: rgba(255,255,255,.06); color: #fff; font-size: 19px; cursor: pointer;
     display: flex; align-items: center; justify-content: center;
-    box-shadow: 0 4px 14px rgba(0,0,0,.06);
-    transition: background .18s, color .18s, border-color .18s, transform .18s, box-shadow .18s;
+    transition: background .18s, color .18s, border-color .18s, transform .18s;
   }
-  .gallery-btn:hover { background: var(--ink); color: #fff; border-color: var(--ink); transform: scale(1.06); box-shadow: 0 8px 22px rgba(0,0,0,.16); }
+  .gallery-btn:hover { background: #fff; color: var(--ink); border-color: #fff; transform: scale(1.06); }
   .gallery-btn:active { transform: scale(.96); }
-  .gallery-btn:disabled { opacity: .25; cursor: default; background: #fff; color: var(--ink); border-color: var(--gray-line); transform: none; box-shadow: none; }
+  .gallery-btn:disabled { opacity: .25; cursor: default; background: rgba(255,255,255,.06); color: #fff; border-color: rgba(255,255,255,.25); transform: none; }
   .gallery-track-wrap { overflow: hidden; flex: 1 1 auto; }
   .gallery-track {
     display: flex; gap: 20px; scroll-behavior: smooth; overflow-x: auto;
@@ -296,14 +296,16 @@ footer .logo-light { display: block; }
   .gallery-track::-webkit-scrollbar { display: none; }
   .gallery-slide {
     flex: 0 0 auto; width: 300px; scroll-snap-align: start; position: relative;
-    border-radius: 12px; overflow: hidden; background: var(--paper-warm);
+    border-radius: 12px; overflow: hidden; background: rgba(255,255,255,.05);
     aspect-ratio: 4 / 5; display: flex; align-items: center; justify-content: center;
-    box-shadow: 0 10px 26px rgba(20,20,20,.12), 0 2px 6px rgba(20,20,20,.08);
-    transition: transform .25s ease, box-shadow .25s ease;
+    border: 1px solid rgba(255,255,255,.08);
+    box-shadow: 0 14px 34px rgba(0,0,0,.5), 0 2px 8px rgba(0,0,0,.4);
+    transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
   }
   .gallery-slide:hover {
     transform: translateY(-6px);
-    box-shadow: 0 22px 48px rgba(20,20,20,.22), 0 6px 14px rgba(20,20,20,.12);
+    box-shadow: 0 26px 56px rgba(0,0,0,.65), 0 8px 18px rgba(0,0,0,.5);
+    border-color: rgba(255,255,255,.2);
   }
   .gallery-slide img { width: 100%; height: 100%; object-fit: cover; display: block; }
   /* caption overlay, shows on hover (desktop), always-on for touch */
