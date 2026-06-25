@@ -55,54 +55,39 @@
   /* --- LOGO BASE --- */
 .nav-logo img,
 .f-logo img {
-  height: 60px;
-  width: 60px;
-  display: none; /* IMPORTANT: start hidden */
+  height: 64px;
+  width: auto;
+  display: none;
 }
-
-/* default state (hero = dark background) */
-nav:not(.scrolled) .logo-light {
-  display: block;
-}
-
-/* scrolled state (light nav background) */
-nav.scrolled .logo-dark {
-  display: block;
-}
-
-/* footer always dark logo */
-footer .logo-dark {
-  display: block;
-}
+.f-logo img { height: 70px; }
+nav:not(.scrolled) .logo-light { display: block; }
+nav.scrolled .logo-dark { display: block; }
+footer .logo-light { display: block; }
 
   /* ---------- NAV ---------- */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     display: flex; align-items: center; justify-content: space-between;
-    padding: 20px 32px;
+    padding: 16px 32px;
     background: rgba(255,255,255,0);
     transition: background .3s ease, padding .3s ease, box-shadow .3s ease;
   }
   nav.scrolled {
     background: rgba(255,255,255,0.92);
     backdrop-filter: blur(10px);
-    padding: 14px 32px;
+    padding: 8px 32px;
     box-shadow: 0 1px 0 var(--gray-line);
   }
-  nav .nav-logo { display: flex; align-items: center; gap: 11px; font-weight: 700; letter-spacing: .14em; font-size: 15px; }
+  nav .nav-logo { display: flex; align-items: center; gap: 11px; }
   nav .nav-links { display: flex; gap: 30px; font-size: 13px; font-weight: 500; letter-spacing: .04em; }
-  /* On load (over dark hero): light text. */
   nav .nav-links a { color: rgba(255,255,255,.82); transition: color .2s; }
   nav .nav-links a:hover { color: #fff; }
-  nav .nav-logo { color: #fff; }
   nav .nav-cta {
     font-size: 13px; font-weight: 600; letter-spacing: .04em;
     border: 1.5px solid rgba(255,255,255,.55); color: #fff; border-radius: 2px; padding: 8px 16px;
     transition: background .2s, color .2s, border-color .2s;
   }
   nav .nav-cta:hover { background: #fff; color: var(--ink); border-color: #fff; }
-  /* Once scrolled (light nav bg): switch to dark text. */
-  nav.scrolled .nav-logo { color: var(--ink); }
   nav.scrolled .nav-links a { color: var(--ink-soft); }
   nav.scrolled .nav-links a:hover { color: var(--gray); }
   nav.scrolled .nav-cta { border-color: var(--ink); color: var(--ink); }
@@ -119,7 +104,6 @@ footer .logo-dark {
     padding: 140px 0 90px;
     overflow: hidden;
   }
-  /* faint concentric "broadcast" rings, top-right, as the quiet signature */
   header.hero .rings {
     position: absolute; top: -20%; right: -12%;
     width: 760px; height: 760px; pointer-events: none; opacity: .5;
@@ -173,7 +157,6 @@ footer .logo-dark {
   .sec-title { font-size: clamp(28px, 4vw, 44px); font-weight: 700; line-height: 1.12; letter-spacing: -.01em; max-width: 760px; }
   .sec-lead { margin-top: 22px; max-width: 660px; font-size: 18px; color: var(--ink-soft); }
 
-  /* reveal on scroll */
   .reveal { opacity: 0; transform: translateY(26px); transition: opacity .7s ease, transform .7s ease; }
   .reveal.in { opacity: 1; transform: translateY(0); }
 
@@ -234,7 +217,7 @@ footer .logo-dark {
   .tier .price { margin-top: auto; font-size: 27px; font-weight: 700; }
   .tier .price span { display: block; font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--gray); margin-top: 5px; }
 
-  .alacarte { margin-top: 56px; padding: 28px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 8px; display: flex; flex-wrap: wrap; gap: 10px 26px; align-items: center; }
+  .alacarte { margin-top: 24px; display: flex; flex-wrap: wrap; gap: 10px 26px; align-items: center; }
   .alacarte .label { font-size: 12px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,.45); width: 100%; margin-bottom: 4px; }
   .alacarte .item { font-size: 14px; color: rgba(255,255,255,.85); }
   .alacarte .item b { font-weight: 700; color: #fff; }
@@ -307,186 +290,75 @@ footer .logo-dark {
   }
   .gallery-track::-webkit-scrollbar { display: none; }
   .gallery-slide {
-    flex: 0 0 auto; width: 300px; scroll-snap-align: start;
+    flex: 0 0 auto; width: 300px; scroll-snap-align: start; position: relative;
     border-radius: 8px; overflow: hidden; border: 1px solid var(--gray-line); background: var(--paper-warm);
     aspect-ratio: 4 / 5; display: flex; align-items: center; justify-content: center;
   }
   .gallery-slide img { width: 100%; height: 100%; object-fit: cover; display: block; }
-  /* placeholder look until real images are added */
-  .gallery-slide.placeholder { position: relative; }
-  .gallery-slide.placeholder::after {
-    content: attr(data-label);
-    font-size: 13px; font-weight: 600; letter-spacing: .04em; color: var(--gray);
-    text-align: center; padding: 0 18px; line-height: 1.5;
+  /* caption overlay from data-caption, shows on hover (desktop) and always-faint on touch */
+  .gallery-slide .cap-overlay {
+    position: absolute; left: 0; right: 0; bottom: 0;
+    padding: 16px 16px 14px; font-size: 13px; font-weight: 600; line-height: 1.35; color: #fff;
+    background: linear-gradient(to top, rgba(0,0,0,.82), rgba(0,0,0,.45) 60%, rgba(0,0,0,0));
+    opacity: 0; transform: translateY(8px); transition: opacity .22s ease, transform .22s ease;
+    pointer-events: none;
   }
+  .gallery-slide:hover .cap-overlay { opacity: 1; transform: translateY(0); }
+  @media (hover: none) { .gallery-slide .cap-overlay { opacity: 1; transform: translateY(0); } }
   @media (max-width: 600px) { .gallery-slide { width: 240px; } }
 
   /* ---------- ABOUT ---------- */
   .about { background: var(--paper); }
-  .about-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 60px; align-items: start; }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 60px;
+    align-items: start;
+    margin-bottom: 50px;
+  }
   @media (max-width: 860px) { .about-grid { grid-template-columns: 1fr; gap: 36px; } }
   .about p { font-size: 18px; color: var(--ink-soft); margin-bottom: 20px; }
   .about p strong { color: var(--ink); font-weight: 600; }
-  .stat-block { border-left: 2px solid var(--ink); padding-left: 22px; }
-  .stat-block .stat { margin-bottom: 24px; }
-  .stat-block .num { font-size: 34px; font-weight: 800; line-height: 1; letter-spacing: -.02em; }
-  .stat-block .cap { font-size: 13px; color: var(--gray); margin-top: 6px; }
+  .about-bio { display: flex; flex-direction: column; }
+  .about-photo-frame {
+    width: 100%; max-width: 360px; aspect-ratio: 4 / 5; overflow: hidden;
+    border-radius: 6px; border: 1px solid var(--gray-line); background: var(--paper-warm);
+  }
+  .about-photo-frame img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%) contrast(1.05); }
 
-  .about-grid {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  gap: 60px;
-  align-items: start;
-  margin-bottom: 50px;
-}
-
-/* keeps bio text clean */
-.about-bio {
-  display: flex;
-  flex-direction: column;
-}
-
-/* image */
-.about-photo-frame {
-  width: 100%;
-  max-width: 400px;
-  aspect-ratio: 4 / 5;
-  overflow: hidden;
-  border-radius: 8px;
-  background: #fff;
-
-  box-shadow:
-  0 40px 80px rgba(0,0,0,.24),
-  0 24px 56px rgba(0,0,0,.18);
-}
-
-.about-photo-frame img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center center;
-  display: block;
-  filter: grayscale(100%) contrast(1.05);
-}
-
-/* ROW 2 STATS */
-.about-stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0;
-  border-top: 1px solid var(--gray-line);
-  margin-top: 10px;
-  position: relative;
-  overflow: hidden;
-  background: var(--paper);
-}
-
-/* vertical dividers = signal channels */
-.about-stats .stat {
-  padding: 26px 24px;
-  position: relative;
-  text-align: left;
-}
-
-/* thin divider lines between stats */
-.about-stats .stat:not(:last-child)::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 18%;
-  bottom: 18%;
-  width: 1px;
-  background: var(--gray-line);
-  opacity: 0.9;
-}
-
-/* number styling = “signal strength” feel */
-.about-stats .num {
-  font-size: 28px;
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  position: relative;
-  display: inline-block;
-}
-
-/* animated underline (broadcast pulse) */
-.about-stats .num::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  height: 2px;
-  width: 100%;
-  background: linear-gradient(90deg, transparent, var(--ink), transparent);
-  transform: scaleX(0.6);
-  opacity: 0.6;
-  animation: signalPulse 2.6s infinite ease-in-out;
-}
-
-/* label text */
-.about-stats .cap {
-  margin-top: 8px;
-  font-size: 13px;
-  color: var(--gray);
-  letter-spacing: 0.02em;
-}
-
-/* scanline overlay across entire strip */
-.about-stats::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: repeating-linear-gradient(
-    to bottom,
-    rgba(0,0,0,0.025),
-    rgba(0,0,0,0.025) 1px,
-    transparent 1px,
-    transparent 6px
-  );
-  pointer-events: none;
-  opacity: 0.35;
-}
-
-/* subtle moving “signal sweep” */
-.about-stats::after {
-  content: "";
-  position: absolute;
-  top: -40%;
-  left: -20%;
-  width: 60%;
-  height: 200%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(0,0,0,0.04),
-    transparent
-  );
-  transform: rotate(12deg);
-  animation: scanSweep 6s infinite linear;
-  pointer-events: none;
-}
-
-/* animations */
-@keyframes signalPulse {
-  0%, 100% { transform: scaleX(0.65); opacity: 0.45; }
-  50% { transform: scaleX(1); opacity: 0.9; }
-}
-
-@keyframes scanSweep {
-  0% { transform: translateX(-40%) rotate(12deg); }
-  100% { transform: translateX(180%) rotate(12deg); }
-}
-
-/* mobile */
-@media (max-width: 860px) {
   .about-stats {
-    grid-template-columns: 1fr;
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 0;
+    border-top: 1px solid var(--gray-line); margin-top: 10px;
+    position: relative; overflow: hidden; background: var(--paper);
   }
-
+  .about-stats .stat { padding: 26px 24px; position: relative; text-align: left; }
   .about-stats .stat:not(:last-child)::after {
-    display: none;
+    content: ""; position: absolute; right: 0; top: 18%; bottom: 18%;
+    width: 1px; background: var(--gray-line); opacity: 0.9;
   }
-}
+  .about-stats .num { font-size: 28px; font-weight: 800; letter-spacing: -0.02em; position: relative; display: inline-block; }
+  .about-stats .num::after {
+    content: ""; position: absolute; left: 0; bottom: -6px; height: 2px; width: 100%;
+    background: linear-gradient(90deg, transparent, var(--ink), transparent);
+    transform: scaleX(0.6); opacity: 0.6; animation: signalPulse 2.6s infinite ease-in-out;
+  }
+  .about-stats .cap { margin-top: 8px; font-size: 13px; color: var(--gray); letter-spacing: 0.02em; }
+  .about-stats::before {
+    content: ""; position: absolute; inset: 0;
+    background: repeating-linear-gradient(to bottom, rgba(0,0,0,0.025), rgba(0,0,0,0.025) 1px, transparent 1px, transparent 6px);
+    pointer-events: none; opacity: 0.35;
+  }
+  .about-stats::after {
+    content: ""; position: absolute; top: -40%; left: -20%; width: 60%; height: 200%;
+    background: linear-gradient(90deg, transparent, rgba(0,0,0,0.04), transparent);
+    transform: rotate(12deg); animation: scanSweep 6s infinite linear; pointer-events: none;
+  }
+  @keyframes signalPulse { 0%, 100% { transform: scaleX(0.65); opacity: 0.45; } 50% { transform: scaleX(1); opacity: 0.9; } }
+  @keyframes scanSweep { 0% { transform: translateX(-40%) rotate(12deg); } 100% { transform: translateX(180%) rotate(12deg); } }
+  @media (max-width: 860px) {
+    .about-stats { grid-template-columns: 1fr; }
+    .about-stats .stat:not(:last-child)::after { display: none; }
+  }
 
   /* ---------- CONTACT ---------- */
   .contact { background: var(--ink); color: #fff; text-align: center; padding: 120px 0; }
@@ -500,16 +372,12 @@ footer .logo-dark {
   .contact .email-btn:hover { transform: translateY(-2px); }
 
   /* ---------- FOOTER ---------- */
-  footer { background: #0c0c0c; color: rgba(255,255,255,.5); padding: 34px 0; }
+  footer { background: #0c0c0c; color: rgba(255,255,255,.5); padding: 40px 0; }
   footer .wrap {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  gap: 10px;
-}
-  footer .f-logo { display: flex; align-items: center; gap: 10px; font-weight: 700; letter-spacing: .14em; font-size: 14px; color: #fff; }
+    display: flex; justify-content: center; align-items: center;
+    flex-direction: column; text-align: center; gap: 14px;
+  }
+  footer .f-logo { display: flex; align-items: center; }
   footer .f-meta { font-size: 13px; letter-spacing: .03em; }
 
   @media (prefers-reduced-motion: reduce) {
@@ -529,6 +397,7 @@ footer .logo-dark {
     <a href="#who">Who I Help</a>
     <a href="#services">Marketing</a>
     <a href="#apps">Technology</a>
+    <a href="#work">Work</a>
     <a href="#about">About</a>
   </div>
   <a class="nav-cta" href="#contact">Get in touch</a>
@@ -542,7 +411,7 @@ footer .logo-dark {
     <span style="width:24%;height:24%"></span>
   </div>
   <div class="wrap">
-    <div class="hero-eyebrow">Voice · Strategy · Social</div>
+    <div class="hero-eyebrow">Voice &middot; Strategy &middot; Social</div>
     <h1 class="triad">
       <span>Voice.<span class="pd"></span></span>
       <span>Strategy.</span>
@@ -619,7 +488,7 @@ footer .logo-dark {
           <li>90-day content strategy</li>
           <li>10 starter post concepts</li>
         </ul>
-        <div class="price">One-time<span>2 weeks · No contract</span></div>
+        <div class="price">One-time<span>2 weeks &middot; No contract</span></div>
       </div>
 
       <div class="tier feat reveal">
@@ -633,7 +502,7 @@ footer .logo-dark {
           <li>Graphic direction included</li>
           <li>Monthly performance check-in</li>
         </ul>
-        <div class="price">Monthly<span>Per month · 3-month minimum</span></div>
+        <div class="price">Monthly<span>Per month &middot; 3-month minimum</span></div>
       </div>
 
       <div class="tier reveal">
@@ -646,17 +515,17 @@ footer .logo-dark {
           <li>Monthly email or newsletter copy</li>
           <li>Priority availability</li>
         </ul>
-        <div class="price">Monthly<span>Per month · 3-month minimum</span></div>
+        <div class="price">Monthly<span>Per month &middot; 3-month minimum</span></div>
       </div>
     </div>
 
     <div class="alacarte reveal">
       <span class="label">À la carte for partners</span>
-      <span class="item">Social Media Audit</span><span class="dotsep">·</span>
-      <span class="item">Brand Voice Guide</span><span class="dotsep">·</span>
-      <span class="item">Email Campaign</span><span class="dotsep">·</span>
-      <span class="item">Voiceover</span><span class="dotsep">·</span>
-      <span class="item">Podcast Launch</span><span class="dotsep">·</span>
+      <span class="item">Social Media Audit</span><span class="dotsep">&middot;</span>
+      <span class="item">Brand Voice Guide</span><span class="dotsep">&middot;</span>
+      <span class="item">Email Campaign</span><span class="dotsep">&middot;</span>
+      <span class="item">Voiceover</span><span class="dotsep">&middot;</span>
+      <span class="item">Podcast Launch</span><span class="dotsep">&middot;</span>
       <span class="item">Podcast Production</span>
     </div>
     <p class="alacarte-note reveal">Pricing shared in a short conversation, so I can scope it to what you actually need.</p>
@@ -670,7 +539,7 @@ footer .logo-dark {
         <div class="sec-eyebrow reveal">When marketing needs technology</div>
         <h2 class="sec-title reveal">I don't just plan it. I can build it.</h2>
       </div>
-      <div class="shipped reveal">Shipped: <b>ATMO · BrickKeep · PawFile · Dropzone</b></div>
+      <div class="shipped reveal">Shipped: <b>ATMO &middot; BrickKeep &middot; PawFile &middot; Dropzone</b></div>
     </div>
     <p class="sec-lead reveal">Custom web and mobile apps designed, built, and shipped. From a simple tool to a full product with accounts, payments, and integrations. I can write the ad, voice it, produce it, and market it, then build the tool behind it. Very few marketing people can hand you all of that.</p>
 
@@ -700,7 +569,7 @@ footer .logo-dark {
     <div class="sec-eyebrow reveal">Selected work</div>
     <h2 class="sec-title reveal">Built, shipped, and live.</h2>
     <p class="sec-lead reveal">Four products I designed and built from scratch. Not mockups, real apps you can open right now.</p>
- 
+
     <div class="work-grid">
       <a class="work-card reveal" href="https://getatmoapp.com" target="_blank" rel="noopener">
         <div>
@@ -712,7 +581,7 @@ footer .logo-dark {
         </div>
         <span class="work-link">Visit ATMO <span class="arr">&rarr;</span></span>
       </a>
- 
+
       <a class="work-card reveal" href="https://mybrickkeep.com" target="_blank" rel="noopener">
         <div>
           <div class="work-top">
@@ -723,7 +592,7 @@ footer .logo-dark {
         </div>
         <span class="work-link">Visit BrickKeep <span class="arr">&rarr;</span></span>
       </a>
- 
+
       <a class="work-card reveal" href="https://mypawfile.vercel.app" target="_blank" rel="noopener">
         <div>
           <div class="work-top">
@@ -734,7 +603,7 @@ footer .logo-dark {
         </div>
         <span class="work-link">Visit PawFile <span class="arr">&rarr;</span></span>
       </a>
- 
+
       <a class="work-card reveal" href="https://dropzone-game.vercel.app" target="_blank" rel="noopener">
         <div>
           <div class="work-top">
@@ -746,29 +615,28 @@ footer .logo-dark {
         <span class="work-link">Play Dropzone <span class="arr">&rarr;</span></span>
       </a>
     </div>
- 
+
     <div class="gallery reveal">
       <div class="gallery-head">
         <div>
           <h3>The marketing work</h3>
-          <p>Campaigns, social, and brand work. Swipe through.</p>
+          <p>Campaigns, social, and brand work. Hover for details, swipe to explore.</p>
         </div>
         <div class="gallery-controls">
           <button class="gallery-btn" id="galPrev" aria-label="Previous">&larr;</button>
           <button class="gallery-btn" id="galNext" aria-label="Next">&rarr;</button>
         </div>
       </div>
- 
+
       <div class="gallery-track-wrap">
         <div class="gallery-track" id="galTrack">
-          <!-- Replace each placeholder div with: <div class="gallery-slide"><img src="work-1.png" alt="..." /></div> -->
-          <div class="gallery-slide"><img src="work-2.png" alt="Proven Success"></div>
-          <div class="gallery-slide"><img src="work-1.png" alt="Duet with Disturbed campaign"></div>
-          <div class="gallery-slide"><img src="work-4.png" alt="Festination Flyaway Experience campaign"></div>
-          <div class="gallery-slide"><img src="work-6.png" alt="ATMO 'This Or That' content"></div>
-          <div class="gallery-slide"><img src="work-7.png" alt="Pup Close With PK & Kentucky Humane Society"></div>
-          <div class="gallery-slide"><img src="work-3.png" alt="Three Days Grace On-Stage Experience campaign"></div>
-          <div class="gallery-slide"><img src="work-5.png" alt="'$20,000 Crypt Cash' content"></div>
+          <div class="gallery-slide"><img src="work-2.png" alt="Proven success" /><span class="cap-overlay">Proven success</span></div>
+          <div class="gallery-slide"><img src="work-1.png" alt="Duet with Disturbed campaign" /><span class="cap-overlay">Duet with Disturbed campaign</span></div>
+          <div class="gallery-slide"><img src="work-4.png" alt="Festination Flyaway Experience campaign" /><span class="cap-overlay">Festination Flyaway Experience campaign</span></div>
+          <div class="gallery-slide"><img src="work-6.png" alt="ATMO This Or That content" /><span class="cap-overlay">ATMO &ldquo;This Or That&rdquo; content</span></div>
+          <div class="gallery-slide"><img src="work-7.png" alt="Pup Close With PK and Kentucky Humane Society" /><span class="cap-overlay">Pup Close With PK &amp; Kentucky Humane Society</span></div>
+          <div class="gallery-slide"><img src="work-3.png" alt="Three Days Grace On-Stage Experience campaign" /><span class="cap-overlay">Three Days Grace On-Stage Experience campaign</span></div>
+          <div class="gallery-slide"><img src="work-5.png" alt="20,000 dollar Crypt Cash content" /><span class="cap-overlay">&ldquo;$20,000 Crypt Cash&rdquo; content</span></div>
         </div>
       </div>
     </div>
@@ -777,54 +645,33 @@ footer .logo-dark {
 
 <section class="about" id="about">
   <div class="wrap about-grid">
-
-    <!-- ROW 1: BIO + PHOTO -->
     <div class="about-bio">
       <div class="sec-eyebrow reveal">About</div>
-
-      <h2 class="sec-title reveal" style="margin-bottom:28px;">
-        15 years making brands sound like something.
-      </h2>
-
-      <p class="reveal">
-        PK Works is me, Phil Kukawinski. I spent 15 years in radio building brands, growing audiences, and producing the kind of content that makes people stop and pay attention.
-      </p>
-
-      <p class="reveal">
-        That's where the ear for voice comes from, and the instinct for what actually moves people instead of just filling a feed. Now I bring that same expertise to businesses that need real marketing leadership without the cost of a full-time hire.
-      </p>
-
-      <p class="reveal">
-        I work with a small number of clients at a time, which means you get someone who treats your brand like it's the only one that matters. Because while we're working together, it is.
-      </p>
+      <h2 class="sec-title reveal" style="margin-bottom:28px;">15 years making brands sound like something.</h2>
+      <p class="reveal">PK Works is me, Phil Kukawinski. I spent 15 years in radio building brands, growing audiences, and producing the kind of content that makes people stop and pay attention.</p>
+      <p class="reveal">That's where the ear for voice comes from, and the instinct for what actually moves people instead of just filling a feed. Now I bring that same expertise to businesses that need real marketing leadership without the cost of a full-time hire.</p>
+      <p class="reveal">I work with a small number of clients at a time, which means you get someone who treats your brand like it's the only one that matters. Because while we're working together, it is.</p>
     </div>
-
     <div class="about-media reveal">
       <div class="about-photo-frame">
         <img src="pk-headshot.png" alt="Phil Kukawinski" />
       </div>
     </div>
-
   </div>
 
-  <!-- ROW 2: STATS -->
   <div class="wrap about-stats reveal">
-
     <div class="stat">
       <div class="num">15+ yrs</div>
       <div class="cap">Building brands and audiences in media</div>
     </div>
-
     <div class="stat">
       <div class="num">4 apps</div>
       <div class="cap">Designed, built, and shipped independently</div>
     </div>
-
     <div class="stat">
       <div class="num">1 seat</div>
       <div class="cap">The marketing department your business is missing</div>
     </div>
-
   </div>
 </section>
 
@@ -839,19 +686,17 @@ footer .logo-dark {
 <footer>
   <div class="wrap">
     <div class="f-logo">
-  <img class="logo-dark" src="pk-logo-white.png" alt="PK Works" />
-</div>
-    <div class="f-meta">Voice. Strategy. Social. · Louisville, KY</div>
+      <img class="logo-light" src="pk-logo-white.png" alt="PK Works" />
+    </div>
+    <div class="f-meta">Voice. Strategy. Social. &middot; Louisville, KY</div>
   </div>
 </footer>
 
 <script>
-  // nav background on scroll
   var nav = document.getElementById('nav');
   function onScroll(){ if (window.scrollY > 30) nav.classList.add('scrolled'); else nav.classList.remove('scrolled'); }
   window.addEventListener('scroll', onScroll); onScroll();
 
-  // reveal on scroll
   var io = new IntersectionObserver(function(entries){
     entries.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
   }, { threshold: 0.12 });
@@ -859,6 +704,43 @@ footer .logo-dark {
     el.style.transitionDelay = (i % 3) * 0.07 + 's';
     io.observe(el);
   });
+
+  // carousel arrows
+  (function(){
+    var track = document.getElementById('galTrack');
+    var prev = document.getElementById('galPrev');
+    var next = document.getElementById('galNext');
+    if (!track || !prev || !next) return;
+    function step(){ var s = track.querySelector('.gallery-slide'); return s ? s.offsetWidth + 16 : 316; }
+    function update(){
+      prev.disabled = track.scrollLeft <= 4;
+      next.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 4;
+    }
+    prev.addEventListener('click', function(){ track.scrollBy({left: -step()*1.5, behavior:'smooth'}); });
+    next.addEventListener('click', function(){ track.scrollBy({left: step()*1.5, behavior:'smooth'}); });
+    track.addEventListener('scroll', update);
+    window.addEventListener('resize', update);
+    update();
+  })();
+
+  // carousel arrows
+  (function(){
+    var track = document.getElementById('galTrack');
+    var prev = document.getElementById('galPrev');
+    var next = document.getElementById('galNext');
+    if (!track || !prev || !next) return;
+    function step(){ var sl = track.querySelector('.gallery-slide'); return sl ? sl.offsetWidth + 16 : 316; }
+    function update(){
+      prev.disabled = track.scrollLeft <= 4;
+      next.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 4;
+    }
+    prev.addEventListener('click', function(){ track.scrollBy({left: -step()*1.5, behavior:'smooth'}); });
+    next.addEventListener('click', function(){ track.scrollBy({left: step()*1.5, behavior:'smooth'}); });
+    track.addEventListener('scroll', update);
+    window.addEventListener('resize', update);
+    update();
+  })();
+
 </script>
 
 </body>
