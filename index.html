@@ -444,7 +444,7 @@ footer .logo-light { display: block; }
       <span>Strategy.</span>
       <span>Social.</span>
     </h1>
-    <p class="hero-sub"><strong>Marketing leadership without the marketing department.</strong> Brand, content, and social media for businesses that need results, not another full-time hire. Starts at $1,500.</p>
+    <p class="hero-sub"><strong>Marketing leadership without the marketing department.</strong> Brand, content, and social media for small businesses — without the cost of a full-time hire. Based in Louisville, KY. Available nationwide. Starts at $1,500.</p>
     <div class="hero-actions">
       <a class="btn btn-primary" href="#services">See what I do</a>
       <a class="btn btn-ghost" href="#contact">Start a conversation</a>
@@ -679,7 +679,7 @@ footer .logo-light { display: block; }
     </div>
     <div class="about-media reveal">
       <div class="about-photo-frame">
-        <img src="pk-headshot.png" alt="Phil Kukawinski" />
+        <img src="pk-headshot.png" alt="Phil Kukawinski — Owner & Marketing Consultant, PK Works" />
       </div>
     </div>
   </div>
@@ -704,7 +704,7 @@ footer .logo-light { display: block; }
   <div class="wrap">
     <h2>Let's talk about your brand.</h2>
     <p>A short conversation is the best way to see if we're a fit. No pitch, no pressure.</p>
-    <a class="email-btn" href="mailto:phil@pkworks.co">phil@pkworks.co</a>
+    <a class="email-btn" href="mailto:phil@pkworks.co" onclick="gtag('event', 'contact_click', {'event_category': 'conversion'})">phil@pkworks.co</a>
   </div>
 </section>
 
@@ -759,29 +759,9 @@ footer .logo-light { display: block; }
     update();
   })();
 
-  // carousel arrows
-  (function(){
-    var track = document.getElementById('galTrack');
-    var prev = document.getElementById('galPrev');
-    var next = document.getElementById('galNext');
-    if (!track || !prev || !next) return;
-    function step(){ var sl = track.querySelector('.gallery-slide'); return sl ? sl.offsetWidth + 16 : 316; }
-    function update(){
-      prev.disabled = track.scrollLeft <= 4;
-      next.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 4;
-    }
-    prev.addEventListener('click', function(){ track.scrollBy({left: -step()*1.5, behavior:'smooth'}); });
-    next.addEventListener('click', function(){ track.scrollBy({left: step()*1.5, behavior:'smooth'}); });
-    track.addEventListener('scroll', update);
-    window.addEventListener('resize', update);
-    update();
-  })();
-
 </script>
 
 <script defer src="/_vercel/insights/script.js"></script>
-
-<a href="mailto:phil@pkworks.co" onclick="gtag('event', 'contact_click', {'event_category': 'conversion'})"></a>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-RBPSRVKGVY"></script>
