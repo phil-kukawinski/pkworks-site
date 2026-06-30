@@ -111,6 +111,17 @@
   .empty { text-align: center; padding: 80px 0; color: var(--gray); }
   .empty p { font-size: 16px; }
 
+  .show-more-btn {
+  display: block; margin: 40px auto 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px; font-weight: 600; letter-spacing: .04em;
+  border: 1.5px solid var(--ink); color: var(--ink);
+  background: transparent; border-radius: 2px;
+  padding: 12px 24px; cursor: pointer;
+  transition: background .2s, color .2s;
+}
+.show-more-btn:hover { background: var(--ink); color: #fff; }
+
   /* FOOTER */
   footer { background: #0c0c0c; color: rgba(255,255,255,.5); padding: 40px 0; }
   footer .wrap {
@@ -169,7 +180,12 @@
 
       <!-- ADD REAL CARDS BELOW THIS LINE -->
 
-    </div>
+    <a class="post-card" href="/blog/how-to-create-a-content-calendar-for-a-small-business.html">
+        <div class="post-meta">October 2026 &middot; 4 min read</div>
+        <h2>How to Create a Content Calendar for a Small Business</h2>
+        <p>A content calendar doesn't have to be complicated. Here's a practical approach to building one that actually gets used, even without a dedicated marketing team.</p>
+        <span class="post-read">Read more <span class="arr">&rarr;</span></span>
+      </a>
 
     <a class="post-card" href="/blog/what-is-a-fractional-marketing-consultant.html">
         <div class="post-meta">September 2026 &middot; 3 min read</div>
@@ -198,9 +214,38 @@
         <p>Full-time, freelance, or fractional — here's what social media management actually costs, and how to figure out which option makes sense for your business.</p>
         <span class="post-read">Read more <span class="arr">&rarr;</span></span>
       </a>
-
+    </div>
   </div>
 </section>
+
+<script>
+  (function() {
+    var grid = document.querySelector('.post-grid');
+    var cards = Array.from(grid.querySelectorAll('.post-card'));
+    var perPage = 5;
+    var shown = perPage;
+
+    // Hide everything past the first 5
+    cards.forEach(function(card, i) {
+      if (i >= perPage) card.style.display = 'none';
+    });
+
+    // Only add the button if there are more than 5 posts
+    if (cards.length <= perPage) return;
+
+    var btn = document.createElement('button');
+    btn.textContent = 'Show more';
+    btn.className = 'show-more-btn';
+    grid.parentNode.insertBefore(btn, grid.nextSibling);
+
+    btn.addEventListener('click', function() {
+      var next = cards.slice(shown, shown + perPage);
+      next.forEach(function(card) { card.style.display = ''; });
+      shown += perPage;
+      if (shown >= cards.length) btn.style.display = 'none';
+    });
+  })();
+</script>
 
 <footer>
   <div class="wrap">
@@ -219,6 +264,16 @@
     <div class="f-meta">Voice. Strategy. Social. &middot; Louisville, KY</div>
   </div>
 </footer>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RBPSRVKGVY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-RBPSRVKGVY');
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
 
 </body>
 </html>
