@@ -417,6 +417,19 @@ footer .logo-light { display: block; }
 .sib-container--large { border-color: rgba(255,255,255,.15) !important; }
 .input--hidden { display: none !important; visibility: hidden !important; opacity: 0 !important; height: 0 !important; width: 0 !important; position: absolute !important; }
 #sib-container input { color: #141414 !important; }
+
+.clients { background: var(--paper-warm); padding: 64px 0; }
+.clients-grid {
+  display: flex; flex-wrap: wrap; align-items: center;
+  justify-content: center; gap: 48px; margin-top: 32px;
+}
+.client-logo {
+  height: 48px; width: auto; opacity: 0.6;
+  filter: grayscale(100%);
+  transition: opacity .2s ease;
+}
+.client-logo:hover { opacity: 1; }
+
 </style>
 
 <script type="application/ld+json">
@@ -748,6 +761,15 @@ footer .logo-light { display: block; }
     <div class="stat">
       <div class="num">1 seat</div>
       <div class="cap">The marketing department your business is missing</div>
+    </div>
+  </div>
+</section>
+
+<section class="clients" id="clients">
+  <div class="wrap">
+    <div class="sec-eyebrow reveal">Working with</div>
+    <div class="clients-grid reveal">
+      <img src=“clients/bright-school-kits-logo.png” alt=“Bright School Kits" class="client-logo" />
     </div>
   </div>
 </section>
