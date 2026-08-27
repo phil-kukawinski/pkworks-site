@@ -412,6 +412,32 @@ footer .logo-light { display: block; }
     .triad span, .hero-eyebrow, .hero-sub, .hero-actions, .reveal { animation: none !important; opacity: 1 !important; transform: none !important; transition: none !important; }
   }
 
+  /* ---------- CONTACT FORM ---------- */
+.contact-form { max-width: 640px; margin: 40px auto 0; width: 100%; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } }
+.form-group { display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px; }
+.form-group label {
+  font-size: 11px; font-weight: 700; letter-spacing: .15em;
+  text-transform: uppercase; color: rgba(255,255,255,.5);
+}
+.form-group input, .form-group textarea {
+  background: rgba(255,255,255,.07);
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 3px; padding: 12px 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px; color: #ffffff;
+  transition: border-color .2s ease;
+  width: 100%;
+}
+.form-group input::placeholder, .form-group textarea::placeholder { color: rgba(255,255,255,.3); }
+.form-group input:focus, .form-group textarea:focus {
+  outline: none; border-color: rgba(255,255,255,.4);
+}
+.form-group textarea { resize: vertical; min-height: 120px; }
+.contact-form .btn { margin-top: 8px; width: 100%; justify-content: center; }
+
+
   /* ---------- BREVO FORM ---------- */
 .sib-form { background-color: transparent !important; padding: 0 !important; }
 .sib-container--large { border-color: rgba(255,255,255,.15) !important; }
@@ -541,7 +567,7 @@ footer .logo-light { display: block; }
     </div>
   </div>
   <div class="position-cta reveal" style="margin-top: 56px; text-align: center;">
-  <a href="mailto:phil@pkworks.co" class="btn btn-primary" style="display: inline-block; background: var(--ink); color: #fff;" onclick="gtag('event', 'contact_click', {'event_category': 'conversion'})">Start a conversation</a>
+  <a href="mailto:phil@pkworks.co" class="btn btn-primary" style="display: inline-block; background: var(--ink); color: #fff;" onclick="gtag('event', 'contact_click', {'event_category': 'conversion'})">Let's Have A Conversation</a>
 </div>
 </section>
 
@@ -790,7 +816,27 @@ footer .logo-light { display: block; }
   <div class="wrap">
     <h2>Let's talk about your brand.</h2>
     <p>A short conversation is the best way to see if we're a fit. No pitch, no pressure.</p>
-    <a class="email-btn" href="mailto:phil@pkworks.co" onclick="gtag('event', 'contact_click', {'event_category': 'conversion'})">phil@pkworks.co</a>
+    <form action="https://formspree.io/f/xqpkzvwq" method="POST" class="contact-form reveal">
+  <div class="form-row">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your name" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="your@email.com" required>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="company">Business Name</label>
+    <input type="text" id="company" name="company" placeholder="Your business name">
+  </div>
+  <div class="form-group">
+    <label for="message">Message</label>
+    <textarea id="message" name="message" placeholder="Tell me a bit about what you're looking for..." rows="5" required></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary" onclick="gtag('event', 'contact_click', {'event_category': 'conversion'})">Send it</button>
+</form>
 
     <div style="margin-top: 48px; max-width: 540px; margin-left: auto; margin-right: auto;">
       <p style="font-size: 13px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,.5); margin-bottom: 16px;">Or stay in the loop</p>
