@@ -816,7 +816,7 @@ footer .logo-light { display: block; }
   <div class="wrap">
     <h2>Let's talk about your brand.</h2>
     <p>A short conversation is the best way to see if we're a fit. No pitch, no pressure.</p>
-    <form action="https://formspree.io/f/xqpkzvwq" method="POST" class="contact-form reveal">
+    <form id="contact-form" action="https://formspree.io/f/xqpkzvwq" method="POST" class="contact-form reveal">
   <div class="form-row">
     <div class="form-group">
       <label for="name">Name</label>
@@ -836,7 +836,34 @@ footer .logo-light { display: block; }
     <textarea id="message" name="message" placeholder="Tell me a bit about what you're looking for..." rows="5" required></textarea>
   </div>
   <button type="submit" class="btn btn-primary" onclick="gtag('event', 'contact_click', {'event_category': 'conversion'})">Send it</button>
+  <p id="form-success" style="display:none; margin-top: 16px; font-size: 14px; color: rgba(255,255,255,.7); text-align: center;">Got it. I'll be in touch soon.</p>
+  <p id="form-error" style="display:none; margin-top: 16px; font-size: 14px; color: #ff6b6b; text-align: center;">Something went wrong. Try emailing me directly at phil@pkworks.co.</p>
 </form>
+
+<script>
+  (function() {
+    var form = document.getElementById('contact-form');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var data = new FormData(form);
+      fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      }).then(function(response) {
+        if (response.ok) {
+          form.reset();
+          document.getElementById('form-success').style.display = 'block';
+          document.getElementById('form-error').style.display = 'none';
+        } else {
+          document.getElementById('form-error').style.display = 'block';
+        }
+      }).catch(function() {
+        document.getElementById('form-error').style.display = 'block';
+      });
+    });
+  })();
+</script>
 
     <div style="margin-top: 48px; max-width: 540px; margin-left: auto; margin-right: auto;">
       <p style="font-size: 13px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,.5); margin-bottom: 16px;">Or stay in the loop</p>
