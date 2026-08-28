@@ -1,1003 +1,3520 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-  <!-- Open Graph (Facebook, LinkedIn, etc.) -->
-<meta property="og:title" content="PK Works — Marketing Leadership Without the Marketing Department" />
-<meta property="og:description" content="Voice. Strategy. Social. Marketing leadership for small and mid-sized businesses that need results, not another full-time hire." />
-<meta property="og:image" content="https://www.pkworks.co/og-image.png" />
-<meta property="og:url" content="https://www.pkworks.co/" />
-<meta property="og:type" content="website" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
+  <meta charset="UTF-8" />
 
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="PK Works — Marketing Leadership Without the Marketing Department" />
-<meta name="twitter:description" content="Voice. Strategy. Social. Marketing leadership for small and mid-sized businesses that need results, not another full-time hire." />
-<meta name="twitter:image" content="https://www.pkworks.co/og-image.png" />
-<meta name="theme-color" content="#141414" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#141414" />
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>PK Works — Marketing Leadership Without the Marketing Department</title>
-<link rel="icon" href="/favicon.ico" />
-<link rel="icon" type="image/png" href="/pk-logo.png" />
-<meta name="description" content="PK Works is fractional marketing leadership for small businesses — brand voice, content strategy, and social media without the cost of a full-time hire. Based in Louisville, KY. Available nationwide." />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="canonical" href="https://www.pkworks.co/" />
-<link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
-<style>
-  :root {
-    --ink: #141414;
-    --ink-soft: #2c2c2a;
-    --paper: #ffffff;
-    --paper-warm: #f4f3f1;
-    --gray: #8a8a85;
-    --gray-line: #e4e3df;
-    --max: 1100px;
-  }
+  <title>PK Works — Marketing Leadership Without the Marketing Department</title>
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+  <meta
+    name="description"
+    content="PK Works provides fractional marketing leadership for small and growing businesses — brand voice, content strategy, social media, and marketing execution without the cost of a full-time hire."
+  />
 
-  html { scroll-behavior: smooth; }
+  <link rel="canonical" href="https://www.pkworks.co/" />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" href="/pk-logo.png" />
 
-  body {
-    font-family: 'Montserrat', sans-serif;
-    color: var(--ink);
-    background: var(--paper);
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-    overflow-x: hidden;
-  }
+  <!-- Open Graph -->
+  <meta property="og:title" content="PK Works — Marketing Leadership Without the Marketing Department" />
+  <meta
+    property="og:description"
+    content="Marketing leadership, brand voice, content strategy, and social media for businesses that aren't ready for a full-time marketing hire."
+  />
+  <meta property="og:image" content="https://www.pkworks.co/og-image.png" />
+  <meta property="og:url" content="https://www.pkworks.co/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
 
-  a { color: inherit; text-decoration: none; }
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="PK Works — Marketing Leadership Without the Marketing Department" />
+  <meta
+    name="twitter:description"
+    content="Marketing leadership, brand voice, content strategy, and social media for businesses that aren't ready for a full-time marketing hire."
+  />
+  <meta name="twitter:image" content="https://www.pkworks.co/og-image.png" />
 
-  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 32px; }
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
 
-  /* --- LOGO BASE --- */
-.nav-logo img,
-.f-logo img {
-  height: 64px;
-  width: auto;
-  display: none;
-}
-.f-logo img { height: 70px; }
-nav:not(.scrolled) .logo-light { display: block; }
-nav.scrolled .logo-dark { display: block; }
-footer .logo-light { display: block; }
+  <!-- Brevo styles -->
+  <link
+    rel="stylesheet"
+    href="https://sibforms.com/forms/end-form/build/sib-styles.css"
+  />
 
-  /* ---------- NAV ---------- */
-  nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 16px 32px;
-    background: rgba(255,255,255,0);
-    transition: background .3s ease, padding .3s ease, box-shadow .3s ease;
-  }
-  nav.scrolled {
-    background: rgba(255,255,255,0.92);
-    backdrop-filter: blur(10px);
-    padding: 8px 32px;
-    box-shadow: 0 1px 0 var(--gray-line);
-  }
-  nav .nav-logo { display: flex; align-items: center; gap: 11px; }
-  nav .nav-links { display: flex; gap: 30px; font-size: 13px; font-weight: 500; letter-spacing: .04em; }
-  nav .nav-links a { color: rgba(255,255,255,.82); transition: color .2s; }
-  nav .nav-links a:hover { color: #fff; }
-  nav .nav-cta {
-    font-size: 13px; font-weight: 600; letter-spacing: .04em;
-    border: 1.5px solid rgba(255,255,255,.55); color: #fff; border-radius: 2px; padding: 8px 16px;
-    transition: background .2s, color .2s, border-color .2s;
-  }
-  nav .nav-cta:hover { background: #fff; color: var(--ink); border-color: #fff; }
-  nav.scrolled .nav-links a { color: var(--ink-soft); }
-  nav.scrolled .nav-links a:hover { color: var(--gray); }
-  nav.scrolled .nav-cta { border-color: var(--ink); color: var(--ink); }
-  nav.scrolled .nav-cta:hover { background: var(--ink); color: #fff; }
-  @media (max-width: 760px) { nav .nav-links { display: none; } }
+  <style>
+    :root {
+      --ink: #141414;
+      --ink-soft: #2c2c2a;
+      --paper: #ffffff;
+      --paper-warm: #f4f3f1;
+      --gray: #7f7f7a;
+      --gray-light: #a8a8a2;
+      --gray-line: #e4e3df;
+      --white-line: rgba(255,255,255,.14);
+      --max: 1100px;
+      --radius: 6px;
+      --transition: .2s ease;
+    }
 
-  /* ---------- HERO ---------- */
-  header.hero {
-    background: var(--ink);
-    color: #fff;
-    min-height: 100vh;
-    display: flex; flex-direction: column; justify-content: center;
-    position: relative;
-    padding: 140px 0 90px;
-    overflow: hidden;
-  }
-  header.hero .rings {
-    position: absolute; top: -20%; right: -12%;
-    width: 760px; height: 760px; pointer-events: none; opacity: .5;
-  }
-  header.hero .rings span {
-    position: absolute; border-radius: 50%; border: 1px solid rgba(255,255,255,0.06);
-    inset: 0; margin: auto;
-  }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  .hero-eyebrow {
-    font-size: 12px; font-weight: 600; letter-spacing: .42em; text-transform: uppercase;
-    color: rgba(255,255,255,.5); margin-bottom: 30px;
-    opacity: 0; transform: translateY(14px); animation: rise .7s ease forwards .1s;
-  }
-  .triad { font-weight: 800; letter-spacing: -.01em; line-height: .98; font-size: clamp(48px, 9vw, 116px); }
-  .triad span { display: inline-block; opacity: 0; transform: translateY(26px); }
-  .triad span:nth-child(1) { animation: rise .7s cubic-bezier(.2,.7,.2,1) forwards .25s; }
-  .triad span:nth-child(2) { animation: rise .7s cubic-bezier(.2,.7,.2,1) forwards .42s; }
-  .triad span:nth-child(3) { animation: rise .7s cubic-bezier(.2,.7,.2,1) forwards .59s; }
-  .triad .pd { color: var(--gray); }
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
 
-  .hero-sub {
-    margin-top: 34px; max-width: 600px;
-    font-size: clamp(17px, 2.1vw, 21px); font-weight: 400; line-height: 1.5;
-    color: rgba(255,255,255,.82);
-    opacity: 0; transform: translateY(14px); animation: rise .7s ease forwards .8s;
-  }
-  .hero-sub strong { font-weight: 600; color: #fff; }
-  .hero-actions {
-    margin-top: 42px; display: flex; gap: 16px; flex-wrap: wrap;
-    opacity: 0; transform: translateY(14px); animation: rise .7s ease forwards .95s;
-  }
-  .btn {
-    font-size: 14px; font-weight: 600; letter-spacing: .04em;
-    padding: 14px 26px; border-radius: 2px; transition: transform .15s, background .2s, color .2s;
-    display: inline-block;
-  }
-  .btn-primary { background: #fff; color: var(--ink); }
-  .btn-primary:hover { transform: translateY(-2px); }
-  .btn-ghost { border: 1.5px solid rgba(255,255,255,.4); color: #fff; }
-  .btn-ghost:hover { border-color: #fff; background: rgba(255,255,255,.07); }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
 
-  @keyframes rise { to { opacity: 1; transform: translateY(0); } }
+    body.menu-open {
+      overflow: hidden;
+    }
 
-  /* ---------- SECTION SHELL ---------- */
-  section { padding: 104px 0; }
-  .sec-eyebrow {
-    font-size: 12px; font-weight: 700; letter-spacing: .34em; text-transform: uppercase;
-    color: var(--gray); margin-bottom: 18px;
-  }
-  .sec-title { font-size: clamp(28px, 4vw, 44px); font-weight: 700; line-height: 1.12; letter-spacing: -.01em; max-width: 760px; }
-  .sec-lead { margin-top: 22px; max-width: 660px; font-size: 18px; color: var(--ink-soft); }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-  .reveal { opacity: 0; transform: translateY(26px); transition: opacity .7s ease, transform .7s ease; }
-  .reveal.in { opacity: 1; transform: translateY(0); }
+    button,
+    input,
+    textarea,
+    select {
+      font: inherit;
+    }
 
-  /* ---------- POSITIONING ---------- */
-  .position { background: var(--paper); }
-  .position .big {
-    font-size: clamp(26px, 3.6vw, 40px); font-weight: 600; line-height: 1.25; letter-spacing: -.01em;
-    max-width: 880px; margin-top: 8px;
-  }
-  .position .big em { font-style: normal; color: var(--gray); }
-  .position-grid {
-    margin-top: 64px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 34px;
-  }
-  @media (max-width: 760px) { .position-grid { grid-template-columns: 1fr; gap: 30px; } }
-  .pcard .pnum { font-size: 13px; font-weight: 700; letter-spacing: .2em; color: var(--gray); }
-  .pcard h3 { font-size: 20px; font-weight: 700; margin: 14px 0 8px; }
-  .pcard p { font-size: 15px; color: var(--ink-soft); }
-  .pcard { border-top: 2px solid var(--ink); padding-top: 18px; }
+    button {
+      cursor: pointer;
+    }
 
-  /* ---------- WHO I HELP ---------- */
-  .who { background: var(--paper-warm); }
-  .who .who-lead { margin-top: 22px; max-width: 660px; font-size: 18px; color: var(--ink-soft); }
-  .who-grid {
-    margin-top: 48px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px;
-  }
-  @media (max-width: 860px) { .who-grid { grid-template-columns: repeat(2, 1fr); } }
-  @media (max-width: 480px) { .who-grid { grid-template-columns: 1fr; } }
-  .who-item {
-    background: #fff; border: 1px solid var(--gray-line); border-radius: 6px;
-    padding: 20px 18px; font-size: 15px; font-weight: 600; color: var(--ink);
-  }
-  .who-foot { margin-top: 34px; font-size: 18px; font-weight: 600; color: var(--ink); max-width: 720px; }
-  .who-foot em { font-style: normal; color: var(--gray); }
+    img {
+      max-width: 100%;
+    }
 
-  /* ---------- SERVICES ---------- */
-  .services { background: var(--ink); color: #fff; }
-  .services .sec-eyebrow { color: rgba(255,255,255,.5); }
-  .services .sec-lead { color: rgba(255,255,255,.75); }
-  .tier-grid {
-    margin-top: 56px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px;
-  }
-  @media (max-width: 860px) { .tier-grid { grid-template-columns: 1fr; } }
-  .tier {
-    background: #fff; color: var(--ink); border-radius: 6px; padding: 32px 28px;
-    display: flex; flex-direction: column; position: relative;
-  }
-  .tier.feat { outline: 2px solid #fff; outline-offset: 4px; }
-  .tier .badge {
-    position: absolute; top: -12px; left: 28px; background: var(--ink); color: #fff;
-    font-size: 10px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase;
-    padding: 5px 12px; border-radius: 2px;
-  }
-  .tier h3 { font-size: 23px; font-weight: 700; font-style: italic; margin-bottom: 6px; }
-  .tier .tier-for { font-size: 13px; color: var(--gray); margin-bottom: 22px; min-height: 38px; }
-  .tier ul { list-style: none; margin-bottom: 26px; }
-  .tier li { font-size: 14px; color: var(--ink-soft); padding: 7px 0 7px 18px; position: relative; }
-  .tier li::before { content: '—'; position: absolute; left: 0; color: #bbb; }
-  .tier .price { margin-top: auto; font-size: 27px; font-weight: 700; }
-  .tier .price span { display: block; font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--gray); margin-top: 5px; }
+    .wrap {
+      width: 100%;
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 32px;
+    }
 
-  .alacarte { margin-top: 24px; display: flex; flex-wrap: wrap; gap: 10px 26px; align-items: center; }
-  .alacarte .label { font-size: 12px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,.45); width: 100%; margin-bottom: 4px; }
-  .alacarte .item { font-size: 14px; color: rgba(255,255,255,.85); }
-  .alacarte .item b { font-weight: 700; color: #fff; }
-  .alacarte .dotsep { color: rgba(255,255,255,.25); }
-  .alacarte-note { margin-top: 16px; font-size: 13px; color: rgba(255,255,255,.55); }
+    /* =========================================================
+       ACCESSIBILITY
+       ========================================================= */
 
-  /* ---------- APPS ---------- */
-  .apps { background: var(--paper-warm); }
-  .apps-head { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 20px; }
-  .apps .shipped { font-size: 13px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--gray); }
-  .apps .shipped b { color: var(--ink); }
-  .apps-grid { margin-top: 52px; display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
-  @media (max-width: 860px) { .apps-grid { grid-template-columns: 1fr; } }
-  .app-tier { background: #fff; border: 1px solid var(--gray-line); border-radius: 6px; padding: 28px 24px; }
-  .app-tier h3 { font-size: 19px; font-weight: 700; font-style: italic; margin-bottom: 12px; }
-  .app-tier p { font-size: 14px; color: var(--ink-soft); margin-bottom: 18px; min-height: 60px; }
-  .app-tier .price { font-size: 21px; font-weight: 700; }
-  .app-tier .price span { display:block; font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--gray); margin-top: 4px; }
-  .app-note { margin-top: 22px; font-size: 13px; color: var(--gray); }
+    .skip-link {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      z-index: 9999;
+      background: #fff;
+      color: var(--ink);
+      padding: 10px 16px;
+      transform: translateY(-150%);
+      transition: transform .2s ease;
+      font-weight: 700;
+    }
 
-  /* ---------- PORTFOLIO (dark) ---------- */
-  .portfolio { background: var(--ink); color: #fff; }
-  .portfolio .sec-eyebrow { color: rgba(255,255,255,.5); }
-  .portfolio .sec-lead { margin-bottom: 0; color: rgba(255,255,255,.75); }
-  .work-grid {
-    margin-top: 52px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px;
-  }
-  @media (max-width: 760px) { .work-grid { grid-template-columns: 1fr; } }
-  .work-card {
-    display: flex; flex-direction: column; justify-content: space-between;
-    background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.10); border-radius: 8px;
-    padding: 28px 28px 24px; transition: transform .18s ease, background .18s ease, border-color .18s ease;
-    min-height: 180px;
-  }
-  .work-card:hover { transform: translateY(-3px); background: rgba(255,255,255,.07); border-color: rgba(255,255,255,.22); }
-  .work-top { display: flex; align-items: baseline; justify-content: space-between; gap: 14px; }
-  .work-name { font-size: 24px; font-weight: 700; letter-spacing: -.01em; color: #fff; }
-  .work-live {
-    font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
-    color: #4ade80; border: 1px solid rgba(74,222,128,.4); border-radius: 20px;
-    padding: 4px 10px; white-space: nowrap;
-  }
-  .work-desc { margin-top: 12px; font-size: 15px; color: rgba(255,255,255,.7); line-height: 1.5; }
-  .work-link {
-    margin-top: 22px; font-size: 13px; font-weight: 600; letter-spacing: .03em;
-    color: #fff; display: inline-flex; align-items: center; gap: 7px;
-  }
-  .work-link .arr { transition: transform .18s ease; }
-  .work-card:hover .work-link .arr { transform: translateX(4px); }
-  .work-foot { margin-top: 36px; font-size: 15px; color: rgba(255,255,255,.55); }
+    .skip-link:focus {
+      transform: translateY(0);
+    }
 
-  /* ---------- CAROUSEL ---------- */
-  .gallery { margin-top: 64px; }
-  .gallery-head { margin-bottom: 28px; }
-  .gallery-head h3 { font-size: 22px; font-weight: 700; letter-spacing: -.01em; color: #fff; }
-  .gallery-head p { font-size: 14px; color: rgba(255,255,255,.55); margin-top: 4px; }
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    textarea:focus-visible,
+    select:focus-visible {
+      outline: 2px solid currentColor;
+      outline-offset: 4px;
+    }
 
-  /* row: [prev arrow] [track] [next arrow] */
-  .gallery-row { display: flex; align-items: center; gap: 16px; }
-  .gallery-btn {
-    flex: 0 0 auto;
-    width: 48px; height: 48px; border-radius: 50%; border: 1.5px solid rgba(255,255,255,.25);
-    background: rgba(255,255,255,.06); color: #fff; font-size: 19px; cursor: pointer;
-    display: flex; align-items: center; justify-content: center;
-    transition: background .18s, color .18s, border-color .18s, transform .18s;
-  }
-  .gallery-btn:hover { background: #fff; color: var(--ink); border-color: #fff; transform: scale(1.06); }
-  .gallery-btn:active { transform: scale(.96); }
-  .gallery-btn:disabled { opacity: .25; cursor: default; background: rgba(255,255,255,.06); color: #fff; border-color: rgba(255,255,255,.25); transform: none; }
-  .gallery-track-wrap { overflow: hidden; flex: 1 1 auto; }
-  .gallery-track {
-    display: flex; gap: 20px; scroll-behavior: smooth; overflow-x: auto;
-    scroll-snap-type: x mandatory; padding: 14px 4px 24px;
-    -ms-overflow-style: none; scrollbar-width: none;
-  }
-  .gallery-track::-webkit-scrollbar { display: none; }
-  .gallery-slide {
-    flex: 0 0 auto; width: 300px; scroll-snap-align: start; position: relative;
-    border-radius: 12px; overflow: hidden; background: rgba(255,255,255,.05);
-    aspect-ratio: 4 / 5; display: flex; align-items: center; justify-content: center;
-    border: 1px solid rgba(255,255,255,.08);
-    box-shadow: 0 14px 34px rgba(0,0,0,.5), 0 2px 8px rgba(0,0,0,.4);
-    transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
-  }
-  .gallery-slide:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 26px 56px rgba(0,0,0,.65), 0 8px 18px rgba(0,0,0,.5);
-    border-color: rgba(255,255,255,.2);
-  }
-  .gallery-slide img { width: 100%; height: 100%; object-fit: cover; display: block; }
-  /* caption overlay, shows on hover (desktop), always-on for touch */
-  .gallery-slide .cap-overlay {
-    position: absolute; left: 0; right: 0; bottom: 0;
-    padding: 18px 16px 16px; font-size: 13px; font-weight: 600; line-height: 1.35; color: #fff;
-    background: linear-gradient(to top, rgba(0,0,0,.85), rgba(0,0,0,.45) 55%, rgba(0,0,0,0));
-    opacity: 0; transform: translateY(8px); transition: opacity .22s ease, transform .22s ease;
-    pointer-events: none;
-  }
-  .gallery-slide:hover .cap-overlay { opacity: 1; transform: translateY(0); }
-  @media (hover: none) { .gallery-slide .cap-overlay { opacity: 1; transform: translateY(0); } }
-  @media (max-width: 600px) {
-    .gallery-slide { width: 240px; }
-    .gallery-btn { width: 40px; height: 40px; font-size: 16px; }
-    .gallery-row { gap: 8px; }
-  }
+    /* =========================================================
+       LOGOS
+       ========================================================= */
 
-  /* ---------- ABOUT ---------- */
-  .about { background: var(--paper); }
-  .about-grid {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    gap: 60px;
-    align-items: start;
-    margin-bottom: 50px;
-  }
-  @media (max-width: 860px) { .about-grid { grid-template-columns: 1fr; gap: 36px; } }
-  .about p { font-size: 18px; color: var(--ink-soft); margin-bottom: 20px; }
-  .about p strong { color: var(--ink); font-weight: 600; }
-  .about-bio { display: flex; flex-direction: column; }
-  .about-photo-frame {
-    width: 100%; max-width: 360px; aspect-ratio: 4 / 5; overflow: hidden;
-    border-radius: 6px; border: 1px solid var(--gray-line); background: var(--paper-warm);
-  }
-  .about-photo-frame img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%) contrast(1.05); }
+    .nav-logo img,
+    .f-logo img {
+      width: auto;
+      display: none;
+    }
 
-  .about-stats {
-    display: grid; grid-template-columns: repeat(3, 1fr); gap: 0;
-    border-top: 1px solid var(--gray-line); margin-top: 10px;
-    position: relative; overflow: hidden; background: var(--paper);
-  }
-  .about-stats .stat { padding: 26px 24px; position: relative; text-align: left; }
-  .about-stats .stat:not(:last-child)::after {
-    content: ""; position: absolute; right: 0; top: 18%; bottom: 18%;
-    width: 1px; background: var(--gray-line); opacity: 0.9;
-  }
-  .about-stats .num { font-size: 28px; font-weight: 800; letter-spacing: -0.02em; position: relative; display: inline-block; }
-  .about-stats .num::after {
-    content: ""; position: absolute; left: 0; bottom: -6px; height: 2px; width: 100%;
-    background: linear-gradient(90deg, transparent, var(--ink), transparent);
-    transform: scaleX(0.6); opacity: 0.6; animation: signalPulse 2.6s infinite ease-in-out;
-  }
-  .about-stats .cap { margin-top: 8px; font-size: 13px; color: var(--gray); letter-spacing: 0.02em; }
-  .about-stats::before {
-    content: ""; position: absolute; inset: 0;
-    background: repeating-linear-gradient(to bottom, rgba(0,0,0,0.025), rgba(0,0,0,0.025) 1px, transparent 1px, transparent 6px);
-    pointer-events: none; opacity: 0.35;
-  }
-  .about-stats::after {
-    content: ""; position: absolute; top: -40%; left: -20%; width: 60%; height: 200%;
-    background: linear-gradient(90deg, transparent, rgba(0,0,0,0.04), transparent);
-    transform: rotate(12deg); animation: scanSweep 6s infinite linear; pointer-events: none;
-  }
-  @keyframes signalPulse { 0%, 100% { transform: scaleX(0.65); opacity: 0.45; } 50% { transform: scaleX(1); opacity: 0.9; } }
-  @keyframes scanSweep { 0% { transform: translateX(-40%) rotate(12deg); } 100% { transform: translateX(180%) rotate(12deg); } }
-  @media (max-width: 860px) {
-    .about-stats { grid-template-columns: 1fr; }
-    .about-stats .stat:not(:last-child)::after { display: none; }
-  }
+    .nav-logo img {
+      height: 64px;
+    }
 
-  /* ---------- CONTACT ---------- */
-  .contact { background: var(--ink); color: #fff; text-align: center; padding: 120px 0; }
-  .contact h2 { font-size: clamp(30px, 5vw, 56px); font-weight: 800; letter-spacing: -.01em; line-height: 1.05; }
-  .contact p { margin-top: 20px; font-size: 18px; color: rgba(255,255,255,.7); }
-  .contact .email-btn {
-    margin-top: 38px; display: inline-block; background: #fff; color: var(--ink);
-    font-size: 17px; font-weight: 600; padding: 16px 34px; border-radius: 2px; letter-spacing: .02em;
-    transition: transform .15s;
-  }
-  .contact .email-btn:hover { transform: translateY(-2px); }
+    .f-logo img {
+      height: 70px;
+    }
 
-  /* ---------- FOOTER ---------- */
-  footer { background: #0c0c0c; color: rgba(255,255,255,.5); padding: 40px 0; }
-  footer .wrap {
-    display: flex; justify-content: center; align-items: center;
-    flex-direction: column; text-align: center; gap: 14px;
-  }
-  footer .f-logo { display: flex; align-items: center; }
-  footer .f-meta { font-size: 13px; letter-spacing: .03em; }
-  footer .f-social { display: flex; align-items: center; gap: 18px; margin-top: 2px; }
-  footer .f-social a {
-    display: flex; align-items: center; justify-content: center;
-    color: rgba(255,255,255,.5); transition: color .18s ease, transform .18s ease;
-  }
-  footer .f-social a:hover { color: #fff; transform: translateY(-2px); }
-  footer .f-social svg { width: 20px; height: 20px; display: block; fill: currentColor; }
- 
-  @media (prefers-reduced-motion: reduce) {
-    .triad span, .hero-eyebrow, .hero-sub, .hero-actions, .reveal { animation: none !important; opacity: 1 !important; transform: none !important; transition: none !important; }
-  }
+    nav:not(.scrolled) .logo-light {
+      display: block;
+    }
 
-  /* ---------- CONTACT FORM ---------- */
-.contact-form { max-width: 640px; margin: 40px auto 0; width: 100%; }
-.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-@media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } }
-.form-group { display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px; }
-.form-group label {
-  font-size: 11px; font-weight: 700; letter-spacing: .15em;
-  text-transform: uppercase; color: rgba(255,255,255,.5);
-}
-.form-group input, .form-group textarea {
-  background: rgba(255,255,255,.07);
-  border: 1px solid rgba(255,255,255,.15);
-  border-radius: 3px; padding: 12px 16px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 14px; color: #ffffff;
-  transition: border-color .2s ease;
-  width: 100%;
-}
-.form-group input::placeholder, .form-group textarea::placeholder { color: rgba(255,255,255,.3); }
-.form-group input:focus, .form-group textarea:focus {
-  outline: none; border-color: rgba(255,255,255,.4);
-}
-.form-group textarea { resize: vertical; min-height: 120px; }
-.contact-form .btn { margin-top: 8px; width: 100%; justify-content: center; }
+    nav.scrolled .logo-dark {
+      display: block;
+    }
 
+    footer .logo-light {
+      display: block;
+    }
 
-  /* ---------- BREVO FORM ---------- */
-.sib-form { background-color: transparent !important; padding: 0 !important; }
-.sib-container--large { border-color: rgba(255,255,255,.15) !important; }
-.input--hidden { display: none !important; visibility: hidden !important; opacity: 0 !important; height: 0 !important; width: 0 !important; position: absolute !important; }
-#sib-container input { color: #141414 !important; }
+    /* =========================================================
+       NAVIGATION
+       ========================================================= */
 
-.clients { background: var(--paper-warm); padding: 64px 0; }
-.clients-grid {
-  display: flex; flex-wrap: wrap; align-items: center;
-  justify-content: center; gap: 48px; margin-top: 32px;
-}
-.client-logo {
-  height: 48px; width: auto; opacity: 0.6;
-  filter: grayscale(100%);
-  transition: opacity .2s ease;
-}
-.client-logo:hover { opacity: 1; }
+    nav {
+      position: fixed;
+      inset: 0 0 auto 0;
+      z-index: 1000;
 
-</style>
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "PK Works",
-  "url": "https://www.pkworks.co",
-  "logo": "https://www.pkworks.co/pk-logo.png",
-  "image": "https://www.pkworks.co/og-image.png",
-  "description": "Fractional marketing consultant offering brand voice, content strategy, and social media services for small and mid-sized businesses.",
-  "founder": {
-    "@type": "Person",
-    "name": "Phil Kukawinski"
-  },
-  "areaServed": "United States",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Louisville",
-    "addressRegion": "KY",
-    "addressCountry": "US"
-  },
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "email": "phil@pkworks.co",
-    "telephone": "+15027951959",
-    "contactType": "customer service"
-  },
-  "sameAs": [
-    "https://instagram.com/pkworks.co",
-    "https://facebook.com/pkworksco",
-    "https://linkedin.com/company/pkworks"
-  ],
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Marketing Services",
-    "itemListElement": [
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Foundation" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Signal" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Full Signal" } }
+      padding: 16px 32px;
+
+      background: rgba(20,20,20,0);
+      transition:
+        background .3s ease,
+        padding .3s ease,
+        box-shadow .3s ease;
+    }
+
+    nav.scrolled {
+      background: rgba(255,255,255,.94);
+      backdrop-filter: blur(12px);
+      padding: 8px 32px;
+      box-shadow: 0 1px 0 var(--gray-line);
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: .04em;
+    }
+
+    .nav-links a {
+      color: rgba(255,255,255,.82);
+      transition: color var(--transition);
+    }
+
+    .nav-links a:hover {
+      color: #fff;
+    }
+
+    nav.scrolled .nav-links a {
+      color: var(--ink-soft);
+    }
+
+    nav.scrolled .nav-links a:hover {
+      color: var(--gray);
+    }
+
+    .nav-cta {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: .04em;
+      border: 1.5px solid rgba(255,255,255,.55);
+      color: #fff;
+      border-radius: 2px;
+      padding: 8px 16px;
+      transition:
+        background var(--transition),
+        color var(--transition),
+        border-color var(--transition);
+    }
+
+    .nav-cta:hover {
+      background: #fff;
+      color: var(--ink);
+      border-color: #fff;
+    }
+
+    nav.scrolled .nav-cta {
+      border-color: var(--ink);
+      color: var(--ink);
+    }
+
+    nav.scrolled .nav-cta:hover {
+      background: var(--ink);
+      color: #fff;
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 42px;
+      height: 42px;
+      border: 1px solid rgba(255,255,255,.45);
+      background: transparent;
+      color: #fff;
+      border-radius: 2px;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    nav.scrolled .menu-toggle {
+      border-color: var(--ink);
+      color: var(--ink);
+    }
+
+    .menu-toggle span {
+      width: 18px;
+      height: 1.5px;
+      background: currentColor;
+      transition: transform .2s ease, opacity .2s ease;
+    }
+
+    .mobile-menu {
+      position: fixed;
+      inset: 0;
+      z-index: 999;
+      background: var(--ink);
+      color: #fff;
+      padding: 120px 32px 40px;
+
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity .2s ease, visibility .2s ease;
+    }
+
+    .mobile-menu.open {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    .mobile-menu-links {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    .mobile-menu-links a {
+      font-size: clamp(28px, 8vw, 44px);
+      font-weight: 700;
+      letter-spacing: -.02em;
+    }
+
+    .mobile-menu-cta {
+      margin-top: 44px;
+    }
+
+    /* =========================================================
+       HERO
+       ========================================================= */
+
+    .hero {
+      background: var(--ink);
+      color: #fff;
+      min-height: 100svh;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      position: relative;
+      padding: 140px 0 90px;
+      overflow: hidden;
+    }
+
+    .hero .rings {
+      position: absolute;
+      top: -20%;
+      right: -12%;
+      width: 760px;
+      height: 760px;
+      pointer-events: none;
+      opacity: .5;
+    }
+
+    .hero .rings span {
+      position: absolute;
+      inset: 0;
+      margin: auto;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,.06);
+    }
+
+    .hero-eyebrow {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .42em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.5);
+      margin-bottom: 30px;
+
+      opacity: 0;
+      transform: translateY(14px);
+      animation: rise .7s ease forwards .1s;
+    }
+
+    .triad {
+      font-weight: 800;
+      letter-spacing: -.01em;
+      line-height: .98;
+      font-size: clamp(48px, 9vw, 116px);
+    }
+
+    .triad span {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(26px);
+    }
+
+    .triad span:nth-child(1) {
+      animation: rise .7s cubic-bezier(.2,.7,.2,1) forwards .25s;
+    }
+
+    .triad span:nth-child(2) {
+      animation: rise .7s cubic-bezier(.2,.7,.2,1) forwards .42s;
+    }
+
+    .triad span:nth-child(3) {
+      animation: rise .7s cubic-bezier(.2,.7,.2,1) forwards .59s;
+    }
+
+    .triad .pd {
+      color: var(--gray);
+    }
+
+    .hero-sub {
+      margin-top: 34px;
+      max-width: 680px;
+
+      font-size: clamp(17px, 2.1vw, 21px);
+      font-weight: 400;
+      line-height: 1.5;
+      color: rgba(255,255,255,.82);
+
+      opacity: 0;
+      transform: translateY(14px);
+      animation: rise .7s ease forwards .8s;
+    }
+
+    .hero-sub strong {
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .hero-actions {
+      margin-top: 42px;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+
+      opacity: 0;
+      transform: translateY(14px);
+      animation: rise .7s ease forwards .95s;
+    }
+
+    .hero-proof {
+      margin-top: 32px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px 28px;
+      color: rgba(255,255,255,.52);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: .05em;
+
+      opacity: 0;
+      transform: translateY(14px);
+      animation: rise .7s ease forwards 1.05s;
+    }
+
+    .hero-proof span::before {
+      content: "✓";
+      margin-right: 7px;
+      color: rgba(255,255,255,.75);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: .04em;
+
+      padding: 14px 26px;
+      border-radius: 2px;
+
+      transition:
+        transform .15s ease,
+        background .2s ease,
+        color .2s ease,
+        border-color .2s ease;
+    }
+
+    .btn-primary {
+      background: #fff;
+      color: var(--ink);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-dark {
+      background: var(--ink);
+      color: #fff;
+    }
+
+    .btn-dark:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-ghost {
+      border: 1.5px solid rgba(255,255,255,.4);
+      color: #fff;
+    }
+
+    .btn-ghost:hover {
+      border-color: #fff;
+      background: rgba(255,255,255,.07);
+    }
+
+    @keyframes rise {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* =========================================================
+       GENERAL SECTIONS
+       ========================================================= */
+
+    section {
+      padding: 104px 0;
+    }
+
+    .sec-eyebrow {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .34em;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 18px;
+    }
+
+    .sec-title {
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 700;
+      line-height: 1.12;
+      letter-spacing: -.01em;
+      max-width: 760px;
+    }
+
+    .sec-lead {
+      margin-top: 22px;
+      max-width: 700px;
+      font-size: 18px;
+      color: var(--ink-soft);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(26px);
+      transition:
+        opacity .7s ease,
+        transform .7s ease;
+    }
+
+    .reveal.in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .section-cta {
+      margin-top: 52px;
+      text-align: center;
+    }
+
+    /* =========================================================
+       POSITIONING
+       ========================================================= */
+
+    .position {
+      background: var(--paper);
+    }
+
+    .position .big {
+      font-size: clamp(26px, 3.6vw, 40px);
+      font-weight: 600;
+      line-height: 1.25;
+      letter-spacing: -.01em;
+      max-width: 880px;
+      margin-top: 8px;
+    }
+
+    .position .big em {
+      font-style: normal;
+      color: var(--gray);
+    }
+
+    .position-grid {
+      margin-top: 64px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 34px;
+    }
+
+    .pcard {
+      border-top: 2px solid var(--ink);
+      padding-top: 18px;
+    }
+
+    .pcard .pnum {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .2em;
+      color: var(--gray);
+    }
+
+    .pcard h3 {
+      font-size: 20px;
+      font-weight: 700;
+      margin: 14px 0 8px;
+    }
+
+    .pcard p {
+      font-size: 15px;
+      color: var(--ink-soft);
+    }
+
+    /* =========================================================
+       WHO I HELP
+       ========================================================= */
+
+    .who {
+      background: var(--paper-warm);
+    }
+
+    .who-lead {
+      margin-top: 22px;
+      max-width: 720px;
+      font-size: 18px;
+      color: var(--ink-soft);
+    }
+
+    .who-grid {
+      margin-top: 48px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .who-item {
+      background: #fff;
+      border: 1px solid var(--gray-line);
+      border-radius: var(--radius);
+      padding: 24px;
+    }
+
+    .who-item strong {
+      display: block;
+      font-size: 17px;
+      margin-bottom: 5px;
+    }
+
+    .who-item span {
+      display: block;
+      font-size: 14px;
+      color: var(--gray);
+    }
+
+    .who-foot {
+      margin-top: 34px;
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--ink);
+      max-width: 720px;
+    }
+
+    .who-foot em {
+      font-style: normal;
+      color: var(--gray);
+    }
+
+    /* =========================================================
+       HOW IT WORKS
+       ========================================================= */
+
+    .process {
+      background: #fff;
+    }
+
+    .process-grid {
+      margin-top: 56px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 34px;
+    }
+
+    .process-step {
+      border-top: 2px solid var(--ink);
+      padding-top: 20px;
+    }
+
+    .process-number {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .2em;
+      color: var(--gray);
+    }
+
+    .process-step h3 {
+      margin-top: 14px;
+      font-size: 22px;
+    }
+
+    .process-step p {
+      margin-top: 9px;
+      font-size: 15px;
+      color: var(--ink-soft);
+    }
+
+    /* =========================================================
+       SERVICES
+       ========================================================= */
+
+    .services {
+      background: var(--ink);
+      color: #fff;
+    }
+
+    .services .sec-eyebrow {
+      color: rgba(255,255,255,.5);
+    }
+
+    .services .sec-lead {
+      color: rgba(255,255,255,.75);
+    }
+
+    .tier-grid {
+      margin-top: 56px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .tier {
+      background: #fff;
+      color: var(--ink);
+      border-radius: var(--radius);
+      padding: 32px 28px;
+
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .tier.feat {
+      outline: 2px solid #fff;
+      outline-offset: 4px;
+    }
+
+    .tier .badge {
+      position: absolute;
+      top: -12px;
+      left: 28px;
+
+      background: var(--ink);
+      color: #fff;
+
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+
+      padding: 5px 12px;
+      border-radius: 2px;
+    }
+
+    .tier h3 {
+      font-size: 23px;
+      font-weight: 700;
+      font-style: italic;
+      margin-bottom: 6px;
+    }
+
+    .tier-for {
+      font-size: 13px;
+      color: var(--gray);
+      margin-bottom: 22px;
+      min-height: 38px;
+    }
+
+    .tier ul {
+      list-style: none;
+      margin-bottom: 30px;
+    }
+
+    .tier li {
+      font-size: 14px;
+      color: var(--ink-soft);
+      padding: 7px 0 7px 18px;
+      position: relative;
+    }
+
+    .tier li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: #bbb;
+    }
+
+    .tier .price {
+      margin-top: auto;
+      font-size: 27px;
+      font-weight: 700;
+    }
+
+    .tier .price span {
+      display: block;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-top: 5px;
+    }
+
+    .price-note {
+      margin-top: 9px;
+      font-size: 12px;
+      color: var(--gray);
+    }
+
+    .alacarte {
+      margin-top: 30px;
+      padding-top: 28px;
+      border-top: 1px solid rgba(255,255,255,.12);
+
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 26px;
+      align-items: center;
+    }
+
+    .alacarte .label {
+      width: 100%;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.45);
+      margin-bottom: 4px;
+    }
+
+    .alacarte .item {
+      font-size: 14px;
+      color: rgba(255,255,255,.85);
+    }
+
+    .alacarte .dotsep {
+      color: rgba(255,255,255,.25);
+    }
+
+    .alacarte-note {
+      margin-top: 16px;
+      font-size: 13px;
+      color: rgba(255,255,255,.55);
+    }
+
+    .services .section-cta p {
+      font-size: 15px;
+      color: rgba(255,255,255,.7);
+      margin-bottom: 20px;
+    }
+
+    /* =========================================================
+       TECHNOLOGY
+       ========================================================= */
+
+    .apps {
+      background: var(--paper-warm);
+    }
+
+    .apps-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .apps .shipped {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--gray);
+      max-width: 420px;
+      text-align: right;
+    }
+
+    .apps .shipped b {
+      color: var(--ink);
+    }
+
+    .apps-grid {
+      margin-top: 52px;
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 18px;
+    }
+
+    .app-tier {
+      background: #fff;
+      border: 1px solid var(--gray-line);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+    }
+
+    .app-tier h3 {
+      font-size: 19px;
+      font-weight: 700;
+      font-style: italic;
+      margin-bottom: 12px;
+    }
+
+    .app-tier p {
+      font-size: 14px;
+      color: var(--ink-soft);
+      margin-bottom: 18px;
+      min-height: 60px;
+    }
+
+    .app-tier .price {
+      font-size: 21px;
+      font-weight: 700;
+    }
+
+    .app-tier .price span {
+      display: block;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-top: 4px;
+    }
+
+    .app-note {
+      margin-top: 22px;
+      font-size: 13px;
+      color: var(--gray);
+    }
+
+    /* =========================================================
+       WORK
+       ========================================================= */
+
+    .portfolio {
+      background: var(--ink);
+      color: #fff;
+    }
+
+    .portfolio .sec-eyebrow {
+      color: rgba(255,255,255,.5);
+    }
+
+    .portfolio .sec-lead {
+      color: rgba(255,255,255,.75);
+    }
+
+    .work-grid {
+      margin-top: 52px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .work-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.10);
+      border-radius: 8px;
+
+      padding: 28px 28px 24px;
+      min-height: 210px;
+
+      transition:
+        transform .18s ease,
+        background .18s ease,
+        border-color .18s ease;
+    }
+
+    .work-card:hover {
+      transform: translateY(-3px);
+      background: rgba(255,255,255,.07);
+      border-color: rgba(255,255,255,.22);
+    }
+
+    .work-top {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 14px;
+    }
+
+    .work-name {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -.01em;
+      color: #fff;
+    }
+
+    .work-live {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+
+      color: #4ade80;
+      border: 1px solid rgba(74,222,128,.4);
+      border-radius: 20px;
+
+      padding: 4px 10px;
+      white-space: nowrap;
+    }
+
+    .work-desc {
+      margin-top: 12px;
+      font-size: 15px;
+      color: rgba(255,255,255,.7);
+      line-height: 1.5;
+    }
+
+    .work-role {
+      margin-top: 16px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.4);
+    }
+
+    .work-link {
+      margin-top: 22px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: .03em;
+
+      color: #fff;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .work-link .arr {
+      transition: transform .18s ease;
+    }
+
+    .work-card:hover .work-link .arr {
+      transform: translateX(4px);
+    }
+
+    .work-foot {
+      margin-top: 36px;
+      font-size: 15px;
+      color: rgba(255,255,255,.55);
+    }
+
+    /* =========================================================
+       MARKETING GALLERY
+       ========================================================= */
+
+    .gallery {
+      margin-top: 72px;
+    }
+
+    .gallery-head {
+      margin-bottom: 28px;
+    }
+
+    .gallery-head h3 {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -.01em;
+      color: #fff;
+    }
+
+    .gallery-head p {
+      font-size: 14px;
+      color: rgba(255,255,255,.55);
+      margin-top: 4px;
+    }
+
+    .gallery-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .gallery-btn {
+      flex: 0 0 auto;
+
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+
+      border: 1.5px solid rgba(255,255,255,.25);
+      background: rgba(255,255,255,.06);
+      color: #fff;
+
+      font-size: 19px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      transition:
+        background .18s,
+        color .18s,
+        border-color .18s,
+        transform .18s;
+    }
+
+    .gallery-btn:hover {
+      background: #fff;
+      color: var(--ink);
+      border-color: #fff;
+      transform: scale(1.06);
+    }
+
+    .gallery-btn:active {
+      transform: scale(.96);
+    }
+
+    .gallery-btn:disabled {
+      opacity: .25;
+      cursor: default;
+      transform: none;
+    }
+
+    .gallery-track-wrap {
+      overflow: hidden;
+      flex: 1 1 auto;
+    }
+
+    .gallery-track {
+      display: flex;
+      gap: 20px;
+
+      scroll-behavior: smooth;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+
+      padding: 14px 4px 24px;
+
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    .gallery-track::-webkit-scrollbar {
+      display: none;
+    }
+
+    .gallery-slide {
+      flex: 0 0 auto;
+      width: 300px;
+
+      scroll-snap-align: start;
+
+      position: relative;
+
+      border-radius: 12px;
+      overflow: hidden;
+
+      background: rgba(255,255,255,.05);
+      aspect-ratio: 4 / 5;
+
+      border: 1px solid rgba(255,255,255,.08);
+
+      box-shadow:
+        0 14px 34px rgba(0,0,0,.5),
+        0 2px 8px rgba(0,0,0,.4);
+
+      transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        border-color .25s ease;
+    }
+
+    .gallery-slide:hover {
+      transform: translateY(-6px);
+      box-shadow:
+        0 26px 56px rgba(0,0,0,.65),
+        0 8px 18px rgba(0,0,0,.5);
+      border-color: rgba(255,255,255,.2);
+    }
+
+    .gallery-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .gallery-slide .cap-overlay {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      padding: 18px 16px 16px;
+
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 1.35;
+      color: #fff;
+
+      background:
+        linear-gradient(
+          to top,
+          rgba(0,0,0,.85),
+          rgba(0,0,0,.45) 55%,
+          rgba(0,0,0,0)
+        );
+
+      opacity: 0;
+      transform: translateY(8px);
+
+      transition:
+        opacity .22s ease,
+        transform .22s ease;
+
+      pointer-events: none;
+    }
+
+    .gallery-slide:hover .cap-overlay {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (hover: none) {
+      .gallery-slide .cap-overlay {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* =========================================================
+       ABOUT
+       ========================================================= */
+
+    .about {
+      background: var(--paper);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 60px;
+      align-items: start;
+      margin-bottom: 50px;
+    }
+
+    .about h2 {
+      margin-bottom: 28px;
+    }
+
+    .about p {
+      font-size: 18px;
+      color: var(--ink-soft);
+      margin-bottom: 20px;
+    }
+
+    .about p strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    .about-photo-frame {
+      width: 100%;
+      max-width: 360px;
+      aspect-ratio: 4 / 5;
+      overflow: hidden;
+
+      border-radius: 8px;
+      border: 1px solid var(--gray-line);
+      background: var(--paper-warm);
+
+      box-shadow:
+        0 18px 40px rgba(0,0,0,.08),
+        0 3px 10px rgba(0,0,0,.06);
+    }
+
+    .about-photo-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(100%) contrast(1.05);
+    }
+
+    .about-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      border-top: 1px solid var(--gray-line);
+      background: var(--paper);
+    }
+
+    .about-stats .stat {
+      padding: 26px 24px;
+      position: relative;
+    }
+
+    .about-stats .stat:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 18%;
+      bottom: 18%;
+      width: 1px;
+      background: var(--gray-line);
+    }
+
+    .about-stats .num {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -.02em;
+    }
+
+    .about-stats .cap {
+      margin-top: 8px;
+      font-size: 13px;
+      color: var(--gray);
+      letter-spacing: .02em;
+    }
+
+    /* =========================================================
+       CLIENTS / SOCIAL PROOF
+       ========================================================= */
+
+    .clients {
+      background: var(--paper-warm);
+      padding: 72px 0;
+    }
+
+    .clients-intro {
+      max-width: 600px;
+      font-size: 16px;
+      color: var(--ink-soft);
+    }
+
+    .clients-grid {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 48px;
+      margin-top: 36px;
+    }
+
+    .client-logo {
+      height: 48px;
+      width: auto;
+      opacity: .6;
+      filter: grayscale(100%);
+      transition: opacity .2s ease;
+    }
+
+    .client-logo:hover {
+      opacity: 1;
+    }
+
+    /* =========================================================
+       CONTACT
+       ========================================================= */
+
+    .contact {
+      background: var(--ink);
+      color: #fff;
+      text-align: center;
+      padding: 120px 0;
+    }
+
+    .contact h2 {
+      font-size: clamp(30px, 5vw, 56px);
+      font-weight: 800;
+      letter-spacing: -.01em;
+      line-height: 1.05;
+    }
+
+    .contact-intro {
+      margin: 20px auto 0;
+      max-width: 620px;
+      font-size: 18px;
+      color: rgba(255,255,255,.7);
+    }
+
+    .contact-form {
+      max-width: 640px;
+      margin: 42px auto 0;
+      width: 100%;
+      text-align: left;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .form-group label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.55);
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 3px;
+
+      padding: 13px 16px;
+
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      color: #fff;
+
+      transition: border-color .2s ease, background .2s ease;
+    }
+
+    .form-group select {
+      appearance: none;
+      background-image:
+        linear-gradient(45deg, transparent 50%, #aaa 50%),
+        linear-gradient(135deg, #aaa 50%, transparent 50%);
+      background-position:
+        calc(100% - 18px) 55%,
+        calc(100% - 12px) 55%;
+      background-size:
+        6px 6px,
+        6px 6px;
+      background-repeat: no-repeat;
+    }
+
+    .form-group select option {
+      color: var(--ink);
+      background: #fff;
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: rgba(255,255,255,.3);
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: rgba(255,255,255,.55);
+      background: rgba(255,255,255,.1);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 140px;
+    }
+
+    .contact-form .btn {
+      margin-top: 8px;
+      width: 100%;
+    }
+
+    .form-status {
+      margin-top: 16px;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .form-success {
+      color: rgba(255,255,255,.8);
+    }
+
+    .form-error {
+      color: #ff8b8b;
+    }
+
+    .email-fallback {
+      margin-top: 18px;
+      text-align: center;
+      font-size: 13px;
+      color: rgba(255,255,255,.45);
+    }
+
+    .email-fallback a {
+      color: rgba(255,255,255,.8);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    /* =========================================================
+       NEWSLETTER
+       ========================================================= */
+
+    .newsletter {
+      max-width: 640px;
+      margin: 72px auto 0;
+      padding-top: 52px;
+      border-top: 1px solid rgba(255,255,255,.12);
+      text-align: left;
+    }
+
+    .newsletter-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.45);
+    }
+
+    .newsletter h3 {
+      margin-top: 10px;
+      font-size: 28px;
+      color: #fff;
+    }
+
+    .newsletter p {
+      margin-top: 8px;
+      font-size: 14px;
+      color: rgba(255,255,255,.6);
+    }
+
+    .newsletter-form {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .newsletter-form input {
+      flex: 1;
+      min-width: 0;
+
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 3px;
+
+      padding: 13px 16px;
+      color: #fff;
+    }
+
+    .newsletter-form input::placeholder {
+      color: rgba(255,255,255,.3);
+    }
+
+    .newsletter-form button {
+      border: 0;
+      padding: 13px 20px;
+      border-radius: 3px;
+      background: #fff;
+      color: var(--ink);
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: .03em;
+    }
+
+    .newsletter-form button:hover {
+      transform: translateY(-1px);
+    }
+
+    /* =========================================================
+       FOOTER
+       ========================================================= */
+
+    footer {
+      background: #0c0c0c;
+      color: rgba(255,255,255,.5);
+      padding: 40px 0;
+    }
+
+    footer .wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      gap: 14px;
+    }
+
+    footer .f-logo {
+      display: flex;
+      align-items: center;
+    }
+
+    footer .f-meta {
+      font-size: 13px;
+      letter-spacing: .03em;
+    }
+
+    footer .f-social {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-top: 2px;
+    }
+
+    footer .f-social a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      color: rgba(255,255,255,.5);
+
+      transition:
+        color .18s ease,
+        transform .18s ease;
+    }
+
+    footer .f-social a:hover {
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    footer .f-social svg {
+      width: 20px;
+      height: 20px;
+      display: block;
+      fill: currentColor;
+    }
+
+    /* =========================================================
+       RESPONSIVE
+       ========================================================= */
+
+    @media (max-width: 860px) {
+
+      .nav-links,
+      nav .nav-cta {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      .position-grid,
+      .process-grid,
+      .tier-grid,
+      .apps-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+
+      .about-media {
+        order: -1;
+      }
+
+      .about-photo-frame {
+        max-width: 340px;
+      }
+
+      .about-stats {
+        grid-template-columns: 1fr;
+      }
+
+      .about-stats .stat:not(:last-child)::after {
+        display: none;
+      }
+
+      .apps .shipped {
+        text-align: left;
+      }
+    }
+
+    @media (max-width: 760px) {
+
+      .wrap {
+        padding: 0 22px;
+      }
+
+      nav {
+        padding: 14px 22px;
+      }
+
+      nav.scrolled {
+        padding: 7px 22px;
+      }
+
+      .nav-logo img {
+        height: 56px;
+      }
+
+      section {
+        padding: 80px 0;
+      }
+
+      .hero {
+        padding: 120px 0 70px;
+      }
+
+      .hero .rings {
+        width: 520px;
+        height: 520px;
+        top: -10%;
+        right: -35%;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+      }
+
+      .hero-proof {
+        flex-direction: column;
+        gap: 9px;
+      }
+
+      .position-grid {
+        gap: 30px;
+      }
+
+      .who-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .work-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-row {
+        gap: 8px;
+      }
+
+      .gallery-slide {
+        width: 240px;
+      }
+
+      .gallery-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .newsletter-form {
+        flex-direction: column;
+      }
+
+      .newsletter-form button {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+
+      .hero-eyebrow {
+        letter-spacing: .28em;
+      }
+
+      .triad {
+        font-size: clamp(48px, 17vw, 76px);
+      }
+
+      .contact {
+        padding: 90px 0;
+      }
+    }
+
+    /* =========================================================
+       REDUCED MOTION
+       ========================================================= */
+
+    @media (prefers-reduced-motion: reduce) {
+
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+        scroll-behavior: auto !important;
+      }
+
+      .reveal,
+      .hero-eyebrow,
+      .hero-sub,
+      .hero-actions,
+      .hero-proof,
+      .triad span {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    }
+  </style>
+
+  <!-- =========================================================
+       STRUCTURED DATA
+       ========================================================= -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "PK Works",
+    "url": "https://www.pkworks.co",
+    "logo": "https://www.pkworks.co/pk-logo.png",
+    "image": "https://www.pkworks.co/og-image.png",
+    "description": "Fractional marketing leadership for small and growing businesses, including brand voice, content strategy, social media, and marketing execution.",
+    "founder": {
+      "@type": "Person",
+      "name": "Phil Kukawinski",
+      "jobTitle": "Marketing Consultant"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "United States"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Louisville",
+      "addressRegion": "KY",
+      "addressCountry": "US"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "phil@pkworks.co",
+      "telephone": "+15027951959",
+      "contactType": "customer service"
+    },
+    "sameAs": [
+      "https://instagram.com/pkworks.co",
+      "https://facebook.com/pkworksco",
+      "https://linkedin.com/company/pkworks"
+    ],
+    "knowsAbout": [
+      "Fractional marketing",
+      "Marketing strategy",
+      "Brand voice",
+      "Content strategy",
+      "Social media marketing",
+      "Brand development",
+      "Digital marketing",
+      "Web development",
+      "Product development"
     ]
   }
-}
-</script>
-
+  </script>
 </head>
 
 <body>
 
-<nav id="nav">
-  <a class="nav-logo" href="#top">
-  <img class="logo-light" src="pk-logo-white.png" alt="PK Works" />
-  <img class="logo-dark" src="pk-logo.png" alt="PK Works" />
-</a>
-  <div class="nav-links">
-    <a href="#approach">Approach</a>
-    <a href="#who">Who I Help</a>
-    <a href="#services">Marketing</a>
-    <a href="#apps">Technology</a>
-    <a href="#work">Work</a>
-    <a href="#about">About</a>
-  </div>
-  <a class="nav-cta" href="#contact">Get in touch</a>
-</nav>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-<header class="hero" id="top">
-  <div class="rings" aria-hidden="true">
-    <span style="width:100%;height:100%"></span>
-    <span style="width:74%;height:74%"></span>
-    <span style="width:48%;height:48%"></span>
-    <span style="width:24%;height:24%"></span>
-  </div>
-  <div class="wrap">
-    <div class="hero-eyebrow">Voice &middot; Strategy &middot; Social</div>
-    <h1 class="triad">
-      <span>Voice.<span class="pd"></span></span>
-      <span>Strategy.</span>
-      <span>Social.</span>
-    </h1>
-    <p class="hero-sub"><strong>Marketing leadership without the marketing department.</strong> Brand, content, and social media for small businesses — without the cost of a full-time hire. Based in Louisville, KY. Available nationwide. Starts at $1,500.</p>
-    <div class="hero-actions">
-      <a class="btn btn-primary" href="#services">See what I do</a>
-      <a class="btn btn-ghost" href="#contact">Start a conversation</a>
-    </div>
-  </div>
-</header>
+  <!-- =========================================================
+       NAV
+       ========================================================= -->
 
-<section class="position" id="approach">
-  <div class="wrap">
-    <div class="sec-eyebrow reveal">The idea</div>
-    <p class="big reveal">Most growing businesses don't need to hire a marketing manager. They need someone who already knows how to build a brand, find its voice, and show up consistently. <em>That's where I work.</em></p>
+  <nav id="nav" aria-label="Primary navigation">
 
-    <div class="position-grid">
-      <div class="pcard reveal">
-        <div class="pnum">Voice</div>
-        <h3>Sound like someone</h3>
-        <p>A clear brand voice and message, so every post, email, and page feels like it comes from the same place.</p>
-      </div>
-      <div class="pcard reveal">
-        <div class="pnum">Strategy</div>
-        <h3>Know the plan</h3>
-        <p>Content built on a real strategy with themes, cadence, and goals, not posting for the sake of posting.</p>
-      </div>
-      <div class="pcard reveal">
-        <div class="pnum">Social</div>
-        <h3>Show up consistently</h3>
-        <p>The calendars, the copy, the follow-through. The part most businesses run out of time to do well.</p>
-      </div>
-    </div>
-  </div>
-  <div class="position-cta reveal" style="margin-top: 56px; text-align: center;">
-  <a href="https://www.pkworks.co/#contact" class="btn btn-primary" style="display: inline-block; background: var(--ink); color: #fff;" onclick="gtag('event', 'contact_click', {'event_category': 'conversion'})">Let's Have A Conversation</a>
-</div>
-</section>
-
-<section class="who" id="who">
-  <div class="wrap">
-    <div class="sec-eyebrow reveal">Who I help</div>
-    <h2 class="sec-title reveal">Built for businesses without a marketing team.</h2>
-    <p class="who-lead reveal">If you're growing but too small to justify a full-time marketing hire, that's exactly who I'm built for.</p>
-
-    <div class="who-grid">
-      <div class="who-item reveal">Trades &amp; contractors</div>
-      <div class="who-item reveal">Local retail &amp; shops</div>
-      <div class="who-item reveal">Restaurants &amp; hospitality</div>
-      <div class="who-item reveal">Professional services</div>
-      <div class="who-item reveal">Home services</div>
-      <div class="who-item reveal">Nonprofits &amp; membership orgs</div>
-      <div class="who-item reveal">Fitness &amp; wellness</div>
-      <div class="who-item reveal">Real estate &amp; property</div>
-    </div>
-
-    <p class="who-foot reveal">Different businesses, same gap: <em>too big to ignore marketing, too small to staff it.</em></p>
-  </div>
-</section>
-
-<section class="services" id="services">
-  <div class="wrap">
-    <div class="sec-eyebrow reveal">Marketing</div>
-    <h2 class="sec-title reveal">Three ways to work together.</h2>
-    <p class="sec-lead reveal">Start with a one-time foundation, or bring me on monthly as the marketing partner your business has been missing. A fraction of the cost of a full-time hire, scaled to what you actually need.</p>
-
-    <div class="tier-grid">
-      <div class="tier reveal">
-        <h3>Foundation</h3>
-        <div class="tier-for">For businesses that don't know where to start</div>
-        <ul>
-          <li>Brand voice guide</li>
-          <li>Audience definition</li>
-          <li>Platform recommendation</li>
-          <li>90-day content strategy</li>
-          <li>10 starter post concepts</li>
-        </ul>
-        <div class="price">One-time<span>2 weeks &middot; No contract</span></div>
-      </div>
-
-      <div class="tier feat reveal">
-        <div class="badge">Most Popular</div>
-        <h3>Signal</h3>
-        <div class="tier-for">For businesses ready to show up consistently</div>
-        <ul>
-          <li>Monthly content calendar</li>
-          <li>12 posts, written and formatted</li>
-          <li>Caption copy in your brand voice</li>
-          <li>Graphic direction included</li>
-          <li>Monthly performance check-in</li>
-        </ul>
-        <div class="price">Monthly<span>Per month &middot; 3-month minimum</span></div>
-      </div>
-
-      <div class="tier reveal">
-        <h3>Full Signal</h3>
-        <div class="tier-for">For businesses that want a true marketing partner</div>
-        <ul>
-          <li>Everything in Signal</li>
-          <li>Quarterly strategy sessions</li>
-          <li>Campaign and event planning</li>
-          <li>Monthly email or newsletter copy</li>
-          <li>Priority availability</li>
-        </ul>
-        <div class="price">Monthly<span>Per month &middot; 3-month minimum</span></div>
-      </div>
-    </div>
-
-    <div class="alacarte reveal">
-      <span class="label">À la carte for partners</span>
-      <span class="item">Social Media Audit</span><span class="dotsep">&middot;</span>
-      <span class="item">Brand Voice Guide</span><span class="dotsep">&middot;</span>
-      <span class="item">Email Campaign</span><span class="dotsep">&middot;</span>
-      <span class="item">Voiceover</span><span class="dotsep">&middot;</span>
-      <span class="item">Podcast Launch</span><span class="dotsep">&middot;</span>
-      <span class="item">Podcast Production</span>
-    </div>
-    <p class="alacarte-note reveal">Pricing shared in a short conversation, so I can scope it to what you actually need.</p>
-  </div>
-  <div class="reveal" style="margin-top: 48px; text-align: center;">
-  <p style="font-size: 15px; color: rgba(255,255,255,.7); margin-bottom: 20px;">Not sure which fits? A short conversation is the best way to find out.</p>
-  <a href="https://www.pkworks.co/#contact" class="btn btn-ghost" onclick="gtag('event', 'contact_click', {'event_category': 'conversion'})">See If We're a Fit</a>
-</div>
-</section>
-
-<section class="apps" id="apps">
-  <div class="wrap">
-    <div class="apps-head">
-      <div>
-        <div class="sec-eyebrow reveal">When marketing needs technology</div>
-        <h2 class="sec-title reveal">I don't just plan it. I can build it.</h2>
-      </div>
-      <div class="shipped reveal">Shipped: <b>ATMO &middot; BrickKeep &middot; PawFile &middot; Dropzone</b></div>
-    </div>
-    <p class="sec-lead reveal">Custom web and mobile apps designed, built, and shipped. From a simple tool to a full product with accounts, payments, and integrations. I can write the ad, voice it, produce it, and market it, then build the tool behind it. Very few marketing people can hand you all of that.</p>
-
-    <div class="apps-grid">
-      <div class="app-tier reveal">
-        <h3>Simple</h3>
-        <p>Landing page or single-purpose tool. No accounts or database.</p>
-        <div class="price">Project<span>One-time build</span></div>
-      </div>
-      <div class="app-tier reveal">
-        <h3>Standard</h3>
-        <p>Multiple features, a database, and user accounts. Deployed live.</p>
-        <div class="price">Project<span>One-time build</span></div>
-      </div>
-      <div class="app-tier reveal">
-        <h3>Complex</h3>
-        <p>Full app with accounts, integrations (payments, OAuth, APIs), and native packaging.</p>
-        <div class="price">Project<span>One-time build</span></div>
-      </div>
-    </div>
-    <p class="app-note reveal">An optional Care Plan keeps it running after launch (hosting and maintenance), with changes available as you grow.</p>
-  </div>
-</section>
-
-<section class="portfolio" id="work">
-  <div class="wrap">
-    <div class="sec-eyebrow reveal">Selected work</div>
-    <h2 class="sec-title reveal">Built, shipped, and live.</h2>
-    <p class="sec-lead reveal">Four products I designed and built from scratch. Not mockups, real apps you can open right now.</p>
-
-    <div class="work-grid">
-      <a class="work-card reveal" href="https://getatmoapp.com" target="_blank" rel="noopener">
-        <div>
-          <div class="work-top">
-            <span class="work-name">ATMO</span>
-            <span class="work-live">Live</span>
-          </div>
-          <p class="work-desc">An AI playlist generator that turns any moment or mood into a soundtrack.</p>
-        </div>
-        <span class="work-link">Visit ATMO <span class="arr">&rarr;</span></span>
-      </a>
-
-      <a class="work-card reveal" href="https://mybrickkeep.com" target="_blank" rel="noopener">
-        <div>
-          <div class="work-top">
-            <span class="work-name">BrickKeep</span>
-            <span class="work-live">Live</span>
-          </div>
-          <p class="work-desc">A collection tracker for LEGO builders, with wishlists, values, and shareable profiles.</p>
-        </div>
-        <span class="work-link">Visit BrickKeep <span class="arr">&rarr;</span></span>
-      </a>
-
-      <a class="work-card reveal" href="https://mypawfile.vercel.app" target="_blank" rel="noopener">
-        <div>
-          <div class="work-top">
-            <span class="work-name">PawFile</span>
-            <span class="work-live">Live</span>
-          </div>
-          <p class="work-desc">Pet health records and emergency info in one place, so owners are ready for anything.</p>
-        </div>
-        <span class="work-link">Visit PawFile <span class="arr">&rarr;</span></span>
-      </a>
-
-      <a class="work-card reveal" href="https://dropzone-game.vercel.app" target="_blank" rel="noopener">
-        <div>
-          <div class="work-top">
-            <span class="work-name">Dropzone</span>
-            <span class="work-live">Live</span>
-          </div>
-          <p class="work-desc">A physics-based Plinko game with seasonal themes, trails, and a score chase.</p>
-        </div>
-        <span class="work-link">Play Dropzone <span class="arr">&rarr;</span></span>
-      </a>
-    </div>
-
-    <div class="gallery reveal">
-      <div class="gallery-head">
-        <h3>The marketing work</h3>
-        <p>Campaigns, social, and brand work. Hover for details, swipe to explore.</p>
-      </div>
-
-      <div class="gallery-row">
-        <button class="gallery-btn" id="galPrev" aria-label="Previous">&larr;</button>
-        <div class="gallery-track-wrap">
-          <div class="gallery-track" id="galTrack">
-            <div class="gallery-slide"><img src="work-2.png" alt="Proven success" /><span class="cap-overlay">Proven success</span></div>
-            <div class="gallery-slide"><img src="work-1.png" alt="Duet with Disturbed campaign" /><span class="cap-overlay">Duet with Disturbed campaign</span></div>
-            <div class="gallery-slide"><img src="work-4.png" alt="Festination Flyaway Experience campaign" /><span class="cap-overlay">Festination Flyaway Experience campaign</span></div>
-            <div class="gallery-slide"><img src="work-6.png" alt="ATMO This Or That content" /><span class="cap-overlay">ATMO &ldquo;This Or That&rdquo; content</span></div>
-            <div class="gallery-slide"><img src="work-7.png" alt="Pup Close With PK and Kentucky Humane Society" /><span class="cap-overlay">Pup Close With PK &amp; Kentucky Humane Society</span></div>
-            <div class="gallery-slide"><img src="work-3.png" alt="Three Days Grace On-Stage Experience campaign" /><span class="cap-overlay">Three Days Grace On-Stage Experience campaign</span></div>
-            <div class="gallery-slide"><img src="work-5.png" alt="20,000 dollar Crypt Cash content" /><span class="cap-overlay">&ldquo;$20,000 Crypt Cash&rdquo; content</span></div>
-          </div>
-        </div>
-        <button class="gallery-btn" id="galNext" aria-label="Next">&rarr;</button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="about" id="about">
-  <div class="wrap about-grid">
-    <div class="about-bio">
-      <div class="sec-eyebrow reveal">About</div>
-      <h2 class="sec-title reveal" style="margin-bottom:28px;">15 years making brands sound like something.</h2>
-      <p class="reveal">PK Works is me, Phil Kukawinski. I spent 15 years in radio building brands, growing audiences, and producing the kind of content that makes people stop and pay attention.</p>
-      <p class="reveal">That's where the ear for voice comes from, and the instinct for what actually moves people instead of just filling a feed. Now I bring that same expertise to businesses that need real marketing leadership without the cost of a full-time hire.</p>
-      <p class="reveal">I work with a small number of clients at a time, which means you get someone who treats your brand like it's the only one that matters. Because while we're working together, it is.</p>
-    </div>
-    <div class="about-media reveal">
-      <div class="about-photo-frame">
-        <img src="pk-headshot.png" alt="Phil Kukawinski — Owner & Marketing Consultant, PK Works" />
-      </div>
-    </div>
-  </div>
-
-  <div class="wrap about-stats reveal">
-    <div class="stat">
-      <div class="num">15+ yrs</div>
-      <div class="cap">Building brands and audiences in media</div>
-    </div>
-    <div class="stat">
-      <div class="num">4 apps</div>
-      <div class="cap">Designed, built, and shipped independently</div>
-    </div>
-    <div class="stat">
-      <div class="num">1 seat</div>
-      <div class="cap">The marketing department your business is missing</div>
-    </div>
-  </div>
-  <div class="reveal" style="margin-top: 48px; text-align: center;">
-  <a href="https://www.pkworks.co/#contact" class="btn btn-primary" style="display: inline-block; background: var(--ink); color: #fff;" onclick="gtag('event', 'contact_click', {'event_category': 'conversion'})">Work With Me</a>
-</div>
-</section>
-
-<section class="clients" id="clients">
-  <div class="wrap">
-    <div class="sec-eyebrow reveal">Working with</div>
-    <div class="clients-grid reveal">
-      <a href="https://www.brightschoolkits.com" target="_blank" rel="noopener"><img src="/clients/bright-school-kits-logo.png" alt="Bright School Kits" class="client-logo" /></a>
-      <a href="https://www.stemstorykits.com" target="_blank" rel="noopener"><img src="/clients/ssk-logo.png" alt="STEM Story Kits" class="client-logo" /></a>
-      <a href="https://www.byinfynity.com" target="_blank" rel="noopener"><img src="/clients/infynity-logo.png" alt="Infynity" class="client-logo" /></a>
-    </div>
-  </div>
-</section>
-
-<section class="contact" id="contact">
-  <div class="wrap">
-    <h2>Let's talk about your brand.</h2>
-    <p>A short conversation is the best way to see if we're a fit. No pitch, no pressure.</p>
-    <form id="contact-form" action="https://formspree.io/f/xqpkzvwq" method="POST" class="contact-form reveal">
-  <div class="form-row">
-    <div class="form-group">
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" placeholder="Your name" required>
-    </div>
-    <div class="form-group">
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" placeholder="your@email.com" required>
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="company">Business Name</label>
-    <input type="text" id="company" name="company" placeholder="Your business name">
-  </div>
-  <div class="form-group">
-    <label for="message">Message</label>
-    <textarea id="message" name="message" placeholder="Tell me a bit about what you're looking for..." rows="5" required></textarea>
-  </div>
-  <button type="submit" class="btn btn-primary" onclick="gtag('event', 'contact_click', {'event_category': 'conversion'})">Send</button>
-  <p id="form-success" style="display:none; margin-top: 16px; font-size: 14px; color: rgba(255,255,255,.7); text-align: center;">Got it. I'll be in touch soon.</p>
-  <p id="form-error" style="display:none; margin-top: 16px; font-size: 14px; color: #ff6b6b; text-align: center;">Something went wrong. Try emailing me directly: phil@pkworks.co</p>
-</form>
-
-<script>
-  (function() {
-    var form = document.getElementById('contact-form');
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      var data = new FormData(form);
-      fetch(form.action, {
-        method: 'POST',
-        body: data,
-        headers: { 'Accept': 'application/json' }
-      }).then(function(response) {
-        if (response.ok) {
-          form.reset();
-          document.getElementById('form-success').style.display = 'block';
-          document.getElementById('form-error').style.display = 'none';
-        } else {
-          document.getElementById('form-error').style.display = 'block';
-        }
-      }).catch(function() {
-        document.getElementById('form-error').style.display = 'block';
-      });
-    });
-  })();
-</script>
-
-    <div style="margin-top: 48px; max-width: 540px; margin-left: auto; margin-right: auto;">
-      <p style="font-size: 13px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,.5); margin-bottom: 16px;">Or stay in the loop</p>
-      <!-- BEGIN BREVO FORM -->
-      <!-- Begin Brevo Form -->
-<!-- START - We recommend to place the below code where you want the form in your website html  -->
-<div class="sib-form" style="text-align: center;">
-  <div id="sib-form-container" class="sib-form-container">
-    <div id="sib-container" class="sib-container--large sib-container--vertical" style="max-width:540px; text-align:center; background-color:rgba(0,0,0,1); border-width:1px; border-style:solid; border-color:#C0CCD9; border-radius:3px;">
-      <form id="sib-form" method="POST" action="https://8b58aeed.sibforms.com/serve/MUIFAJmPRogEQMR5l64SnIBPr0erb3d2glZtfMX7RSdLzJmHSocmbCkxLAqplgtpP-hctD_9Xw510fX-KO5r0lk_9AhXLNPI0wc-jL-NB7izrFsyz6uQBEi9tK_tJ3dvvDkRPKdLuKS7IEgyzDDEHrSQ7hIMe0t97egCGO8Opt6sM_bj25W1zYK0yELmKhTllhvJQHZapuWoj-DviA==">
-        <div style="padding: 8px 0;">
-          <div class="sib-form-block sib-image-form-block" style="text-align: center">
-            <img src="https://img.mailinblue.com/11754235/images/content_library/original/6a663815bd21d74a8ab96729.png" style="width: 70px;height: 52px;" alt="" title="" />
-          </div>
-        </div>
-        <div style="padding: 8px 0;">
-          <div class="sib-form-block" style="font-family:Montserrat, webFonts; font-size:32px; font-weight:700; text-align:left; color:#ffffff; background-color:transparent; text-align:left">
-            <p>The Signal Newsletter</p>
-          </div>
-        </div>
-        <div style="padding: 8px 0;">
-          <div class="sib-form-block" style="font-family:Montserrat, webFonts; font-size:16px; text-align:left; color:#ffffff; background-color:transparent; text-align:left">
-            <div class="sib-text-form-block">
-              <p>Subscribe to our newsletter and stay updated.</p>
-            </div>
-          </div>
-        </div>
-        <div style="padding: 8px 0;">
-          <div class="sib-input sib-form-block">
-            <div class="form__entry entry_block">
-              <div class="form__label-row ">
-                <label class="entry__label" style="font-weight: 700; text-align: left; font-family:Montserrat, webFonts; font-size:16px; font-weight:700; text-align:left; color:#ffffff;" for="EMAIL" data-required="*">Enter your email address to subscribe</label>
-                <div class="entry__field">
-                  <input class="input " type="text" id="EMAIL" name="EMAIL" autocomplete="off" value="" placeholder="EMAIL" data-required="true" required />
-                </div>
-              </div>
-              <label class="entry__error entry__error--primary" style="font-family:Helvetica, sans-serif; font-size:16px; text-align:left; color:#661d1d; background-color:#ffeded; border-color:#ff4949; border-radius:3px;">
-              </label>
-              <label class="entry__specification" style="font-family:Montserrat, webFonts; font-size:12px; text-align:left; color:#b2b2b2; text-align: left ">
-                Provide your email address to subscribe. For e.g abc@xyz.com
-              </label>
-            </div>
-          </div>
-        </div>
-        <div style="padding: 8px 0;">
-          <div class="sib-form-block" style="text-align: center">
-            <button class="sib-form-block__button sib-form-block__button-with-loader" style="font-family:Montserrat, webFonts; font-size:16px; font-weight:700; text-align:center; color:#000000; background-color:#ededed; border-width:0px; border-radius:3px;" form="sib-form" type="submit">
-              <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon" viewBox="0 0 512 512">
-                <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
-              </svg>
-              SUBSCRIBE
-            </button>
-          </div>
-        </div>
-        <input type="text" name="email_address_check" value="" class="input--hidden" style="display:none;">
-        <input type="hidden" name="locale" value="en">
-        <input type="hidden" name="html_type" value="simple">
-        
-      </form>
-    </div>
-  </div>
-</div>
-<!-- END - We recommend to place the above code where you want the form in your website html  -->
-<!-- End Brevo Form -->
-      <!-- END BREVO FORM -->
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="wrap">
-    <div class="f-logo">
+    <a class="nav-logo" href="#top" aria-label="PK Works home">
       <img class="logo-light" src="pk-logo-white.png" alt="PK Works" />
+      <img class="logo-dark" src="pk-logo.png" alt="PK Works" />
+    </a>
+
+    <div class="nav-links">
+      <a href="#approach">Approach</a>
+      <a href="#who">Who I Help</a>
+      <a href="#services">Marketing</a>
+      <a href="#apps">Technology</a>
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
     </div>
-    <div class="f-social">
-      <a href="https://instagram.com/pkworks.co" target="_blank" rel="noopener" aria-label="Instagram">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.86s0 3.6-.07 4.86c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.86.07s-3.6 0-4.86-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.86c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.46 2.2 8.84 2.2 12 2.2zm0 1.8c-3.15 0-3.52 0-4.76.07-.9.04-1.39.2-1.71.32-.43.17-.74.37-1.06.69-.32.32-.52.63-.69 1.06-.12.32-.28.81-.32 1.71C3.4 8.48 3.4 8.85 3.4 12s0 3.52.07 4.76c.04.9.2 1.39.32 1.71.17.43.37.74.69 1.06.32.32.63.52 1.06.69.32.12.81.28 1.71.32 1.24.07 1.61.07 4.76.07s3.52 0 4.76-.07c.9-.04 1.39-.2 1.71-.32.43-.17.74-.37 1.06-.69.32-.32.52-.63.69-1.06.12-.32.28-.81.32-1.71.07-1.24.07-1.61.07-4.76s0-3.52-.07-4.76c-.04-.9-.2-1.39-.32-1.71a2.85 2.85 0 0 0-.69-1.06 2.85 2.85 0 0 0-1.06-.69c-.32-.12-.81-.28-1.71-.32C15.52 4 15.15 4 12 4zm0 3.06A4.94 4.94 0 1 1 12 17a4.94 4.94 0 0 1 0-9.88zm0 1.8a3.14 3.14 0 1 0 0 6.28 3.14 3.14 0 0 0 0-6.28zm5.16-.62a1.15 1.15 0 1 1 0-2.3 1.15 1.15 0 0 1 0 2.3z"/></svg>
-      </a>
-      <a href="https://facebook.com/pkworksco" target="_blank" rel="noopener" aria-label="Facebook">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg>
-      </a>
-      <a href="https://linkedin.com/company/pkworks" target="_blank" rel="noopener" aria-label="LinkedIn">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zm1.78 13.02H3.56V9h3.56v11.45zM22.22 0H1.77C.8 0 0 .78 0 1.75v20.5C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.75C24 .78 23.2 0 22.22 0z"/></svg>
+
+    <a class="nav-cta" href="#contact" data-track="contact_cta">
+      Let's Talk
+    </a>
+
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      type="button"
+      aria-label="Open navigation"
+      aria-expanded="false"
+      aria-controls="mobileMenu"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </nav>
+
+  <!-- =========================================================
+       MOBILE NAV
+       ========================================================= -->
+
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+
+    <div class="mobile-menu-links">
+      <a href="#approach">Approach</a>
+      <a href="#who">Who I Help</a>
+      <a href="#services">Marketing</a>
+      <a href="#apps">Technology</a>
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+    </div>
+
+    <div class="mobile-menu-cta">
+      <a
+        href="#contact"
+        class="btn btn-primary"
+        data-track="contact_cta"
+      >
+        Let's Talk
       </a>
     </div>
-    <div class="f-meta">Voice. Strategy. Social. &middot; Louisville, KY</div>
+
   </div>
-</footer>
 
-<script>
-  var nav = document.getElementById('nav');
-  function onScroll(){ if (window.scrollY > 30) nav.classList.add('scrolled'); else nav.classList.remove('scrolled'); }
-  window.addEventListener('scroll', onScroll); onScroll();
+  <main id="main">
 
-  var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, { threshold: 0.12 });
-  document.querySelectorAll('.reveal').forEach(function(el, i){
-    el.style.transitionDelay = (i % 3) * 0.07 + 's';
-    io.observe(el);
-  });
+    <!-- =======================================================
+         HERO
+         ======================================================= -->
 
-  // carousel arrows
-  (function(){
-    var track = document.getElementById('galTrack');
-    var prev = document.getElementById('galPrev');
-    var next = document.getElementById('galNext');
-    if (!track || !prev || !next) return;
-    function step(){ var s = track.querySelector('.gallery-slide'); return s ? s.offsetWidth + 16 : 316; }
-    function update(){
-      prev.disabled = track.scrollLeft <= 4;
-      next.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 4;
+    <header class="hero" id="top">
+
+      <div class="rings" aria-hidden="true">
+        <span style="width:100%;height:100%"></span>
+        <span style="width:74%;height:74%"></span>
+        <span style="width:48%;height:48%"></span>
+        <span style="width:24%;height:24%"></span>
+      </div>
+
+      <div class="wrap">
+
+        <div class="hero-eyebrow">
+          Voice · Strategy · Social
+        </div>
+
+        <h1 class="triad">
+          <span>Voice.<span class="pd"></span></span>
+          <span>Strategy.</span>
+          <span>Social.</span>
+        </h1>
+
+        <p class="hero-sub">
+          <strong>Marketing leadership without the marketing department.</strong>
+          For businesses that have outgrown DIY marketing but aren't ready for
+          a full-time hire. Brand, content, social, and strategy from one
+          experienced marketing partner. Based in Louisville, KY. Available nationwide.
+        </p>
+
+        <div class="hero-actions">
+
+          <a
+            class="btn btn-primary"
+            href="#services"
+            data-track="services_cta"
+          >
+            See How I Can Help
+          </a>
+
+          <a
+            class="btn btn-ghost"
+            href="#contact"
+            data-track="contact_cta"
+          >
+            Let's Talk
+          </a>
+
+        </div>
+
+        <div class="hero-proof" aria-label="Key benefits">
+          <span>15+ years of brand & audience experience</span>
+          <span>Fractional marketing leadership</span>
+          <span>Starts at $1,500</span>
+        </div>
+
+      </div>
+    </header>
+
+
+    <!-- =======================================================
+         POSITIONING
+         ======================================================= -->
+
+    <section class="position" id="approach">
+
+      <div class="wrap">
+
+        <div class="sec-eyebrow reveal">
+          The idea
+        </div>
+
+        <p class="big reveal">
+          Most growing businesses don't need to hire a marketing manager.
+          They need someone who already knows how to build a brand, find its
+          voice, make a plan, and actually execute it.
+          <em>That's where I work.</em>
+        </p>
+
+        <div class="position-grid">
+
+          <div class="pcard reveal">
+            <div class="pnum">01 · Voice</div>
+            <h3>Sound like someone</h3>
+            <p>
+              A clear brand voice and message, so every post, email, page,
+              and campaign feels like it comes from the same place.
+            </p>
+          </div>
+
+          <div class="pcard reveal">
+            <div class="pnum">02 · Strategy</div>
+            <h3>Know the plan</h3>
+            <p>
+              Content built around actual priorities, themes, cadence, and
+              goals—not posting for the sake of posting.
+            </p>
+          </div>
+
+          <div class="pcard reveal">
+            <div class="pnum">03 · Social</div>
+            <h3>Show up consistently</h3>
+            <p>
+              The calendars, copy, creative direction, and follow-through
+              that most businesses run out of time to do well.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="section-cta reveal">
+          <a
+            href="#contact"
+            class="btn btn-dark"
+            data-track="contact_cta"
+          >
+            Let's Talk
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =======================================================
+         WHO I HELP
+         ======================================================= -->
+
+    <section class="who" id="who">
+
+      <div class="wrap">
+
+        <div class="sec-eyebrow reveal">
+          Who I help
+        </div>
+
+        <h2 class="sec-title reveal">
+          Built for businesses without a marketing team.
+        </h2>
+
+        <p class="who-lead reveal">
+          If you're growing but too small to justify a full-time marketing hire,
+          that's exactly where fractional marketing leadership makes sense.
+        </p>
+
+        <div class="who-grid">
+
+          <div class="who-item reveal">
+            <strong>Growing businesses</strong>
+            <span>You've outgrown “we'll get to marketing when we have time.”</span>
+          </div>
+
+          <div class="who-item reveal">
+            <strong>Owner-led companies</strong>
+            <span>You need senior marketing thinking without another full-time employee.</span>
+          </div>
+
+          <div class="who-item reveal">
+            <strong>Businesses with DIY marketing</strong>
+            <span>Someone is posting, but there isn't a real strategy behind it.</span>
+          </div>
+
+          <div class="who-item reveal">
+            <strong>Teams without a marketing lead</strong>
+            <span>You have people executing, but nobody connecting the pieces.</span>
+          </div>
+
+        </div>
+
+        <p class="who-foot reveal">
+          Especially useful for professional services, home services,
+          hospitality, retail, nonprofits, and growing local businesses.
+          <em>Different businesses, same gap.</em>
+        </p>
+
+      </div>
+    </section>
+
+
+    <!-- =======================================================
+         HOW IT WORKS
+         ======================================================= -->
+
+    <section class="process" id="process">
+
+      <div class="wrap">
+
+        <div class="sec-eyebrow reveal">
+          How it works
+        </div>
+
+        <h2 class="sec-title reveal">
+          Simple enough to get started. Strategic enough to matter.
+        </h2>
+
+        <p class="sec-lead reveal">
+          You don't need another complicated agency process. We figure out
+          what's actually missing, build the right plan, and then execute it.
+        </p>
+
+        <div class="process-grid">
+
+          <div class="process-step reveal">
+            <div class="process-number">01 · We talk</div>
+            <h3>Figure out the gap</h3>
+            <p>
+              A short conversation about your business, what's working,
+              what's not, and what you actually need.
+            </p>
+          </div>
+
+          <div class="process-step reveal">
+            <div class="process-number">02 · We build the plan</div>
+            <h3>Set the priorities</h3>
+            <p>
+              I establish the voice, strategy, channels, cadence, and
+              priorities that make sense for your business.
+            </p>
+          </div>
+
+          <div class="process-step reveal">
+            <div class="process-number">03 · We execute</div>
+            <h3>Make it happen</h3>
+            <p>
+              You get consistent marketing execution without having to
+              manage another employee or another agency.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =======================================================
+         SERVICES
+         ======================================================= -->
+
+    <section class="services" id="services">
+
+      <div class="wrap">
+
+        <div class="sec-eyebrow reveal">
+          Marketing
+        </div>
+
+        <h2 class="sec-title reveal">
+          Three ways to work together.
+        </h2>
+
+        <p class="sec-lead reveal">
+          Start with a one-time foundation, or bring me on monthly as the
+          marketing partner your business has been missing. A fraction of
+          the cost of a full-time hire, scaled to what you actually need.
+        </p>
+
+        <div class="tier-grid">
+
+          <!-- FOUNDATION -->
+
+          <div class="tier reveal">
+
+            <h3>Foundation</h3>
+
+            <div class="tier-for">
+              For businesses that don't know where to start
+            </div>
+
+            <ul>
+              <li>Brand voice guide</li>
+              <li>Audience definition</li>
+              <li>Platform recommendation</li>
+              <li>90-day content strategy</li>
+              <li>10 starter post concepts</li>
+            </ul>
+
+            <div class="price">
+              $1,500
+              <span>One-time · 2 weeks · No contract</span>
+            </div>
+
+          </div>
+
+
+          <!-- SIGNAL -->
+
+          <div class="tier feat reveal">
+
+            <div class="badge">
+              Most Popular
+            </div>
+
+            <h3>Signal</h3>
+
+            <div class="tier-for">
+              For businesses ready to show up consistently
+            </div>
+
+            <ul>
+              <li>Monthly content calendar</li>
+              <li>12 posts, written and formatted</li>
+              <li>Caption copy in your brand voice</li>
+              <li>Graphic direction included</li>
+              <li>Monthly performance check-in</li>
+            </ul>
+
+            <!-- Replace with actual price when finalized -->
+            <div class="price">
+              $1,200
+              <span>Monthly · 3-month minimum</span>
+            </div>
+
+            <div class="price-note">
+              Scoped to your business and content needs.
+            </div>
+
+          </div>
+
+
+          <!-- FULL SIGNAL -->
+
+          <div class="tier reveal">
+
+            <h3>Full Signal</h3>
+
+            <div class="tier-for">
+              For businesses that want a true marketing partner
+            </div>
+
+            <ul>
+              <li>Everything in Signal</li>
+              <li>Quarterly strategy sessions</li>
+              <li>Campaign and event planning</li>
+              <li>Monthly email or newsletter copy</li>
+              <li>Priority availability</li>
+            </ul>
+
+            <!-- Replace with actual price when finalized -->
+            <div class="price">
+              $2,500
+              <span>Monthly · 3-month minimum</span>
+            </div>
+
+            <div class="price-note">
+              Scoped to your business and growth goals.
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="alacarte reveal">
+
+          <span class="label">
+            À la carte for partners
+          </span>
+
+          <span class="item">Social Media Audit</span>
+          <span class="dotsep">·</span>
+
+          <span class="item">Brand Voice Guide</span>
+          <span class="dotsep">·</span>
+
+          <span class="item">Email Campaign</span>
+          <span class="dotsep">·</span>
+
+          <span class="item">Voiceover</span>
+          <span class="dotsep">·</span>
+
+          <span class="item">Podcast Launch</span>
+          <span class="dotsep">·</span>
+
+          <span class="item">Podcast Production</span>
+
+        </div>
+
+        <p class="alacarte-note reveal">
+          À la carte pricing is scoped to the project, so you're paying for
+          what you actually need—not a prebuilt package you don't.
+        </p>
+
+
+        <div class="section-cta reveal">
+
+          <p>
+            Not sure which fits? A short conversation is the best way to find out.
+          </p>
+
+          <a
+            href="#contact"
+            class="btn btn-ghost"
+            data-track="contact_cta"
+          >
+            Let's Talk
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =======================================================
+         TECHNOLOGY
+         ======================================================= -->
+
+    <section class="apps" id="apps">
+
+      <div class="wrap">
+
+        <div class="apps-head">
+
+          <div>
+
+            <div class="sec-eyebrow reveal">
+              When marketing needs technology
+            </div>
+
+            <h2 class="sec-title reveal">
+              I don't just plan it. I can build it.
+            </h2>
+
+          </div>
+
+          <div class="shipped reveal">
+            Shipped:
+            <b>ATMO · BrickKeep · PawFile · Dropzone</b>
+          </div>
+
+        </div>
+
+        <p class="sec-lead reveal">
+          Sometimes the thing your marketing needs isn't another campaign.
+          It's a better website, landing page, customer tool, calculator,
+          portal, or product. I can design and build those, too.
+        </p>
+
+        <p class="sec-lead reveal">
+          That means I can write the campaign, produce the content, market
+          the product—and, when necessary, build the technology behind it.
+        </p>
+
+        <div class="apps-grid">
+
+          <div class="app-tier reveal">
+            <h3>Simple</h3>
+            <p>
+              Landing page or single-purpose tool. No accounts or database.
+            </p>
+            <div class="price">
+              Project
+              <span>One-time build</span>
+            </div>
+          </div>
+
+          <div class="app-tier reveal">
+            <h3>Standard</h3>
+            <p>
+              Multiple features, a database, and user accounts. Deployed live.
+            </p>
+            <div class="price">
+              Project
+              <span>One-time build</span>
+            </div>
+          </div>
+
+          <div class="app-tier reveal">
+            <h3>Complex</h3>
+            <p>
+              Full app with accounts, integrations, payments, OAuth,
+              APIs, and native packaging.
+            </p>
+            <div class="price">
+              Project
+              <span>One-time build</span>
+            </div>
+          </div>
+
+        </div>
+
+        <p class="app-note reveal">
+          An optional Care Plan keeps it running after launch, with hosting,
+          maintenance, and changes available as you grow.
+        </p>
+
+      </div>
+    </section>
+
+
+    <!-- =======================================================
+         SELECTED WORK
+         ======================================================= -->
+
+    <section class="portfolio" id="work">
+
+      <div class="wrap">
+
+        <div class="sec-eyebrow reveal">
+          Selected work
+        </div>
+
+        <h2 class="sec-title reveal">
+          Built, shipped, and live.
+        </h2>
+
+        <p class="sec-lead reveal">
+          Real products and real marketing work—not mockups. The common thread
+          is turning an idea into something people can actually experience.
+        </p>
+
+        <div class="work-grid">
+
+          <a
+            class="work-card reveal"
+            href="https://getatmoapp.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div>
+
+              <div class="work-top">
+                <span class="work-name">ATMO</span>
+                <span class="work-live">Live</span>
+              </div>
+
+              <p class="work-desc">
+                An AI playlist generator that turns any moment or mood
+                into a soundtrack.
+              </p>
+
+              <div class="work-role">
+                Product · Design · Development
+              </div>
+
+            </div>
+
+            <span class="work-link">
+              Visit ATMO
+              <span class="arr">→</span>
+            </span>
+
+          </a>
+
+
+          <a
+            class="work-card reveal"
+            href="https://mybrickkeep.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div>
+
+              <div class="work-top">
+                <span class="work-name">BrickKeep</span>
+                <span class="work-live">Live</span>
+              </div>
+
+              <p class="work-desc">
+                A collection tracker for LEGO builders, with wishlists,
+                values, and shareable profiles.
+              </p>
+
+              <div class="work-role">
+                Product · Design · Development
+              </div>
+
+            </div>
+
+            <span class="work-link">
+              Visit BrickKeep
+              <span class="arr">→</span>
+            </span>
+
+          </a>
+
+
+          <a
+            class="work-card reveal"
+            href="https://mypawfile.vercel.app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div>
+
+              <div class="work-top">
+                <span class="work-name">PawFile</span>
+                <span class="work-live">Live</span>
+              </div>
+
+              <p class="work-desc">
+                Pet health records and emergency information in one place,
+                so owners are ready for anything.
+              </p>
+
+              <div class="work-role">
+                Product · Design · Development
+              </div>
+
+            </div>
+
+            <span class="work-link">
+              Visit PawFile
+              <span class="arr">→</span>
+            </span>
+
+          </a>
+
+
+          <a
+            class="work-card reveal"
+            href="https://dropzone-game.vercel.app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div>
+
+              <div class="work-top">
+                <span class="work-name">Dropzone</span>
+                <span class="work-live">Live</span>
+              </div>
+
+              <p class="work-desc">
+                A physics-based Plinko game with seasonal themes,
+                trails, and a score chase.
+              </p>
+
+              <div class="work-role">
+                Product · Design · Development
+              </div>
+
+            </div>
+
+            <span class="work-link">
+              Play Dropzone
+              <span class="arr">→</span>
+            </span>
+
+          </a>
+
+        </div>
+
+
+        <!-- MARKETING GALLERY -->
+
+        <div class="gallery reveal">
+
+          <div class="gallery-head">
+            <h3>The marketing work</h3>
+            <p>
+              Campaigns, social, and brand work. Hover for details,
+              swipe to explore.
+            </p>
+          </div>
+
+          <div class="gallery-row">
+
+            <button
+              class="gallery-btn"
+              id="galPrev"
+              type="button"
+              aria-label="Previous marketing project"
+            >
+              ←
+            </button>
+
+            <div class="gallery-track-wrap">
+
+              <div
+                class="gallery-track"
+                id="galTrack"
+                tabindex="0"
+                aria-label="Selected marketing work"
+              >
+
+                <div class="gallery-slide">
+                  <img
+                    src="work-2.png"
+                    alt="Proven success marketing work"
+                    loading="lazy"
+                  />
+                  <span class="cap-overlay">
+                    Proven success
+                  </span>
+                </div>
+
+                <div class="gallery-slide">
+                  <img
+                    src="work-1.png"
+                    alt="Duet with Disturbed campaign"
+                    loading="lazy"
+                  />
+                  <span class="cap-overlay">
+                    Duet with Disturbed campaign
+                  </span>
+                </div>
+
+                <div class="gallery-slide">
+                  <img
+                    src="work-4.png"
+                    alt="Festination Flyaway Experience campaign"
+                    loading="lazy"
+                  />
+                  <span class="cap-overlay">
+                    Festination Flyaway Experience campaign
+                  </span>
+                </div>
+
+                <div class="gallery-slide">
+                  <img
+                    src="work-6.png"
+                    alt="ATMO This Or That content"
+                    loading="lazy"
+                  />
+                  <span class="cap-overlay">
+                    ATMO “This Or That” content
+                  </span>
+                </div>
+
+                <div class="gallery-slide">
+                  <img
+                    src="work-7.png"
+                    alt="Pup Close With PK and Kentucky Humane Society"
+                    loading="lazy"
+                  />
+                  <span class="cap-overlay">
+                    Pup Close With PK & Kentucky Humane Society
+                  </span>
+                </div>
+
+                <div class="gallery-slide">
+                  <img
+                    src="work-3.png"
+                    alt="Three Days Grace On-Stage Experience campaign"
+                    loading="lazy"
+                  />
+                  <span class="cap-overlay">
+                    Three Days Grace On-Stage Experience campaign
+                  </span>
+                </div>
+
+                <div class="gallery-slide">
+                  <img
+                    src="work-5.png"
+                    alt="$20,000 Crypt Cash content"
+                    loading="lazy"
+                  />
+                  <span class="cap-overlay">
+                    “$20,000 Crypt Cash” content
+                  </span>
+                </div>
+
+              </div>
+            </div>
+
+            <button
+              class="gallery-btn"
+              id="galNext"
+              type="button"
+              aria-label="Next marketing project"
+            >
+              →
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =======================================================
+         ABOUT
+         ======================================================= -->
+
+    <section class="about" id="about">
+
+      <div class="wrap about-grid">
+
+        <div class="about-bio">
+
+          <div class="sec-eyebrow reveal">
+            About
+          </div>
+
+          <h2 class="sec-title reveal">
+            15 years making brands sound like something.
+          </h2>
+
+          <p class="reveal">
+            PK Works is me, Phil Kukawinski. I spent 15 years in radio
+            building brands, growing audiences, and producing the kind of
+            content that makes people stop and pay attention.
+          </p>
+
+          <p class="reveal">
+            That's where the ear for voice comes from—and the instinct for
+            what actually moves people instead of just filling a feed.
+            Now I bring that same expertise to businesses that need real
+            marketing leadership without the cost of a full-time hire.
+          </p>
+
+          <p class="reveal">
+            I work with a small number of clients at a time, which means
+            you get someone who treats your brand like it's the only one
+            that matters.
+            <strong>Because while we're working together, it is.</strong>
+          </p>
+
+        </div>
+
+        <div class="about-media reveal">
+
+          <div class="about-photo-frame">
+            <img
+              src="pk-headshot.png"
+              alt="Phil Kukawinski — Owner and Marketing Consultant, PK Works"
+              loading="lazy"
+            />
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="wrap about-stats reveal">
+
+        <div class="stat">
+          <div class="num">15+ yrs</div>
+          <div class="cap">
+            Building brands and audiences in media
+          </div>
+        </div>
+
+        <div class="stat">
+          <div class="num">4 apps</div>
+          <div class="cap">
+            Designed, built, and shipped independently
+          </div>
+        </div>
+
+        <div class="stat">
+          <div class="num">1 partner</div>
+          <div class="cap">
+            Strategy through execution without another department to manage
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="section-cta reveal">
+
+        <a
+          href="#contact"
+          class="btn btn-dark"
+          data-track="contact_cta"
+        >
+          Let's Talk
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================================================
+         CLIENTS
+         ======================================================= -->
+
+    <section class="clients" id="clients">
+
+      <div class="wrap">
+
+        <div class="sec-eyebrow reveal">
+          Working with
+        </div>
+
+        <p class="clients-intro reveal">
+          A few of the businesses and brands I've worked with.
+        </p>
+
+        <div class="clients-grid reveal">
+
+          <a
+            href="https://www.brightschoolkits.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Bright School Kits"
+          >
+            <img
+              src="/clients/bright-school-kits-logo.png"
+              alt="Bright School Kits"
+              class="client-logo"
+              loading="lazy"
+            />
+          </a>
+
+          <a
+            href="https://www.stemstorykits.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="STEM Story Kits"
+          >
+            <img
+              src="/clients/ssk-logo.png"
+              alt="STEM Story Kits"
+              class="client-logo"
+              loading="lazy"
+            />
+          </a>
+
+          <a
+            href="https://www.byinfynity.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Infynity"
+          >
+            <img
+              src="/clients/infynity-logo.png"
+              alt="Infynity"
+              class="client-logo"
+              loading="lazy"
+            />
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =======================================================
+         CONTACT
+         ======================================================= -->
+
+    <section class="contact" id="contact">
+
+      <div class="wrap">
+
+        <h2 class="reveal">
+          Let's talk about your brand.
+        </h2>
+
+        <p class="contact-intro reveal">
+          A short conversation is the best way to see if we're a fit.
+          No pitch, no pressure.
+        </p>
+
+
+        <form
+          id="contact-form"
+          action="https://formspree.io/f/xqpkzvwq"
+          method="POST"
+          class="contact-form reveal"
+        >
+
+          <div class="form-row">
+
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your name"
+                autocomplete="name"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="your@email.com"
+                autocomplete="email"
+                required
+              />
+            </div>
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label for="company">
+              Business Name
+            </label>
+
+            <input
+              type="text"
+              id="company"
+              name="company"
+              placeholder="Your business name"
+              autocomplete="organization"
+            />
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label for="need">
+              What are you looking for?
+            </label>
+
+            <select id="need" name="need">
+
+              <option value="">
+                Choose an option
+              </option>
+
+              <option value="monthly-marketing">
+                Monthly marketing support
+              </option>
+
+              <option value="strategy-project">
+                One-time strategy or project
+              </option>
+
+              <option value="social-media">
+                Social media
+              </option>
+
+              <option value="brand-content">
+                Brand voice or content
+              </option>
+
+              <option value="website-technology">
+                Website or technology
+              </option>
+
+              <option value="not-sure">
+                I'm not sure yet
+              </option>
+
+            </select>
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label for="message">
+              Tell me a little about it
+            </label>
+
+            <textarea
+              id="message"
+              name="message"
+              placeholder="What's going on with your marketing right now?"
+              rows="5"
+              required
+            ></textarea>
+
+          </div>
+
+
+          <button
+            type="submit"
+            class="btn btn-primary"
+            id="contact-submit"
+          >
+            Send
+          </button>
+
+          <p
+            id="form-success"
+            class="form-status form-success"
+            hidden
+            role="status"
+            aria-live="polite"
+          >
+            Got it. I'll be in touch soon.
+          </p>
+
+          <p
+            id="form-error"
+            class="form-status form-error"
+            hidden
+            role="alert"
+          >
+            Something went wrong. Try emailing me directly:
+            <a href="mailto:phil@pkworks.co">phil@pkworks.co</a>
+          </p>
+
+          <p class="email-fallback">
+            Prefer email?
+            <a href="mailto:phil@pkworks.co">
+              phil@pkworks.co
+            </a>
+          </p>
+
+        </form>
+
+
+        <!-- =====================================================
+             NEWSLETTER
+             ===================================================== -->
+
+        <div class="newsletter reveal">
+
+          <div class="newsletter-label">
+            Stay in the loop
+          </div>
+
+          <h3>
+            The Signal
+          </h3>
+
+          <p>
+            Occasional thoughts on marketing, content, brand voice,
+            and building businesses people actually remember.
+          </p>
+
+          <!--
+            Keep the Brevo action below. This replaces the large
+            generated Brevo embed with a much cleaner visual shell.
+          -->
+
+          <form
+            class="newsletter-form"
+            id="newsletter-form"
+            method="POST"
+            action="https://8b58aeed.sibforms.com/serve/MUIFAJmPRogEQMR5l64SnIBPr0erb3d2glZtfMX7RSdLzJmHSocmbCkxLAqplgtpP-hctD_9Xw510fX-KO5r0lk_9AhXLNPI0wc-jL-NB7izrFsyz6uQBEi9tK_tJ3dvvDkRPKdLuKS7IEgyzDDEHrSQ7hIMe0t97egCGO8Opt6sM_bj25W1zYK0yELmKhTllhvJQHZapuWoj-DviA=="
+          >
+
+            <label class="sr-only" for="newsletter-email">
+              Email address
+            </label>
+
+            <input
+              type="email"
+              id="newsletter-email"
+              name="EMAIL"
+              placeholder="Your email address"
+              autocomplete="email"
+              required
+            />
+
+            <button type="submit">
+              Subscribe
+            </button>
+
+            <input
+              type="hidden"
+              name="locale"
+              value="en"
+            />
+
+            <input
+              type="hidden"
+              name="html_type"
+              value="simple"
+            />
+
+          </form>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- =========================================================
+       FOOTER
+       ========================================================= -->
+
+  <footer>
+
+    <div class="wrap">
+
+      <div class="f-logo">
+        <img
+          class="logo-light"
+          src="pk-logo-white.png"
+          alt="PK Works"
+        />
+      </div>
+
+      <div class="f-social">
+
+        <a
+          href="https://instagram.com/pkworks.co"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.86s0 3.6-.07 4.86c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.86.07s-3.6 0-4.86-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.86c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.32-.32.63-.52 1.06-.69.32-.12.81-.28 1.71-.32C8.46 2.2 8.84 2.2 12 2.2zm0 1.8c-3.15 0-3.52 0-4.76.07-.9.04-1.39.2-1.71.32-.43.17-.74.37-1.06.69-.32.32-.52.63-.69 1.06-.12.32-.28.81-.32 1.71C3.4 8.48 3.4 8.85 3.4 12s0 3.52.07 4.76c.04.9.2 1.39.32 1.71.17.43.37.74.69 1.06.32.32.63.52 1.06.69.32.12.81.2 1.71.32 1.24.07 1.61.07 4.76.07s3.52 0 4.76-.07c.9-.12 1.39-.2 1.71-.32.43-.17.74-.37 1.06-.69.32-.32.52-.63.69-1.06.12-.32.28-.81.32-1.71.07-1.24.07-1.61.07-4.76s0-3.52-.07-4.76c-.04-.9-.2-1.39-.32-1.71a2.85 2.85 0 0 0-.69-1.06 2.85 2.85 0 0 0-1.06-.69c-.32-.12-.81-.28-1.71-.32C15.52 4 15.15 4 12 4zm0 3.06A4.94 4.94 0 1 1 12 17a4.94 4.94 0 0 1 0-9.88zm0 1.8a3.14 3.14 0 1 0 0 6.28 3.14 3.14 0 0 0 0-6.28zm5.16-.62a1.15 1.15 0 1 1 0-2.3 1.15 1.15 0 0 1 0 2.3z"/>
+          </svg>
+        </a>
+
+        <a
+          href="https://facebook.com/pkworksco"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Facebook"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/>
+          </svg>
+        </a>
+
+        <a
+          href="https://linkedin.com/company/pkworks"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zm1.78 13.02H3.56V9h3.56v11.45zM22.22 0H1.77C.8 0 0 .78 0 1.75v20.5C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.75C24 .78 23.2 0 22.22 0z"/>
+          </svg>
+        </a>
+
+      </div>
+
+      <div class="f-meta">
+        Voice. Strategy. Social. · Louisville, KY
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================================================
+       SCRIPTS
+       ========================================================= -->
+
+  <script>
+    /* =========================================================
+       NAVIGATION
+       ========================================================= */
+
+    const nav = document.getElementById('nav');
+
+    function updateNav() {
+      if (window.scrollY > 30) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
     }
-    prev.addEventListener('click', function(){ track.scrollBy({left: -step()*1.5, behavior:'smooth'}); });
-    next.addEventListener('click', function(){ track.scrollBy({left: step()*1.5, behavior:'smooth'}); });
-    track.addEventListener('scroll', update);
-    window.addEventListener('resize', update);
-    update();
-  })();
 
-</script>
-
-<script defer src="/_vercel/insights/script.js"></script>
+    window.addEventListener('scroll', updateNav, { passive: true });
+    updateNav();
 
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RBPSRVKGVY"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    /* =========================================================
+       MOBILE MENU
+       ========================================================= */
 
-  gtag('config', 'G-RBPSRVKGVY');
-</script>
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+
+    function closeMenu() {
+      mobileMenu.classList.remove('open');
+      mobileMenu.setAttribute('aria-hidden', 'true');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.setAttribute('aria-label', 'Open navigation');
+      document.body.classList.remove('menu-open');
+    }
+
+    function openMenu() {
+      mobileMenu.classList.add('open');
+      mobileMenu.setAttribute('aria-hidden', 'false');
+      menuToggle.setAttribute('aria-expanded', 'true');
+      menuToggle.setAttribute('aria-label', 'Close navigation');
+      document.body.classList.add('menu-open');
+    }
+
+    menuToggle.addEventListener('click', function() {
+      const isOpen = mobileMenu.classList.contains('open');
+
+      if (isOpen) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    });
+
+    mobileLinks.forEach(function(link) {
+      link.addEventListener('click', closeMenu);
+    });
+
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        closeMenu();
+      }
+    });
+
+
+    /* =========================================================
+       REVEAL ANIMATIONS
+       ========================================================= */
+
+    const revealElements = document.querySelectorAll('.reveal');
+
+    if ('IntersectionObserver' in window) {
+
+      const observer = new IntersectionObserver(
+        function(entries) {
+
+          entries.forEach(function(entry) {
+
+            if (entry.isIntersecting) {
+              entry.target.classList.add('in');
+              observer.unobserve(entry.target);
+            }
+
+          });
+
+        },
+        {
+          threshold: 0.12
+        }
+      );
+
+      revealElements.forEach(function(element, index) {
+
+        element.style.transitionDelay =
+          (index % 3) * 0.07 + 's';
+
+        observer.observe(element);
+
+      });
+
+    } else {
+
+      revealElements.forEach(function(element) {
+        element.classList.add('in');
+      });
+
+    }
+
+
+    /* =========================================================
+       MARKETING GALLERY
+       ========================================================= */
+
+    (function() {
+
+      const track = document.getElementById('galTrack');
+      const prev = document.getElementById('galPrev');
+      const next = document.getElementById('galNext');
+
+      if (!track || !prev || !next) {
+        return;
+      }
+
+      function step() {
+
+        const slide = track.querySelector('.gallery-slide');
+
+        return slide
+          ? slide.offsetWidth + 20
+          : 320;
+
+      }
+
+      function updateButtons() {
+
+        prev.disabled = track.scrollLeft <= 4;
+
+        next.disabled =
+          track.scrollLeft + track.clientWidth >=
+          track.scrollWidth - 4;
+
+      }
+
+      prev.addEventListener('click', function() {
+
+        track.scrollBy({
+          left: -step(),
+          behavior: 'smooth'
+        });
+
+      });
+
+      next.addEventListener('click', function() {
+
+        track.scrollBy({
+          left: step(),
+          behavior: 'smooth'
+        });
+
+      });
+
+      track.addEventListener('scroll', updateButtons);
+      window.addEventListener('resize', updateButtons);
+
+      updateButtons();
+
+    })();
+
+
+    /* =========================================================
+       CONTACT FORM
+       ========================================================= */
+
+    (function() {
+
+      const form = document.getElementById('contact-form');
+      const submitButton = document.getElementById('contact-submit');
+      const success = document.getElementById('form-success');
+      const error = document.getElementById('form-error');
+
+      if (!form) {
+        return;
+      }
+
+      let formStarted = false;
+
+      form.addEventListener('focusin', function() {
+
+        if (!formStarted) {
+
+          formStarted = true;
+
+          if (typeof gtag === 'function') {
+            gtag('event', 'contact_form_start', {
+              event_category: 'conversion'
+            });
+          }
+
+        }
+
+      });
+
+      form.addEventListener('submit', function(event) {
+
+        event.preventDefault();
+
+        success.hidden = true;
+        error.hidden = true;
+
+        submitButton.disabled = true;
+        submitButton.textContent = 'Sending…';
+
+        const data = new FormData(form);
+
+        fetch(form.action, {
+          method: 'POST',
+          body: data,
+          headers: {
+            'Accept': 'application/json'
+          }
+        })
+        .then(function(response) {
+
+          if (!response.ok) {
+            throw new Error('Form submission failed.');
+          }
+
+          form.reset();
+
+          success.hidden = false;
+
+          submitButton.disabled = false;
+          submitButton.textContent = 'Send';
+
+          if (typeof gtag === 'function') {
+
+            gtag('event', 'contact_form_submit', {
+              event_category: 'conversion',
+              event_label: 'successful'
+            });
+
+          }
+
+        })
+        .catch(function() {
+
+          error.hidden = false;
+
+          submitButton.disabled = false;
+          submitButton.textContent = 'Send';
+
+          if (typeof gtag === 'function') {
+
+            gtag('event', 'contact_form_submit', {
+              event_category: 'conversion',
+              event_label: 'error'
+            });
+
+          }
+
+        });
+
+      });
+
+    })();
+
+
+    /* =========================================================
+       CTA TRACKING
+       ========================================================= */
+
+    document.querySelectorAll('[data-track]').forEach(function(element) {
+
+      element.addEventListener('click', function() {
+
+        const eventName = element.dataset.track;
+
+        if (typeof gtag === 'function') {
+
+          gtag('event', eventName, {
+            event_category: 'conversion'
+          });
+
+        }
+
+      });
+
+    });
+
+
+    /* =========================================================
+       NEWSLETTER TRACKING
+       ========================================================= */
+
+    const newsletterForm =
+      document.getElementById('newsletter-form');
+
+    if (newsletterForm) {
+
+      newsletterForm.addEventListener('submit', function() {
+
+        if (typeof gtag === 'function') {
+
+          gtag('event', 'newsletter_signup', {
+            event_category: 'conversion'
+          });
+
+        }
+
+      });
+
+    }
+
+  </script>
+
+
+  <!-- Vercel Analytics -->
+  <script defer src="/_vercel/insights/script.js"></script>
+
+
+  <!-- Google Analytics -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-RBPSRVKGVY"
+  ></script>
+
+  <script>
+
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-RBPSRVKGVY');
+
+  </script>
 
 </body>
 </html>
