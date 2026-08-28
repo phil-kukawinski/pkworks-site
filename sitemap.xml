@@ -1,18 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
-<url>
+
+  <url>
     <loc>https://www.pkworks.co/</loc>
-    <lastmod>2026-06-29</lastmod>
+    <lastmod>2026-08-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-</url>
+  </url>
 
-<url>
+  <url>
     <loc>https://www.pkworks.co/blog/</loc>
-    <lastmod>2026-06-29</lastmod>
+    <lastmod>2026-08-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-</url>
+  </url>
+
+  <url>
+    <loc>https://www.pkworks.co/blog/how-much-does-a-social-media-manager-cost.html</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.pkworks.co/blog/do-i-need-a-brand-voice-guide.html</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.pkworks.co/blog/how-often-should-a-small-business-post-on-social-media.html</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.pkworks.co/blog/what-is-a-fractional-marketing-consultant.html</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.pkworks.co/blog/how-to-create-a-content-calendar-for-a-small-business.html</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
 
 </urlset>
