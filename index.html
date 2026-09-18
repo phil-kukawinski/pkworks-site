@@ -1823,7 +1823,7 @@
     "url": "https://www.pkworks.co",
     "logo": "https://www.pkworks.co/pk-logo.png",
     "image": "https://www.pkworks.co/og-image.png",
-    "description": "Fractional marketing leadership for businesses that have outgrown DIY marketing but aren't ready for a full-time hire. Brand voice, content strategy, and social media from one experienced partner."
+    "description": "Fractional marketing leadership for businesses that have outgrown DIY marketing but aren't ready for a full-time hire. Brand voice, content strategy, and social media from one experienced partner.",
     "founder": {
       "@type": "Person",
       "name": "Phil Kukawinski",
@@ -1847,7 +1847,7 @@
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Signal" } },
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Full Signal" } }
       ]
-    }
+    },
     "contactPoint": {
       "@type": "ContactPoint",
       "email": "phil@pkworks.co",
@@ -1885,8 +1885,8 @@
   <nav id="nav" aria-label="Primary navigation">
 
     <a class="nav-logo" href="#top" aria-label="PK Works home">
-      <img class="logo-light" src="pk-logo-white.png" alt="PK Works" />
-      <img class="logo-dark" src="pk-logo.png" alt="PK Works" />
+      <img class="logo-light" src="pk-logo-white.png" alt="PK Works logo light" />
+      <img class="logo-dark" src="pk-logo.png" alt="PK Works logo dark" />
     </a>
 
     <div class="nav-links">
@@ -2227,7 +2227,6 @@
               <li>10 starter post concepts</li>
             </ul>
 
-            <!-- Replace with actual price when finalized -->
             <div class="price">
               $1,500
               <span>One-time · 2 weeks · No contract</span>
@@ -2262,7 +2261,6 @@
               <li>Monthly performance check-in</li>
             </ul>
 
-            <!-- Replace with actual price when finalized -->
             <div class="price">
               $1,200
               <span>Monthly · 3-month minimum</span>
@@ -2293,7 +2291,6 @@
               <li>Priority availability</li>
             </ul>
 
-            <!-- Replace with actual price when finalized -->
             <div class="price">
               $2,500
               <span>Monthly · 3-month minimum</span>
@@ -2617,7 +2614,7 @@
               class="gallery-btn"
               id="galPrev"
               type="button"
-              aria-label="Previous marketing project"
+              aria-label="Previous project"
             >
               ←
             </button>
@@ -2704,7 +2701,7 @@
                     loading="lazy"
                   />
                   <span class="cap-overlay">
-                    “Bright School Kits - Social Media Managing
+                    Bright School Kits - Social Media Managing
                   </span>
                 </div>
 
@@ -2715,7 +2712,7 @@
               class="gallery-btn"
               id="galNext"
               type="button"
-              aria-label="Next marketing project"
+              aria-label="Next project"
             >
               →
             </button>
@@ -3075,11 +3072,6 @@
             Occasional thoughts on marketing, content, brand voice,
             and building businesses people actually remember.
           </p>
-
-          <!--
-            Keep the Brevo action below. This replaces the large
-            generated Brevo embed with a much cleaner visual shell.
-          -->
 
           <form
             class="newsletter-form"
@@ -3508,39 +3500,40 @@
   <script defer src="/_vercel/insights/script.js"></script>
 
 
-  <!-- Google Analytics -->
-  <script
-    async
-    src="https://www.googletagmanager.com/gtag/js?id=G-RBPSRVKGVY"
-  ></script>
-
   <!-- Google Adsense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5167321877099155"
      crossorigin="anonymous"></script>
 
-     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18336126793"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'AW-18336126793');
-</script>
-
+  <!-- Google Analytics & Google Ads -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RBPSRVKGVY"></script>
   <script>
-
     window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-
+    function gtag(){ dataLayer.push(arguments); }
     gtag('js', new Date());
 
     gtag('config', 'G-RBPSRVKGVY');
-
+    gtag('config', 'AW-18336126793');
   </script>
+
+
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1602423674572127');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1602423674572127&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
 
 </body>
 </html>
