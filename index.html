@@ -6,11 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#141414" />
 
-  <title>PK Works — Marketing Leadership Without the Marketing Department</title>
+  <title>Fractional Marketing & Social Media | PK Works</title>
 
   <meta
     name="description"
-    content="PK Works provides fractional marketing leadership for small and growing businesses. Brand voice, content strategy, social media, and marketing execution without the cost of a full-time hire."
+    content="PK Works helps growing businesses with fractional marketing leadership, brand voice, content strategy, and social media management—without the cost of a full-time marketing hire."
   />
 
   <link rel="canonical" href="https://www.pkworks.co/" />
@@ -338,6 +338,7 @@
       background: var(--ink);
       color: #fff;
       min-height: 100svh;
+      min-height: 100vh;
 
       display: flex;
       flex-direction: column;
@@ -512,6 +513,32 @@
         transform: translateY(0);
       }
     }
+
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .hero-eyebrow,
+  .triad span,
+  .hero-sub,
+  .hero-actions,
+  .hero-proof {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 
     /* =========================================================
        GENERAL SECTIONS
@@ -1948,66 +1975,78 @@
 
   <main id="main">
 
-    <!-- =======================================================
-         HERO
-         ======================================================= -->
+   
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="rings" aria-hidden="true">
+    <span style="width:100%;height:100%"></span>
+    <span style="width:74%;height:74%"></span>
+    <span style="width:48%;height:48%"></span>
+    <span style="width:24%;height:24%"></span>
+  </div>
 
-    <header class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-eyebrow">Voice · Strategy · Social</div>
 
-      <div class="rings" aria-hidden="true">
-        <span style="width:100%;height:100%"></span>
-        <span style="width:74%;height:74%"></span>
-        <span style="width:48%;height:48%"></span>
-        <span style="width:24%;height:24%"></span>
-      </div>
+    <h1 class="triad">
+      <span>Voice.</span>
+      <span>Strategy.</span>
+      <span>Social.</span>
+    </h1>
 
-      <div class="wrap">
+    <p class="hero-sub">
+      Marketing leadership without the marketing department.
+      For businesses that have outgrown DIY marketing but aren't
+      ready for a full-time hire. Brand, content, social, and
+      strategy from one experienced marketing partner.
+      Based in Louisville, KY. Available nationwide.
+    </p>
 
-        <div class="hero-eyebrow">
-          Voice · Strategy · Social
-        </div>
+    <div class="hero-actions">
+      <a class="btn btn-primary"
+         href="#services"
+         data-track="services_cta">
+        See How I Can Help
+      </a>
 
-        <h1 class="triad">
-          <span>Voice.<span class="pd"></span></span>
-          <span>Strategy.</span>
-          <span>Social.</span>
-        </h1>
+      <a class="btn btn-ghost"
+         href="#contact"
+         data-track="contact_cta">
+        Let's Talk
+      </a>
+    </div>
 
-        <p class="hero-sub">
-          <strong>Marketing leadership without the marketing department.</strong>
-          For businesses that have outgrown DIY marketing but aren't ready for
-          a full-time hire. Brand, content, social, and strategy from one
-          experienced marketing partner. Based in Louisville, KY. Available nationwide.
-        </p>
+    <div class="hero-proof">
+      <span>15+ years of brand & audience experience</span>
+      <span>Fractional marketing leadership</span>
+      <span>Starts at $1,500</span>
+    </div>
+  </div>
+</header>
 
-        <div class="hero-actions">
+<!-- POSITIONING / APPROACH -->
+<section class="position" id="approach">
+  <div class="wrap">
+    <div class="sec-eyebrow reveal">The idea</div>
 
-          <a
-            class="btn btn-primary"
-            href="#services"
-            data-track="services_cta"
-          >
-            See How I Can Help
-          </a>
+    <h2 class="big reveal">
+      Most growing businesses don't need to hire a marketing manager.
+      They need someone who already knows how to build a brand, find its
+      voice, make a plan, and actually execute it.
+      <em>That's where I work.</em>
+    </h2>
 
-          <a
-            class="btn btn-ghost"
-            href="#contact"
-            data-track="contact_cta"
-          >
-            Let's Talk
-          </a>
+    <!-- Keep your existing position-grid and pcard elements here. -->
 
-        </div>
-
-        <div class="hero-proof" aria-label="Key benefits">
-          <span>15+ years of brand & audience experience</span>
-          <span>Fractional marketing leadership</span>
-          <span>Starts at $1,500</span>
-        </div>
-
-      </div>
-    </header>
+    <div class="section-cta reveal">
+      <a class="btn btn-dark"
+         href="#contact"
+         data-track="contact_cta">
+        Let's Talk
+      </a>
+    </div>
+  </div>
+</section>
 
 
     <!-- =======================================================
