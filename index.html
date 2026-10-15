@@ -391,16 +391,18 @@
     }
 
     .triad span:nth-child(1) {
-      animation: rise .7s cubic-bezier(.2,.7,.2,1) forwards .25s;
-    }
+  opacity: 1;
+  transform: none;
+  animation: none;
+}
 
-    .triad span:nth-child(2) {
-      animation: rise .7s cubic-bezier(.2,.7,.2,1) forwards .42s;
-    }
+.triad span:nth-child(2) {
+  animation: rise .7s cubic-bezier(.2,.7,.2,1) forwards .42s;
+}
 
-    .triad span:nth-child(3) {
-      animation: rise .7s cubic-bezier(.2,.7,.2,1) forwards .59s;
-    }
+.triad span:nth-child(3) {
+  animation: rise .7s cubic-bezier(.2,.7,.2,1) forwards .59s;
+}
 
     .triad .pd {
       color: var(--gray);
@@ -1801,8 +1803,7 @@
       .hero-eyebrow,
       .hero-sub,
       .hero-actions,
-      .hero-proof,
-      .triad span {
+      .hero-proof {
         opacity: 1 !important;
         transform: none !important;
       }
@@ -1965,8 +1966,6 @@
           Voice · Strategy · Social
         </div>
 
-        <span aria-hidden="true" style="position:absolute;opacity:0.001;font-size:1px;">PK Works Marketing</span>
-<h1 class="triad">
   <span>Voice.<span class="pd"></span></span>
           <span>Strategy.</span>
           <span>Social.</span>
